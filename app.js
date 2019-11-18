@@ -1,21 +1,5 @@
-// NODE.JS SERVER SET UP
-const http = require('http')
-const hostname = '127.0.0.1'
-const port = 8000
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200
-  res.setHeader('Content-Type', 'text/plain')
-  res.end('Hello World\n')
-})
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`)
-})
-
-
 // MAIN JS
-document.addEventListener('DOMContentLoaded', () => {
+$(function() {
   console.log('JS loaded 🍇')
 
   fetch('./data.json')
@@ -30,5 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
       // Do something for an error here
       console.log(`Error: ${err}`)
     })
+
+  // let data
+
+  // $.ajax({
+  //   beforeSend: function(xhr) {
+  //     if (xhr.overrideMimeType) {
+  //       xhr.overrideMimeType('application/json')
+  //     }
+  //   }
+  // })
+  //
+  // function loadData() {
+  //   $.getJSON('./data.json')
+  //     .done(function(res) {
+  //       data = res
+  //       console.log(data)
+  //     }).fail(function(res) {
+  //       console.log(`Error: ${res}`)
+  //     })
+  // }
+  //
+  // loadData()
 
 })
