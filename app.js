@@ -1,7 +1,7 @@
 console.log('JS loaded 🍇')
 
 const express = require('express')
-const app = express();
+const app = express()
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
@@ -25,26 +25,26 @@ app.listen(8000, () => {
 //       console.log(`Error: ${err}`)
 //     })
 
-  // let data
+// let data
 
-  // $.ajax({
-  //   beforeSend: function(xhr) {
-  //     if (xhr.overrideMimeType) {
-  //       xhr.overrideMimeType('application/json')
-  //     }
-  //   }
-  // })
-  //
-  // function loadData() {
-  //   $.getJSON('./data.json')
-  //     .done(function(res) {
-  //       data = res
-  //       console.log(data)
-  //     }).fail(function(res) {
-  //       console.log(`Error: ${res}`)
-  //     })
-  // }
-  //
-  // loadData()
+// $.ajax({
+//   beforeSend: function(xhr) {
+//     if (xhr.overrideMimeType) {
+//       xhr.overrideMimeType('application/json')
+//     }
+//   }
+// })
+//
+// function loadData() {
+//   $.getJSON('./data.json')
+//     .done(function(res) {
+//       data = res
+//       console.log(data)
+//     }).fail(function(res) {
+//       console.log(`Error: ${res}`)
+//     })
+// }
+//
+// loadData()
 
-})
+// })

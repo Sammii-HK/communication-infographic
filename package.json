@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Sammii-HK/CommunicationInfographic#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.6.0"
   }
 }
