@@ -4,12 +4,18 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  // res.send('Hello World!')
+  res.sendFile('./index.html')
 })
+
+// app.get('/', function(request, response){
+//     response.sendFile('absolutePathToYour/htmlPage.html');
+// });
 
 app.listen(8000, () => {
   console.log('App listening on port 8000! 🍌')
 })
+
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   fetch('./data.json')
