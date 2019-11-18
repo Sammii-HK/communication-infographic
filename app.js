@@ -1,19 +1,29 @@
-// MAIN JS
-$(function() {
-  console.log('JS loaded 🍇')
+console.log('JS loaded 🍇')
 
-  fetch('./data.json')
-    .then(response => {
-      return response.json()
-    })
-    .then(data => {
-      // Work with JSON data here
-      console.log(data)
-    })
-    .catch(err => {
-      // Do something for an error here
-      console.log(`Error: ${err}`)
-    })
+const express = require('express')
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(8000, () => {
+  console.log('Example app listening on port 8000!')
+})
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   fetch('./data.json')
+//     .then(response => {
+//       return response.json()
+//     })
+//     .then(data => {
+//       // Work with JSON data here
+//       console.log(data)
+//     })
+//     .catch(err => {
+//       // Do something for an error here
+//       console.log(`Error: ${err}`)
+//     })
 
   // let data
 
