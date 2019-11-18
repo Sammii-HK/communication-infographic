@@ -1,5 +1,5 @@
+// NODE.JS SERVER SET UP
 const http = require('http')
-
 const hostname = '127.0.0.1'
 const port = 8000
 
@@ -14,10 +14,21 @@ server.listen(port, hostname, () => {
 })
 
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   console.log('JS loaded')
-//
-//
-//
-//
-// })
+// MAIN JS
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('JS loaded 🍇')
+
+  fetch('./data.json')
+    .then(response => {
+      return response.json()
+    })
+    .then(data => {
+      // Work with JSON data here
+      console.log(data)
+    })
+    .catch(err => {
+      // Do something for an error here
+      console.log(`Error: ${err}`)
+    })
+
+})
