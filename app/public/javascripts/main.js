@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded 🍓')
 
   let content
+  let itemContainer
 
   fetch('./data.json')
     .then(response => {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function makeTimeline() {
     content.map(item => {
-      timeline.push(item)
+      console.log('item:', item)
     })
   }
   makeTimeline()
