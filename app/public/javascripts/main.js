@@ -20,5 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
 
-  document.getElementById('timeline')
+  const timeline = document.getElementById('timeline')
+  console.log(timeline)
+  console.log(content)
+
+  function makeTimeline() {
+    content.map(item => {
+      timeline.push(item)
+    })
+  }
+  makeTimeline()
+
 })
