@@ -9,16 +9,19 @@ const usersRouter = require('./routes/users')
 
 const app = express()
 
+// START SERVER
 app.listen(8000, () => {
   console.log('App listening on port 8000! 🍌')
 })
 
+// INDEX ROUTE
 app.get('/', (req, res) => {
-  // res.send('Hello World!')
-  // res.sendFile('./index.html')
-  res.render('index')
+  res.render('index', {
+    title: 'Communication Infographic'
+  })
 })
 
+// ACCOUNT ROUTE
 app.get('/', (req, res) => {
   res.render('account')
 })
