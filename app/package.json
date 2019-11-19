@@ -1,6 +1,8 @@
 {
   "name": "app",
   "version": "0.0.0",
+  "descripton": "",
+  "main": "app.js",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -15,6 +17,8 @@
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-pug": "^4.0.1",
     "nodemon": "^1.19.4"
   }
 }
