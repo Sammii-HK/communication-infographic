@@ -1,7 +1,7 @@
 console.log('JS loaded 🍇')
-const timeline = document.getElementById('timeline')
 
 let content
+let timeline
 let itemContainer
 
 fetch('./data.json')
@@ -21,8 +21,9 @@ fetch('./data.json')
 
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
-  console.log(timeline)
-  console.log(content)
+
+  console.log('timeline', timeline)
+  console.log('content', content)
   content.map(item => {
     console.log('item:', item)
   })
@@ -31,8 +32,11 @@ function makeTimeline() {
 
 // DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', () => {
+  timeline = document.getElementById('timeline')
   console.log('DOMContentLoaded 🍓')
 
-  makeTimeline()
+  if (content) {
+    makeTimeline()
+  }
 
 })
