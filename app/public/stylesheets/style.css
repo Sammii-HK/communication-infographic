@@ -1,8 +1,18 @@
+:root {
+    --transform-y: 0;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height: auto;
 }
 
 a {
   color: #00B7FF;
+}
+
+.item {
+  transform-origin: var(--transform-y);
+  /* transform-origin: var(--transform-y) */
 }

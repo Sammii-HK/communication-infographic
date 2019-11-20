@@ -37,7 +37,8 @@ function makeTimeline() {
     // times the year value with const y value
     const yAxis = parseInt(year * y)
     // set this value to style, as number of px on y axis
-    square.style.top = `${yAxis}px`
+    square.style.setProperty('--transform-y', `0 ${yAxis}px`)
+    // square.style.transformOrigin = `0 ${yAxis}px`
 
 
     square.className = `item ${item.key}`
