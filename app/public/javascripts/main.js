@@ -37,7 +37,7 @@ function makeTimeline() {
     // times the year value with const y value
     const yAxis = parseInt(year * y)
     // set this value to style, as number of px on y axis
-    square.style.top = yAxis + 'px'
+    square.style.top = `${yAxis}px`
 
 
     square.className = `item ${item.key}`
@@ -47,16 +47,6 @@ function makeTimeline() {
   })
 }
 
-
-// // PLACE ITEMS BY YEAR
-// function placeItems() {
-//   content.map(item => {
-//     console.log(item.key, item.year)
-//
-//     console.log(yAxis)
-//
-//   })
-// }
 
 
 // DOM CONTENT LOADED
