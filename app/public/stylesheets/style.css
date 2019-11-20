@@ -15,8 +15,6 @@ a {
 .item {
   transform: translateY(var(--transform-y));
 }
-  /* transform-origin: var(--transform-y); */
-  /* transform-origin: var(--transform-y) */
 
 .typography {
   color: pink;
