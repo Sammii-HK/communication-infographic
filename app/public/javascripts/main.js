@@ -30,13 +30,9 @@ function loadData() {
 function makeTimeline() {
   console.log('content 🥝', content)
   content.map(item => {
-    console.log('item:', item.title)
-    console.log('key:', item.key)
-
     const square = document.createElement('div')
-    square.innerHTML = `${item.title}`
-
     square.className = `${item.key}`
+    square.innerHTML = `${item.title}`
 
     timeline.appendChild(square)
   })
