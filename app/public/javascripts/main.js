@@ -35,12 +35,9 @@ function loadData() {
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
   console.log('content 🥝', content)
-  console.log('content 🍊', content.printing_press)
   content.map(item => {
     console.log('item:', item.title)
     console.log('key:', item.key)
-    // console.log('Object.keys(item)', Object.keys(item))
-    // console.log('Object.keys(content)', Object.keys(content[item]))
 
     const square = document.createElement('div')
     // square.innerHTML = `${item.title}`
