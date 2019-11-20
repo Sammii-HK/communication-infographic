@@ -16,7 +16,7 @@ function loadData() {
     })
     .catch(err => {
       // Do something for an error here
-      console.log(`Error: ${err}`)
+      console.error(`${err}`)
     })
 }
 
@@ -24,10 +24,10 @@ function loadData() {
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
   console.log('content 🥝', content)
-  // content.map(item => {
-  //   console.log('item:', item)
-  // })
-  // console.log('content 🍊', content[0])
+  console.log('content 🍊', content.printing_press)
+  content.map(item => {
+    console.log('item:', item)
+  })
 }
 
 

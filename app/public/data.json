@@ -1,4 +1,5 @@
 {
+
   "printing_press": {
     "title": "Printing Press",
     "year": "1440",
@@ -65,5 +66,13 @@
     "category": "typography",
     "content": "In 1640, Louis XIII of France established a Royal Printing House, evoking greater interest in printing standards. For the first two years the printing press employed the use of the Garamond faces, but later used type designs by Jean Jannon of Sedan. No significant deviation from the old- face type appeared until 1692 when Louis XIV ordered the commission for a series of type by Grandjean, exclusive to the Royal Printing House. This series had distinct changes from the type before it with; vertical strokes, more pronounced contrast between the thick and thin stroke, although the printing process held these advancements back.",
     "image": ""
+
+  }, "printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
   }
+
 }
