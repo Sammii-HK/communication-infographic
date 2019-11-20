@@ -32,13 +32,9 @@ function makeTimeline() {
   console.log('content 🥝', content)
   content.map(item => {
     const square = document.createElement('div')
-    // find the items year value
     const year = item.year - 1425
-    // times the year value with const y value
     const yAxis = parseInt(year * y)
-    // set this value to style, as number of px on y axis
     square.style.setProperty('--transform-y', `${yAxis}px`)
-
 
     square.className = `item ${item.key} ${item.category}`
     square.innerHTML = `${item.title}`
