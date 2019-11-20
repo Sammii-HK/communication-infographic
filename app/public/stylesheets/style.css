@@ -13,7 +13,7 @@ a {
 }
 
 .item {
-  transform: translate-y(var(--transform-y));
+  transform: translateY(var(--transform-y));
 }
   /* transform-origin: var(--transform-y); */
   /* transform-origin: var(--transform-y) */
