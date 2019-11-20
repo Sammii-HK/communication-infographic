@@ -26,9 +26,9 @@ function loadData() {
 function makeTimeline() {
   console.log('timeline', timeline)
   console.log('content', content)
-  content.map(item => {
-    console.log('item:', item)
-  })
+  // content.map(item => {
+  //   console.log('item:', item)
+  // })
 }
 
 
