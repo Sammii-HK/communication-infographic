@@ -4,6 +4,22 @@ let content
 let timeline
 let itemContainer
 
+// REFERENCE CODE ================== From 
+// handleSubmit(e) {
+//     e.preventDefault()
+//
+//     axios.post('/api/login', this.state.data)
+//       .then(res => {
+//         Auth.setToken(res.data.token)
+//         Flash.setMessage('success', res.data.message)
+//         // set the favorites from user db profile into local storage
+//         Favorite.setFavorites(res.data.favorites)
+//         this.props.history.push('/profile')
+//       })
+//       .catch(err => this.setState({ errors: err.response.data.error }))
+//   }
+// =================================
+
 fetch('./data.json')
   .then(response => {
     return response.json()
