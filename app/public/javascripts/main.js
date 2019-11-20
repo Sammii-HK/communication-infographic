@@ -29,11 +29,12 @@ function makeTimeline() {
   console.log('content 🥝', content)
   console.log('content 🍊', content.printing_press)
   content.map(item => {
-    console.log('item:', item)
+    console.log('item:', item.title)
     const square = document.createElement('div')
-    square.className = Object.keys(content)
+    square.innerHTML = 'Title here'
+    square.className = 'ClassName'
+    // square.className = Object.keys(item)
     timeline.appendChild(square)
-    // timeline.innerHTML =
   })
 }
 
