@@ -4,7 +4,7 @@ let content
 let timeline
 let itemContainer
 let resData
-const y = 2
+const y = 10
 
 function loadData() {
   fetch('./data.json')
@@ -33,7 +33,7 @@ function makeTimeline() {
   content.map(item => {
     const square = document.createElement('div')
     // find the items year value
-    const year = item.year
+    const year = item.year - 1425
     // times the year value with const y value
     const yAxis = parseInt(year * y)
     // set this value to style, as number of px on y axis
