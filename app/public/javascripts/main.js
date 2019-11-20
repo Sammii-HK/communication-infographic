@@ -41,7 +41,7 @@ function makeTimeline() {
     // square.style.transformOrigin = `0 ${yAxis}px`
 
 
-    square.className = `item ${item.key}`
+    square.className = `item ${item.key} ${item.category}`
     square.innerHTML = `${item.title}`
 
     timeline.appendChild(square)
