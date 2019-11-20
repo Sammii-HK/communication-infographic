@@ -17,65 +17,53 @@
     "category": "invention",
     "content": "Due to the vast advancements made because of the printing press, it made communications such as newspapers possible. The emergence of newspapers began in England in the 17th century. At this time the right to print was strictly controlled which may explain why the first English language newspaper was printed in Amsterdam by Joris Veseler. Such an advancement is thoroughly taken for granted today.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
-    "image": ""
   }, "venetian_roman": {
     "title": "Venetian Roman",
-    "year": "1440",
+    "year": "1462",
     "category": "typography",
     "content": "German printers rapidly spread the new art all over Europe, the sack of Mainz in 1462 accelerated the process as it wiped out all commerce, causing many printers who were established there to scatter across Europe. Many printers relocated to Italy, which had seen the birth of the Renaissance within the prior century. Renaissance humanists rejected the gothic hand which many classical works were copied in and much preferred the script in which many works were written; a clear, regular hand which was perfected centuries earlier within the reign of Charlemagne. This style of writing is easily recognisable as the beginning of what we know as upper and lower case.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "bembo": {
+    "title": "Bembo",
+    "year": "1495",
+    "category": "typography",
+    "content": "Bembo is classified as a Venetian Humanist Serif; it dates back to 1495 and was designed and cut by Franceso Griffo for his employer, the renowned Aldus Manutius. The type face was first used by the scholar Pietro Bembo, who at the time was young and respected he later became Cardinal Bembo, in a small book about his visit to Mount Etna. The fonts restoration and digitalisation was carried out by Monotype and over seen by Stanley Morrison. It is widely used today, particularly within books for its consistency in; colour, texture, legibility and use of space within large bodies of text.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "old_face_roman": {
+    "title": "Old Face Roman",
+    "year": "1495",
+    "category": "typography",
+    "content": "In 1495 Aldus Manutius, who was a scholar fascinated by the editing of Greek texts established a printing press in Venice. That year an issue of a tract by Pietro Bembo, a Renaissance humanist, was printed in a variation of the roman letter; this is what Stanley Morison believes as ‘the origin of all old-faces’. In the early years the type was marred by l arge capitals and poor cutting, but with time comes improvement making the type more beautiful; the capitals smaller, upper and lower case are lighter and improved cutting allows for crisper letters. Aldus has been named as the greatest of all the Venetian printer-publishers, one of the first and most famous type-cutters who used Aldus’s letter as a model was Claude Garamond.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "aldine_italic": {
+    "title": "Aldine Italic",
+    "year": "1500",
+    "category": "typography",
+    "content": "Previously in history we had learnt that some type had been derived from beautiful scripts, which were then used by the printers as a model for their type, this is another. When formal hands were written quickly, all of the text reacted to this speed; ‘o’s because elliptical, there were tendencies for ligaturing, letter shapes were simplified and for many the tendency was for these hands to incline to the right, with these characteristics we have the start of what we refer to as italic type. Aldus was not only a printer and publisher but was also a businessman; wishing to print editions of classics in small editions he searched for space saving possibilities. Aldine Italics were based on the Chancery hand and within 1500; the first of all italic typefaces was cut.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "royal_main": {
+    "title": "Royal Mail",
+    "year": "1516",
+    "category": "invention",
+    "content": "Before digital communication and the near thoughtless process of sending someone an email or a text message, the only form of message for centuries was a letter. In the early days of sending letters you would need to use a homing pigeon, which the small paper message was rolled up and tied to the animals leg. In 1516 the Royal Mail first emerged and was founded by King Henry V1II. At this time, the King’s Posts were crucially dependent on horses for swift delivery timings. Charles I did not open the first public postal service until 1635, this process consisted of letters being carried between posts by mounted post-boys and were then delivered to the local postmaster. Despite being a slow process it remained largely unchanged for 150 years. By 1660 a postal service known as the Royal Mail was established, built on the distribution system for royal and government documents, due to the network of Post Offices the public could easily send and receive letters. It was not until 1852 that the first pillar-box was introduced and meant that people did not have to travel as far to send letters, but were not painted bright red until 1874. This form of communication was essential for many centuries, with a rich history and has become a synonymous British icon.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "garamond": {
+    "title": "Garamond",
+    "year": "1532",
+    "category": "typography",
+    "content": "The font is named after Claude Garamond, who first created the designs in 1532. It was later discovered, in 1926 by Beatrice Warde, that many designs thought to have been designed by Garamond were designs by Jean Jannon who had worked closely with Garamond. Jannons’ designs were created up to 80 years after Garamond, so many variations were created on what was believed to be Garamond but was Jannon, so many designs are confused with the other. This confusion continues today; as most of the major type foundries have created revivals of the font there are many different variations which exist, all with greatly different x-height, cap height and thickness. Due to the consistent and relatively large x-height, within Garamonds’ many designs, it is often used for type setting. The font was also the first of the classic typefaces which were revived by Monotype in the 1920s.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "old-face_italic": {
+    "title": "Old-Face Italic",
+    "year": "1524",
+    "category": "typography",
+    "content": "The sixteenth century is known as ‘the age of italics’ due to their great popularity at the time, many books being printed wholly in italic type. Up until 1524 the inclined lower case letters were paired with roman capitals; some attempt was made to redesign the capitals, which later led to swash capitals, and sloped capitals became the norm. For a considerable period italics were regarded as type in its own right, however in time was not used to publish complete books but ‘for preliminary matter, citation, and emphasis’, however at the end of the sixteenth century books of verse, which were set completely in italics, were still common. Although many still viewed roman and italic type as entirely separate, the Egenolff-Berner foundry of Frankfurt displayed an example of roman type followed by an example of italic type on the same specimen sheet.",
     "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
-    "image": ""
-  }, "printing_press": {
-    "title": "Printing Press",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "traditional_roman": {
+    "title": "Traditional Roman",
+    "year": "1692",
+    "category": "typography",
+    "content": "In 1640, Louis XIII of France established a Royal Printing House, evoking greater interest in printing standards. For the first two years the printing press employed the use of the Garamond faces, but later used type designs by Jean Jannon of Sedan. No significant deviation from the old- face type appeared until 1692 when Louis XIV ordered the commission for a series of type by Grandjean, exclusive to the Royal Printing House. This series had distinct changes from the type before it with; vertical strokes, more pronounced contrast between the thick and thin stroke, although the printing process held these advancements back.",
     "image": ""
   }
 }
