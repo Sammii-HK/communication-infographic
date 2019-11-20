@@ -11,7 +11,8 @@ function loadData() {
     })
     .then(data => {
       // Work with JSON data here
-      content = data
+      // content = data
+      content = Object.keys(data).map(i => data[i])
       makeTimeline()
     })
     .catch(err => {
