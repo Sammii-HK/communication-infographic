@@ -29,7 +29,6 @@ function loadData() {
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
   console.log('content 🥝', content)
-  const randomNumber = scatter()
   content.map(item => {
     const square = document.createElement('div')
     const year = item.year - 1425
@@ -44,15 +43,18 @@ function makeTimeline() {
     x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
     console.log('x', item.key, x)
 
-    console.log('**--**', randomNumber)
+    const randomNumber = scatter()
+    console.log('randomNumber', randomNumber)
   })
 }
 
-function scatter() {
-  const posOrNeg = Math.round(Math.random) * 2 - 1
-  randomValue = Math.round(Math.random()) * width
+const scatter = function() {
+  const posOrNeg = Math.random() < 0.5 ? -1 : 1
+  console.log('posOrNeg', posOrNeg)
+  randomValue = Math.round(Math.random() * width - 1)
+  console.log('randomValue', randomValue)
   randomValue = randomValue * posOrNeg
-  console.log(randomValue)
+  console.log('randomValue', randomValue)
   return randomValue
 }
 
@@ -61,5 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
   timeline = document.getElementById('timeline')
   itemContainer = document.getElementById('item')
   loadData()
+  console.log('scatter()', scatter())
 
 })
