@@ -12,6 +12,14 @@ a {
   color: #00B7FF;
 }
 
+#timeline {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* display: grid; */
+}
+
 .item {
   transform: translateY(var(--transform-y));
 }
