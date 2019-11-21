@@ -1,9 +1,12 @@
 console.log('JS loaded 🍇')
 
+const y = 10
+const width = 100
+let x
+let randomValue
 let content
 let timeline
 let itemContainer
-const y = 10
 
 function loadData() {
   fetch('./data.json')
@@ -36,9 +39,21 @@ function makeTimeline() {
     square.innerHTML = `${item.title}`
 
     timeline.appendChild(square)
+
+    x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
+    console.log('x', x)
   })
 }
 
+function scatter() {
+  const posOrNeg = Math.raound(Math.random) * 2 - 1
+  randomValue = Math.round(Math.random()) * width
+  randomValue = randomValue * posOrNeg
+  return randomValue
+}
+
+function applyScatter() {
+}
 
 
 // DOM CONTENT LOADED
