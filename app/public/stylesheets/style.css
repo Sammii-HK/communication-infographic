@@ -1,5 +1,6 @@
 :root {
     --transform-y: 0;
+    --transform-x: 0;
 }
 
 * {
@@ -45,10 +46,13 @@ a {
 }
 
 .item {
-  transform: translateY(var(--transform-y));
-  width: 150px;
   display: flex;
   justify-content: center;
+  transform: translate(var(--transform-x), var(--transform-y));
+  /* transform: translateY(var(--transform-y)); */
+  /* transform: translate(var(--transform-y), var(--transform-x)); */
+  /* transform: translateX(var(--transform-x)); */
+  width: 150px;
 }
 
 .typography {

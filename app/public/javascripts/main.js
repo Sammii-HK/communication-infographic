@@ -45,6 +45,7 @@ function makeTimeline() {
 
     const randomNumber = scatter()
     console.log('randomNumber', randomNumber)
+    square.style.setProperty('--transform-x', `${randomNumber}px`)
   })
 }
 
@@ -64,5 +65,4 @@ document.addEventListener('DOMContentLoaded', () => {
   itemContainer = document.getElementById('item')
   loadData()
   console.log('scatter()', scatter())
-
 })
