@@ -1,8 +1,9 @@
 console.log('JS loaded 🍇')
 
+const offset = 500
 const y = 10
-const width = 100
 let x
+let width
 let randomValue
 let content
 let timeline
@@ -45,19 +46,24 @@ function makeTimeline() {
 
     const randomNumber = scatter()
     console.log('randomNumber', randomNumber)
+    width = timeline.offsetWidth
+    // randomNumber = ()
+    // if offset.min + randomNumber || offset.max + randomNumber
+    const offsetAxisValue = width + randomNumber
+    console.log('offsetAxisValue', offsetAxisValue)
+    // if (offsetAxisValue <= 0 || offsetAxisValue >= width)
     square.style.setProperty('--transform-x', `${randomNumber}px`)
   })
 }
 
 const scatter = function() {
   const posOrNeg = Math.random() < 0.5 ? -1 : 1
-  console.log('posOrNeg', posOrNeg)
-  randomValue = Math.round(Math.random() * width - 1)
-  console.log('randomValue', randomValue)
+  randomValue = Math.round(Math.random() * offset - 1)
   randomValue = randomValue * posOrNeg
-  console.log('randomValue', randomValue)
   return randomValue
 }
+
+// const offsetAxisValue = {}
 
 // DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', () => {
