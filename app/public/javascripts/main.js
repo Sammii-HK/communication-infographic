@@ -1,3 +1,6 @@
+/*eslint space-before-function-paren: ["error", "never"]*/
+/*eslint-env es6*/
+
 console.log('JS loaded 🍇')
 
 let content
