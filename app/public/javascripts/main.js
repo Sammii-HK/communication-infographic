@@ -41,18 +41,21 @@ function makeTimeline() {
 
     timeline.appendChild(square)
 
-    x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
-    console.log('x', item.key, x)
+    // x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
+    // console.log('x', item.key, x)
 
-    const randomNumber = scatter()
-    console.log('randomNumber', randomNumber)
-    width = timeline.offsetWidth
+    // const randomNumber = scatter()
+    // console.log('randomNumber', randomNumber)
+    // width = timeline.offsetWidth
     // randomNumber = ()
     // if offset.min + randomNumber || offset.max + randomNumber
-    const offsetAxisValue = width + randomNumber
-    console.log('offsetAxisValue', offsetAxisValue)
-    // if (offsetAxisValue <= 0 || offsetAxisValue >= width)
-    square.style.setProperty('--transform-x', `${randomNumber}px`)
+    // const offsetAxisValue = width + randomNumber
+    // console.log('offsetAxisValue', offsetAxisValue)
+    const offsetAxis = offsetAxisValue()
+    if (offsetAxis <= 0 || offsetAxis >= width) offsetAxisValue()
+    else if (offsetAxis >= 0 || offsetAxis <= width) square.style.setProperty('--transform-x', `${offsetAxis}px`)
+
+    // square.style.setProperty('--transform-x', `${randomNumber}px`)
   })
 }
 
@@ -63,7 +66,16 @@ const scatter = function() {
   return randomValue
 }
 
-// const offsetAxisValue = {}
+const offsetAxisValue = function() {
+  console.log('=====')
+  const randomNumber = scatter()
+  console.log('randomNumber', randomNumber)
+  width = timeline.offsetWidth
+  console.log('width', width)
+  const offsetAxisValue = width + randomNumber
+  console.log('offsetAxisValue', offsetAxisValue)
+  return offsetAxisValue
+}
 
 // DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', () => {
