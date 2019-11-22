@@ -51,6 +51,7 @@ function makeTimeline() {
     // if offset.min + randomNumber || offset.max + randomNumber
     // const offsetAxisValue = width + randomNumber
     // console.log('offsetAxisValue', offsetAxisValue)
+
     const offsetAxis = offsetAxisValue()
     if (offsetAxis <= 0 || offsetAxis >= width) offsetAxisValue()
     else if (offsetAxis >= 0 || offsetAxis <= width) square.style.setProperty('--transform-x', `${offsetAxis}px`)
