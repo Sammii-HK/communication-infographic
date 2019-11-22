@@ -44,45 +44,28 @@ function makeTimeline() {
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
 
-    // GET POSITION OF ITEM ON THE X AXIS
-    x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
     // console.log('x', item.key, x)
 
     // get percentage of width with randomValue
 
 
 
+    // GET POSITION OF ITEM ON THE X AXIS
+    x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
     // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
     let offsetAxis = offsetAxisValue()
     // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
     let xAxisValue = x + offsetAxis
     // IF FINAL X AXIS VALUE LESS OR MORE THAN THE BOUNDS OF THE TIMELINE
     if (offsetAxis <= 0 || offsetAxis >= width) {
+    // MAKE NEW RANDOM NUMBER
+    // CREATE NEW AXIS NUMBER BY X VALUE + RANDOM OFFSET VALUE
+    // CHECK IT AGAIN....
 
-      // offsetAxisValue()
-      while (offsetAxis <= 0 || offsetAxis >= width) {
-        offsetAxis = offsetAxisValue()
-        console.log(offsetAxis)
-        return offsetAxis
-      }
-      square.style.setProperty('--transform-x', `${offsetAxis}px`)
-    } else if (offsetAxis >= 0 || offsetAxis <= width) square.style.setProperty('--transform-x', `${offsetAxis}px`)
+  }
 
-
-    // square.style.setProperty('--transform-x', `${randomNumber}px`)
-
-
-
-
-    // const randomNumber = scatter()
-    // console.log('randomNumber', randomNumber)
-    // width = timeline.offsetWidth
-    // randomNumber = ()
-    // if offset.min + randomNumber || offset.max + randomNumber
-    // const offsetAxisValue = width + randomNumber
-    // console.log('offsetAxisValue', offsetAxisValue)
-  })
 }
+
 
 const scatter = function() {
   // MAKE POSITIVE OR NEGATIVE NUMBER
