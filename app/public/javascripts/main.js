@@ -8,6 +8,8 @@ let randomValue
 let content
 let timeline
 let itemContainer
+let randomNumber
+let xAxisValue
 
 function loadData() {
   fetch('./data.json')
@@ -49,7 +51,6 @@ function makeTimeline() {
     // get percentage of width with randomValue
 
 
-
     // GET POSITION OF ITEM ON THE X AXIS
     x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
     // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
@@ -57,13 +58,14 @@ function makeTimeline() {
     // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
     let xAxisValue = x + offsetAxis
     // IF FINAL X AXIS VALUE LESS OR MORE THAN THE BOUNDS OF THE TIMELINE
-    if (offsetAxis <= 0 || offsetAxis >= width) {
-    // MAKE NEW RANDOM NUMBER
-    // CREATE NEW AXIS NUMBER BY X VALUE + RANDOM OFFSET VALUE
-    // CHECK IT AGAIN....
-
-  }
-
+    while (xAxisValue <= 0 || xAxisValue >= width) {
+      // MAKE NEW RANDOM NUMBER TO OFFSET AXIS BY
+      offsetAxis = offsetAxisValue()
+      // CREATE NEW AXIS NUMBER BY X VALUE + RANDOM OFFSET VALUE
+      xAxisValue = x + randomNumber
+      // CHECK IT AGAIN....
+    }
+  })
 }
 
 
