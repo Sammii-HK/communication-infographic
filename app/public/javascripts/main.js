@@ -1,6 +1,5 @@
 console.log('JS loaded 🍇')
 
-const fetch = require('node-fetch')
 const offset = 500
 const y = 10
 let x
