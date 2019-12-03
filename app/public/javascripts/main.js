@@ -1,5 +1,6 @@
 console.log('JS loaded 🍇')
 
+const fetch = require('node-fetch')
 const offset = 500
 const y = 10
 let x
@@ -7,9 +8,8 @@ let width
 let randomValue
 let content
 let timeline
-// let itemContainer
 
-function loadData() {
+function loadData () {
   fetch('./data.json')
     .then(response => {
       return response.json()
@@ -26,7 +26,6 @@ function loadData() {
     })
 }
 
-
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
   console.log('content 🥝', content)
@@ -34,9 +33,6 @@ function makeTimeline() {
   width = timeline.offsetWidth - 25
   console.log('width', width)
   const square = document.createElement('div')
-
-  // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
-  const randomValue = scatter()
 
   content.map(item => {
     // PUSH ALL ELEMENTS UP FOR AESTHETICS
@@ -55,10 +51,8 @@ function makeTimeline() {
     // GET POSITION OF ITEM ON THE X AXIS
     x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
 
-
-    // // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
-    // const randomValue = scatter()
-
+    // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
+    const randomValue = scatter()
 
     // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
     let xAxis = x + randomValue
@@ -87,21 +81,6 @@ const scatter = function() {
   return randomValue
 }
 
-// const offsetAxisValue = function() {
-//   // console.log('=====')
-//   // GET RANDOM POSITIVE OR NEGATIVE VALUE
-//   const randomNumber = scatter()
-//   console.log('randomNumber', randomNumber)
-//   // GET WIDTH OF THE TIMELINE ELEMENT
-//   width = timeline.offsetWidth
-//   console.log('width', width)
-//   // GET PERCENTAGE OF WIDTH USING RANDOM VALUE
-//   const offsetAxisValue = (width / randomNumber) * 100
-//   // const offsetAxisValue = width + randomNumber
-//   console.log('offsetAxisValue', offsetAxisValue)
-//   return offsetAxisValue
-// }
-
 // DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', () => {
   timeline = document.getElementById('timeline')
@@ -109,21 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
   loadData()
   console.log('scatter()', scatter())
 })
-
-
-
-
-
-// // GET POSITION OF ITEM ON THE X AXIS
-// x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
-// // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
-// let offsetAxis = offsetAxisValue()
-// // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
-// let xAxisValue = x + offsetAxis
-// // IF FINAL X AXIS VALUE LESS OR MORE THAN THE BOUNDS OF THE TIMELINE
-// while (xAxisValue <= 0 || xAxisValue >= width) {
-//   // MAKE NEW RANDOM NUMBER TO OFFSET AXIS BY
-//   offsetAxis = offsetAxisValue()
-//   // CREATE NEW AXIS NUMBER BY X VALUE + RANDOM OFFSET VALUE
-//   xAxisValue = x + randomNumber
-//   // CHECK IT AGAIN....
