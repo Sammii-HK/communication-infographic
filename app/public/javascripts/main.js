@@ -1,6 +1,7 @@
 console.log('JS loaded 🍇')
 
-const offset = 500
+const offset = 0
+// const offset = 500
 const y = 10
 let x
 let width
@@ -29,20 +30,21 @@ function loadData () {
 function makeTimeline() {
   console.log('content 🥝', content)
   // GET WIDTH OF TIMELINE
-  width = timeline.offsetWidth - 25
+  width = timeline.offsetWidth - 150
   console.log('width', width)
-  const square = document.createElement('div')
 
   content.map(item => {
+    // SAVE CREATE DIV AS VAR
+    const square = document.createElement('div')
+    // SET BASE CLASSES FOR ITEMS
+    square.className = `item ${item.key} ${item.category}`
+    square.innerHTML = `${item.title} ${item.year}`
     // PUSH ALL ELEMENTS UP FOR AESTHETICS
     const year = parseInt(item.year) - 1425
     // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
     const yAxis = parseInt(year * y)
     // SET TRANSFORM
     square.style.setProperty('--transform-y', `${yAxis}px`)
-    // SET BASE CLASSES FOR ITEMS
-    square.className = `item ${item.key} ${item.category}`
-    square.innerHTML = `${item.title} ${item.year}`
 
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
@@ -56,14 +58,12 @@ function makeTimeline() {
     // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
     let xAxis = x + randomValue
     // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
-    while (xAxis <= 25) {
+    if (xAxis <= 150) {
       // MAKE NEW RANDOM NUMBER TO POSITIVE
       xAxis = Math.abs(xAxis)
-    }
-    // IF FINAL X AXIS VALUE IS MORE THAN THE BOUNDS OF THE TIMELINE
-    while (xAxis >= width) {
+    } else if (xAxis >= width) { // IF FINAL X AXIS VALUE IS MORE THAN THE BOUNDS OF THE TIMELINE
       // MAKE NEW RANDOM NUMBER TO POSITIVE
-      xAxis = -xAxis
+      xAxis -= x
     }
     console.log('xAxis', xAxis)
     square.style.setProperty('--transform-x', `${xAxis}px`)
@@ -85,5 +85,5 @@ document.addEventListener('DOMContentLoaded', () => {
   timeline = document.getElementById('timeline')
   // itemContainer = document.getElementById('item')
   loadData()
-  console.log('scatter()', scatter())
+  // console.log('scatter()', scatter())
 })
