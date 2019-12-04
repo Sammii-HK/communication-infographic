@@ -3,6 +3,7 @@ console.log('JS loaded 🍇')
 const offset = 200
 const y = 10
 let x
+let xAxisValues = []
 let width
 let randomValue
 let content
@@ -37,7 +38,7 @@ function makeTimeline() {
     const square = document.createElement('div')
     // SET BASE CLASSES FOR ITEMS
     square.className = `item ${item.key} ${item.category}`
-    square.innerHTML = `${item.title} ${item.year}`
+    square.innerHTML = `${item.title} <br> ${item.year}`
     // PUSH ALL ELEMENTS UP FOR AESTHETICS
     const year = parseInt(item.year) - 1425
     // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
@@ -62,10 +63,20 @@ function makeTimeline() {
       // MAKE NEW RANDOM NUMBER TO NEGATIVE
       xAxis -= x
     }
+    xAxisValues.push({ [yAxis]: xAxis })
     console.log('xAxis', xAxis)
     console.log('========')
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
+  overlayCheck()
+}
+
+const overlayCheck = function() {
+  // timeline.map(item => {
+  //   console.log('item', item)
+  // })
+  console.log('timeline', timeline)
+  console.log('xAxisValues', xAxisValues)
 }
 
 const scatter = function() {

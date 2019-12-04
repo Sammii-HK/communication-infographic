@@ -46,13 +46,15 @@ a {
 }
 
 .item {
-  display: flex;
+  display: inline-block;
   justify-content: center;
   transform: translate(var(--transform-x), var(--transform-y));
   /* transform: translateY(var(--transform-y)); */
   /* transform: translate(var(--transform-y), var(--transform-x)); */
   /* transform: translateX(var(--transform-x)); */
   width: 150px;
+  border: 0.5px solid gray;
+  border-radius: 15px;
 }
 
 .typography {
