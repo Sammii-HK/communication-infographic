@@ -71,10 +71,17 @@ function makeTimeline() {
 const overlayCheck = function() {
   Object.keys(xAxisValues).forEach(e => console.log(`key=${e}  value=${xAxisValues[e]}`))
   // xAxisValues[1].sort()
-  xAxisValues.map(item => {
+  xAxisValues.map((item, i) => {
     console.log('item', item)
-    console.log('item[0]', item[0])
-    console.log('item[1]', item[1])
+    console.log('i', i)
+    const yValue = item[0]
+    const xValue = item[1]
+    // IF THE CURRENT ITEM Y AXIS IS WITHIN 50 YEARS OF THE LAST ITEMS Y AXIS VALUE
+    while (item[i][0] <= item[(i - 1)][0 - 50]) {
+      item[0] = scatter()
+    }
+    // console.log('item[0]', item[0])
+    // console.log('item[1]', item[1])
   })
   console.log('xAxisValues', xAxisValues)
 }
