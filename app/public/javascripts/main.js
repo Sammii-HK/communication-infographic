@@ -29,7 +29,7 @@ function loadData () {
 function makeTimeline() {
   console.log('content 🥝', content)
   // GET WIDTH OF TIMELINE
-  width = timeline.offsetWidth - 50
+  width = timeline.offsetWidth
   console.log('width', width)
 
   content.map(item => {
@@ -45,28 +45,21 @@ function makeTimeline() {
     console.log('yAxis', yAxis)
     // SET TRANSFORM
     square.style.setProperty('--transform-y', `${yAxis}px`)
-
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
-
     // GET POSITION OF ITEM ON THE X AXIS
     x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
-
     // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
     const randomValue = scatter()
-    console.log('randomValue', randomValue)
-    // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
     // MAKE PERCENTAGE OF AXIS VALUE WITH RANDOMNUMBER FUNCTION
     const percentage = (x / randomValue)
-    console.log('percentage', percentage)
     let xAxis = x / percentage
-    // let xAxis = x + randomValue
     // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
-    if (xAxis <= 50) {
+    if (xAxis <= 0) {
       // MAKE NEW RANDOM NUMBER TO POSITIVE
       xAxis = Math.abs(xAxis)
     } else if (xAxis >= width) { // IF FINAL X AXIS VALUE IS MORE THAN THE BOUNDS OF THE TIMELINE
-      // MAKE NEW RANDOM NUMBER TO POSITIVE
+      // MAKE NEW RANDOM NUMBER TO NEGATIVE
       xAxis -= x
     }
     console.log('xAxis', xAxis)
@@ -90,5 +83,4 @@ document.addEventListener('DOMContentLoaded', () => {
   timeline = document.getElementById('timeline')
   // itemContainer = document.getElementById('item')
   loadData()
-  // console.log('scatter()', scatter())
 })
