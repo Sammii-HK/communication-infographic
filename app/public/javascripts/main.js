@@ -1,7 +1,6 @@
 console.log('JS loaded 🍇')
 
-const offset = 0
-// const offset = 500
+const offset = 500
 const y = 10
 let x
 let width
@@ -43,6 +42,7 @@ function makeTimeline() {
     const year = parseInt(item.year) - 1425
     // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
     const yAxis = parseInt(year * y)
+    console.log('yAxis', yAxis)
     // SET TRANSFORM
     square.style.setProperty('--transform-y', `${yAxis}px`)
 
@@ -54,7 +54,7 @@ function makeTimeline() {
 
     // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
     const randomValue = scatter()
-
+    console.log('randomValue', randomValue)
     // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
     let xAxis = x + randomValue
     // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
@@ -66,6 +66,7 @@ function makeTimeline() {
       xAxis -= x
     }
     console.log('xAxis', xAxis)
+    console.log('========')
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
 }
