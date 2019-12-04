@@ -1,6 +1,6 @@
 console.log('JS loaded 🍇')
 
-const offset = 500
+const offset = 200
 const y = 10
 let x
 let width
@@ -29,7 +29,7 @@ function loadData () {
 function makeTimeline() {
   console.log('content 🥝', content)
   // GET WIDTH OF TIMELINE
-  width = timeline.offsetWidth - 150
+  width = timeline.offsetWidth - 50
   console.log('width', width)
 
   content.map(item => {
@@ -56,9 +56,13 @@ function makeTimeline() {
     const randomValue = scatter()
     console.log('randomValue', randomValue)
     // GET THE FINAL X AXIS VALUE = THE INITIAL VALUE + RANDOM OFFSET VALUE
-    let xAxis = x + randomValue
+    // MAKE PERCENTAGE OF AXIS VALUE WITH RANDOMNUMBER FUNCTION
+    const percentage = (x / randomValue)
+    console.log('percentage', percentage)
+    let xAxis = x / percentage
+    // let xAxis = x + randomValue
     // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
-    if (xAxis <= 150) {
+    if (xAxis <= 50) {
       // MAKE NEW RANDOM NUMBER TO POSITIVE
       xAxis = Math.abs(xAxis)
     } else if (xAxis >= width) { // IF FINAL X AXIS VALUE IS MORE THAN THE BOUNDS OF THE TIMELINE
