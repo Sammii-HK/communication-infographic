@@ -43,7 +43,6 @@ function makeTimeline() {
     const year = parseInt(item.year) - 1425
     // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
     const yAxis = parseInt(year * y)
-    console.log('yAxis', yAxis)
     // SET TRANSFORM
     square.style.setProperty('--transform-y', `${yAxis}px`)
     // PUSH ELEMENTS TO DOM TIMELINE
@@ -63,19 +62,20 @@ function makeTimeline() {
       // MAKE NEW RANDOM NUMBER TO NEGATIVE
       xAxis -= x
     }
-    xAxisValues.push({ [yAxis]: xAxis })
-    console.log('xAxis', xAxis)
-    console.log('========')
+    xAxisValues.push([ yAxis, xAxis ])
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
   overlayCheck()
 }
 
 const overlayCheck = function() {
-  // timeline.map(item => {
-  //   console.log('item', item)
-  // })
-  console.log('timeline', timeline)
+  Object.keys(xAxisValues).forEach(e => console.log(`key=${e}  value=${xAxisValues[e]}`))
+  // xAxisValues[1].sort()
+  xAxisValues.map(item => {
+    console.log('item', item)
+    console.log('item[0]', item[0])
+    console.log('item[1]', item[1])
+  })
   console.log('xAxisValues', xAxisValues)
 }
 
