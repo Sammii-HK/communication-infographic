@@ -77,7 +77,8 @@ const overlayCheck = function() {
     const yValue = item[0]
     const xValue = item[1]
     // IF THE CURRENT ITEM Y AXIS IS WITHIN 50 YEARS OF THE LAST ITEMS Y AXIS VALUE
-    while (item[i][0] <= item[(i - 1)][0 - 50]) {
+    while (item[i][0] <= (item[i--][0] - 50)) {
+    // while (item[i][0] <= item[(i - 1)][0 - 50]) {
       item[0] = scatter()
     }
     // console.log('item[0]', item[0])
