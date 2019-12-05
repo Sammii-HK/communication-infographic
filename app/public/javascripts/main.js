@@ -84,21 +84,23 @@ const overlayCheck = function() {
     console.log('==========')
     console.log('item', item)
     if (i === 0) return
+    // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (item.yAxis <= (lastItem.yAxis - 10)) {
-      console.log('item', item.yAxis, item.xAxis)
-      console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
+      // IF CURRENT XAXIS IS WITHIN 10% (OF TIMELINE DIV WIDTH) OF LAST ITEM
+      // console.log('item', item.yAxis, item.xAxis)
+      // console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
       if (item.xAxis <= (lastItem.xAxis - tenPerc)) {
-        console.log('item', item.xAxis)
-        console.log('xAxis', xAxis)
+        console.log('item 1', item.xAxis)
+        console.log('xAxis 1', xAxis)
+        // ADD 10% TO BOTH ARRAY AND CURRENT XAXIS VAR VALUE
         item.xAxis += tenPerc
         xAxis += tenPerc
-        console.log('item', item.xAxis)
-        console.log('==xAxis', xAxis)
+        console.log('item 2', item.xAxis)
+        console.log('xAxis 2', xAxis)
       }
     }
     console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
   })
-  console.log('axisValues', axisValues)
 }
 
 const scatter = function() {
