@@ -68,6 +68,7 @@ function makeTimeline() {
     axisValues.push({ xAxis: xAxis, yAxis: yAxis })
     // xValues.push(xAxis)
     // yValues.push(yAxis)
+    console.log('*xAxis*', xAxis)
     overlayCheck()
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
@@ -78,19 +79,19 @@ const lastValue = axisValues[axisValues.length-1]
 const overlayCheck = function() {
   axisValues.map((item, i) => {
     const lastItem = axisValues[ i - 1 ]
-    console.log('item', i, item)
-    console.log('lastItem', lastItem)
     console.log('==========')
-    console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
-    console.log('item.yAxis', item.yAxis)
-    console.log('xAxis', xAxis)
+    console.log('item', item)
     if (i === 0) return
     if (item.yAxis <= (lastItem.yAxis - 10)) {
-      console.log('lastItem.yAxis', lastItem.yAxis)
-      console.log('lastItem.xAxis', lastItem.xAxis)
-      if (item.xAxis <= (lastItem.xAxis - 50)) {
-        item.xAxis += 50
-        xAxis += 50
+      console.log('item', item.yAxis, item.xAxis)
+      console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
+      if (item.xAxis <= (lastItem.xAxis - 10)) {
+        console.log('item', item.xAxis)
+        console.log('xAxis', xAxis)
+        item.xAxis += 10
+        xAxis += 10
+        console.log('item', item.xAxis)
+        console.log('==xAxis', xAxis)
       }
     }
     console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
