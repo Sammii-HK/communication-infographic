@@ -4,8 +4,7 @@ const offset = 200
 const y = 10
 const xAxisValues = []
 const axisValues = []
-const xValues = []
-const yValues = []
+let xAxis
 let x
 let width
 let randomValue
@@ -56,7 +55,7 @@ function makeTimeline() {
     const randomValue = scatter()
     // MAKE PERCENTAGE OF AXIS VALUE WITH RANDOMNUMBER FUNCTION
     const percentage = (x / randomValue)
-    let xAxis = x / percentage
+    xAxis = x / percentage
     // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
     if (xAxis <= 0) {
       // MAKE NEW RANDOM NUMBER TO POSITIVE
@@ -82,8 +81,20 @@ const overlayCheck = function() {
     console.log('item', i, item)
     console.log('lastItem', lastItem)
     console.log('==========')
+    console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
+    console.log('item.yAxis', item.yAxis)
+    console.log('xAxis', xAxis)
+    if (i === 0) return
+    if (item.yAxis <= (lastItem.yAxis - 10)) {
+      console.log('lastItem.yAxis', lastItem.yAxis)
+      console.log('lastItem.xAxis', lastItem.xAxis)
+      if (item.xAxis <= (lastItem.xAxis - 50)) {
+        item.xAxis += 50
+        xAxis += 50
+      }
+    }
+    console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
   })
-  console.log('xAxisValues', xAxisValues)
   console.log('axisValues', axisValues)
 }
 
