@@ -2,8 +2,10 @@ console.log('JS loaded 🍇')
 
 const offset = 200
 const y = 10
+const xAxisValues = []
+const xValues = []
+const yValues = []
 let x
-let xAxisValues = []
 let width
 let randomValue
 let content
@@ -63,28 +65,36 @@ function makeTimeline() {
       xAxis -= x
     }
     xAxisValues.push([ yAxis, xAxis ])
+    xValues.push(xAxis)
+    yValues.push(yAxis)
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
   overlayCheck()
 }
 
 const overlayCheck = function() {
-  Object.keys(xAxisValues).forEach(e => console.log(`key=${e}  value=${xAxisValues[e]}`))
+  // Object.keys(xAxisValues).forEach(e => console.log(`key=${e}  value=${xAxisValues[e]}`))
   // xAxisValues[1].sort()
+  // xAxisValues = xAxisValues.sort(function( a,b ) { return a[0] < b[0] })
+
   xAxisValues.map((item, i) => {
-    console.log('item', item)
-    console.log('i', i)
-    const yValue = item[0]
-    const xValue = item[1]
-    // IF THE CURRENT ITEM Y AXIS IS WITHIN 50 YEARS OF THE LAST ITEMS Y AXIS VALUE
-    while (item[i][0] <= (item[i--][0] - 50)) {
-    // while (item[i][0] <= item[(i - 1)][0 - 50]) {
-      item[0] = scatter()
-    }
+  //   console.log('item', item)
+  //   const yValue = item[0]
+  //   const xValue = item[1]
+  // IF THE CURRENT ITEM Y AXIS IS WITHIN 50 YEARS OF THE LAST ITEMS Y AXIS VALUE
+  // for(let i = 1; i < xAxisValues.length; i++) {
+    //
+    // }
+    // while (item[i][0] <= (item[i--][0] - 50)) {
+    // // while (item[i][0] <= item[(i - 1)][0 - 50]) {
+    //   item[0] = scatter()
+    // }
     // console.log('item[0]', item[0])
     // console.log('item[1]', item[1])
   })
   console.log('xAxisValues', xAxisValues)
+  console.log('xValues', xValues)
+  console.log('yValues', yValues)
 }
 
 const scatter = function() {
