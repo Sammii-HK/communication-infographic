@@ -7,6 +7,7 @@ const axisValues = []
 let xAxis
 let x
 let width
+let tenPerc
 let randomValue
 let content
 let timeline
@@ -33,6 +34,7 @@ function makeTimeline() {
   console.log('content 🥝', content)
   // GET WIDTH OF TIMELINE
   width = timeline.offsetWidth
+  tenPerc = (width / 100) * 10
   console.log('width', width)
 
   content.map(item => {
@@ -85,11 +87,11 @@ const overlayCheck = function() {
     if (item.yAxis <= (lastItem.yAxis - 10)) {
       console.log('item', item.yAxis, item.xAxis)
       console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
-      if (item.xAxis <= (lastItem.xAxis - 10)) {
+      if (item.xAxis <= (lastItem.xAxis - tenPerc)) {
         console.log('item', item.xAxis)
         console.log('xAxis', xAxis)
-        item.xAxis += 10
-        xAxis += 10
+        item.xAxis += tenPerc
+        xAxis += tenPerc
         console.log('item', item.xAxis)
         console.log('==xAxis', xAxis)
       }
