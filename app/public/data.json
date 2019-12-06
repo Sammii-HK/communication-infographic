@@ -121,49 +121,49 @@
     "category": "invention",
     "content": "A unit of type measurement which is used in Europe; it was created and established by the Parisian type founder Francois-Ambrose Didot in 1775. The system is based on a standard unit of measurement of 0.3759mm or 0.0148 inches",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "antique_or_egyptian": {
+    "title": "Antique or Egyptian",
+    "year": "1815",
+    "category": "movement",
+    "content": "Vincent Figgins first showed the earliest example of this group of type in a specimen book from 1815, under the name of Antique. Although Robert Thorne has been acclaimed with the credit for this development, many contemporary writers do not agree. Before his death in 1820 Thorne had already cut and set up specimens in which the type was named Egyptian. William Thorowgood, who was neither a founder nor a printer, purchased Thorne’s foundry in 1820 and used the settings, which Thorne had created. The most reasonable explanation for the name Egyptian appears to be due to the great fascination of Egypt within the early nineteenth century",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "Shadowed_or_3-D": {
+    "title": "Shadowed or 3-D",
+    "year": "1815",
+    "category": "movement",
+    "content": "As all novelty was exhausted from the modern letter, which had been inherited from Grandjean to Fournier, Bodoni and the Didots, the typefounders of the nineteenth century then experimented with colour. This type group was exploited and pushed to the point of illegibility. By the middle of the nineteenth century the Victorian type-founders, the first shadowed types were available around 1815, had produced an eclectic range of quirky letters, fat faces, egyptians and sans serifs all in shadowed form.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "sans_serif": {
+    "title": "Sans Serif",
+    "year": "1816",
+    "category": "movement",
+    "content": "The first sans serif was displayed as a single line specimen, labelled Egyptian, in 1816 within William Caslon IV’s specimen book; these specimens appeared again in 1819 but then no more specimens were found until unrefined letterforms appeared under the name of sans serif, within Vincent Figgin’s specimen book of 1832. That same year specimens were released under the title ‘grotesque’ in a specimen book belonging to William Thorowgood, many more curious names were coined for this new type style. Most of the early forms of sans serif were used for titling, they were often heavy and consisted of a uniform width, a trait which derived from the ‘modern’ face. Lighter variations were later created and although no lower-case sans serif letters were cut before the 1870s in England, they were in use in America and Germany long before then; the Schelter & Giesecke foundry designed and issued such type in 1830.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "fat_face": {
+    "title": "Fat Face",
+    "year": "1820",
+    "category": "movement",
+    "content": "Although shaded types were used profusely within the advertising sector, the first typefaces, which were cut specifically for this purpose, are what we know as Fat Faces. The first step towards this type was the introduction of normal letters, which were enlarged beyond the size of normal book type. Edward Rowe Mores claims that the innovation was thanks to an English type-founder, Thomas Cottrell, his book of 1765 depicts a twelve-line pica letter. This idea was then reproduced by other foundries, causing letters to grow bigger and fatter. Fat Faces were originally known as fat types and probably included types from other groups, for example Egyptian (Antique).",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "reverse_or_cameo": {
+    "title": "Reverse or Cameo",
+    "year": "1828",
+    "category": "movement",
+    "content": "This group of typefaces originate from the early nineteenth century, the first examples were created by reversing Egyptians, Fat Faces and Tuscans which consisted of white characters on a black background. The first examples of this type group were seen in Thorowgood’s specimens of 1928, which used a reversed Egyptian italic, and Bower & Bacon whom created a four-line specimen in 1830; using reversed Fat Face capitals. In contrast to modern examples, the early examples are formed of a continuous background with no lines which separate individual letters. This category of typography embarked on a fairly brief period of popularity, being almost almost out of use 40 years after their creation.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "telegraph": {
+    "title": "Telegraph",
+    "year": "1831",
+    "category": "invention",
+    "content": "Samuel Morse, along with other inventors, spent years developing the telegraph, which was to revolutionise long-distance communication. The technology worked by transmitting electrical signals through a wire which was laid between the telegraph stations. In addition to this great advancement in communication technology, Samuel Morse also developed a code which allowed the transmission of complex messages across  the telegraph lines. In 1844, the first telegraph was sent by Morse from Washington to Baltimore and by 1866, telegraph lines had been laid across the Atlantic Ocean, allowing communications from America to Europe. This technology led to the communications revolution that led to later advances in communication technology.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "ionic": {
+    "title": "Ionic",
+    "year": "1833",
+    "category": "movement",
+    "content": "The name Ionic appears to have derived from early Victorian founders and was used as another name for Egyptian type. A specimen created by Blake and Stephenson in 1813 is a modified form of the earliest examples of Egyptian type. Once this specimen is compared with those of Figgins and of Thorne, the differences included more bracketed and less slab like serifs, greater contrast in stroke weight and lighter, smoother cutting are evident, displaying the differences in these two type groups. The fonts within this group were originally display fonts but later were primarily used within newspapers, other uses include Bible printing, magazines and advertising. Present day versions have been adapted specifically for use within newspaper printing, composing of large x-heights with short ascenders and descenders, open counters and slightly bracketed serifs. ",
     "image": ""
-  }, "printing": {
+  }, "Printing": {
     "title": "Printing",
     "year": "1440",
     "category": "",
