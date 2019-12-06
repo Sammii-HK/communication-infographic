@@ -33,13 +33,13 @@
   }, "old_face_roman": {
     "title": "Old Face Roman",
     "year": "1495",
-    "category": "typography",
+    "category": "movement",
     "content": "In 1495 Aldus Manutius, who was a scholar fascinated by the editing of Greek texts established a printing press in Venice. That year an issue of a tract by Pietro Bembo, a Renaissance humanist, was printed in a variation of the roman letter; this is what Stanley Morison believes as ‘the origin of all old-faces’. In the early years the type was marred by l arge capitals and poor cutting, but with time comes improvement making the type more beautiful; the capitals smaller, upper and lower case are lighter and improved cutting allows for crisper letters. Aldus has been named as the greatest of all the Venetian printer-publishers, one of the first and most famous type-cutters who used Aldus’s letter as a model was Claude Garamond.",
     "image": ""
   }, "chancery_italic": {
     "title": "Chancery Italic",
     "year": "1500",
-    "category": "typography",
+    "category": "movement",
     "content": "Previously in history we had learnt that some type had been derived from beautiful scripts, which were then used by the printers as a model for their type, this is another. When formal hands were written quickly, all of the text reacted to this speed; ‘o’s because elliptical, there were tendencies for ligaturing, letter shapes were simplified and for many the tendency was for these hands to incline to the right, with these characteristics we have the start of what we refer to as italic type. Aldus was not only a printer and publisher but was also a businessman; wishing to print editions of classics in small editions he searched for space saving possibilities. Aldine Italics were based on the Chancery hand and within 1500; the first of all italic typefaces was cut.",
     "image": ""
   }, "royal_mail": {
@@ -57,13 +57,13 @@
   }, "old-face_italic": {
     "title": "Old-Face Italic",
     "year": "1540",
-    "category": "typography",
+    "category": "movement",
     "content": "The sixteenth century is known as ‘the age of italics’ due to their great popularity at the time, many books being printed wholly in italic type. Up until 1524 the inclined lower case letters were paired with roman capitals; some attempt was made to redesign the capitals, which later led to swash capitals, and sloped capitals became the norm. For a considerable period italics were regarded as type in its own right, however in time was not used to publish complete books but ‘for preliminary matter, citation, and emphasis’, however at the end of the sixteenth century books of verse, which were set completely in italics, were still common. Although many still viewed roman and italic type as entirely separate, the Egenolff-Berner foundry of Frankfurt displayed an example of roman type followed by an example of italic type on the same specimen sheet.",
     "image": ""
   }, "trasitional_roman": {
     "title": "Trasitional Roman",
     "year": "1640",
-    "category": "typography",
+    "category": "movement",
     "content": "In 1640, Louis XIII of France established a Royal Printing House, evoking greater interest in printing standards. For the first two years the printing press employed the use of the Garamond faces, but later used type designs by Jean Jannon of Sedan. No significant deviation from the old- face type appeared until 1692 when Louis XIV ordered the commission for a series of type by Grandjean, exclusive to the Royal Printing House. This series had distinct changes from the type before it with; vertical strokes, more pronounced contrast between the thick and thin stroke, although the printing process held these advancements back.",
     "image": ""
 
@@ -76,7 +76,7 @@
   }, "modernised_italic": {
     "title": "Modernised Italic",
     "year": "1716",
-    "category": "typography",
+    "category": "movement",
     "content": "In the first half of the seventeenth century, italics appeared which were known for their condensation, an effect which was partly due to the romanisation of certain letters. Pierre Simon Fournier remarked on how greatly his designs differed from previous designs. This new type was to some extent based on the formal scripts of engravers, it also had been influenced somewhat by Grandjean and other successors. This italic type shows great differentiation between thick and thin strokes but also an innovation of a serif treatment for some letters, for example; m, n, p & r. All letters are inclined and bracketed; Fournier even made the inclination of the italic type more regular and disbanded the use of ligatures.",
     "image": ""
   }, "caslon": {
@@ -91,35 +91,35 @@
     "category": "typography",
     "content": "This font was first designed in 1757 by John Baskerville, who began as a writing master in Birmingham and later established himself as a printer. Throughout his life, Baskerville strived to improve printing and typography with innovations in the printing press, inks and papers, later creating his own typeface which has generous proportions, with wide and open characters. At first his design received criticism as readers at the time were not used to the finer serifs used with an increased contrast within the character strokes, which were made possible by innovations which included wove paper. Unable to achieve commercial success, his widow sold the original punches in the year 1779 to Beaumarchais, which eventually found their way to Deberny & Peignot, a French foundry who later returned them to England in 1953.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "shaded_type": {
+    "title": "Shaded Type",
+    "year": "1765",
+    "category": "movement",
+    "content": "Fournier, who was a pioneer in cutting decorative letters, produced the first shaded types, which were presented at several sizes in his Manuel Typographique of 1764-66. Later, shaded versions were included with faces cut for advertising but the use of shaded type as a decorative piece was disused and were rarely used for the next 100 years. The simplest form of shaded type employs the use of a single white line offset to one side of the character but more usually the left hand side. This type is sometimes referred to as hand-tooled, a term which most likely originates from the process to tool the white lines on the type. There is another form of shaded type which most likely originates from the former styles from the early 19th century, which has become to be known as Inline; examples vary within the design but a common factor is a white line which runs down the centre of the thick stem of the characters, this line can even cut through the serif at the head and foot.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "didot": {
+    "title": "Didot",
+    "year": "1784",
+    "category": "typography",
+    "content": "Didot, as with other fonts created at a similar time as Bodoni, mark the arrival of ‘Transitional’ type design which was made possible because of improvements in punch-cutting, printing techniques, inks and paper production which all allowed the introduction of much greater contrast in stroke weight along with greater detail and refinements added which pushed the limits of technical advancement. The font was used extensively, as the French standard, for over a century after appearing 5 years before the industrial revolution it reflected a fresh and modern look. It began to lose favour in the late 19th century but after Deberny & Peignot purchased the original punches and revived the design, the font soon began to gain popularity within magazine design; in the early 1990s a vital element of Harper’s Bazaar’s radical redesign which included a digital version of Didot, which had been redrawn by Jonathan Hoefler & Frere-Jones.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "modern_face_roman": {
+    "title": "Modern Face Roman",
+    "year": "1784",
+    "category": "movement",
+    "content": "The evolution of roman type from old face to modern face is more one of technique, mechanical improvements made to the printing press and changes to paper texture allowed printers to produce techniques, which just would not have been possible using earlier processes. Despite foundries being forbidden to copy the romain du Roi (French for “King’s roman”), thin, flat serifs and vertical shading in capitals can be frequently seen in examples from the first half of the eighteenth century. It was not until 1784 that the first modern face appeared. It was cut in the typefoundry of F.A.Didot, a famous family of Parisian founders and printers.  It was presented in a prospectus which announced a work of Tasso’s, F.A.Didot printed the book on an improved press and also used wove paper. Both advancements left a sharper impression of the type, which was necessary for the development of modern faces; the thin strokes finally becoming hairlines.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "bodoni": {
+    "title": "Bodoni",
+    "year": "1785",
+    "category": "typography",
+    "content": "Didot influenced the development of Bodoni, which was designed around 1785 by Giambattista Bodoni who was an innovative printer and type designer from Italy. This font has been a popular choice for fashion journals and fashion houses and was also used for the Victoria & Albert Museum logo. Despite being revived various times, each design while varying in detail from the original, maintains essential characteristics of the font which precede from the original, these include; extreme contrast between the thicks and thins of strokes, the stress is vertical with flat, unbracketed and sharply cut serifs. This font is one where the evolution of typography is evident; the calligraphic approaches that had existed were being replaced with structure and a geometric purity.",
     "image": ""
-  }, "printing": {
-    "title": "Printing",
-    "year": "1440",
-    "category": "",
-    "content": "",
+  }, "didot_point_system": {
+    "title": "Didot Point System",
+    "year": "1775",
+    "category": "invention",
+    "content": "A unit of type measurement which is used in Europe; it was created and established by the Parisian type founder Francois-Ambrose Didot in 1775. The system is based on a standard unit of measurement of 0.3759mm or 0.0148 inches",
     "image": ""
   }, "printing": {
     "title": "Printing",
