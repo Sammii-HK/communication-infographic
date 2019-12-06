@@ -286,11 +286,59 @@
   }, "computer": {
     "title": "Computer",
     "year": "1937",
-    "category": "The first computer was created in the early 19th century by Charles Babbage, an English mathematics professor. Babbage designed the Analytical Engine which now forms the basic framework that even modern computers are based upon. Computers are classified into three generations of development and advancements; the first electronic digital computer was designed and created by Dr. John Atanasoff and Clifford Berry in 1937, by 1943 an electric computer was built for the military being aptly named Colossus. In 1946 the first general-purpose digital computer was built—it weighed 30 tons, and consisted of 18,000 vacuum tubes. Despite the size of these computers they could only perform a single task and had no operating system. The second generation used transistors which replaced the vacuum tubes and were more reliable so by 1951 the first computer for commercial use was released and in 1953 IBM released their 650 and 700 series computers. The third generation of computers incorporated the use of a circuit, this advancement allowed computers to become smaller, more reliable and able to run many processes at one time. “Many will consider true freedom of speech to be enshrined in law, but is that really true? Do not these democracies that we live within not all have increasingly more and more laws to gag, or to influence, the press; and in fact do not the owners really control the contents? No to me the computer has become the truest tool to be employed in the pursuit of the freedom of speech. Though it the Internet has evolved into a communication medium that has proved to be ungovernable, to be resistant to all forms of censorship, communication that all of us now have access to.” Interview with Brent Meheux–Graphic Designer / Educator",
+    "category": "invention",
+    "content": "The first computer was created in the early 19th century by Charles Babbage, an English mathematics professor. Babbage designed the Analytical Engine which now forms the basic framework that even modern computers are based upon. Computers are classified into three generations of development and advancements; the first electronic digital computer was designed and created by Dr. John Atanasoff and Clifford Berry in 1937, by 1943 an electric computer was built for the military being aptly named Colossus. In 1946 the first general-purpose digital computer was built—it weighed 30 tons, and consisted of 18,000 vacuum tubes. Despite the size of these computers they could only perform a single task and had no operating system. The second generation used transistors which replaced the vacuum tubes and were more reliable so by 1951 the first computer for commercial use was released and in 1953 IBM released their 650 and 700 series computers. The third generation of computers incorporated the use of a circuit, this advancement allowed computers to become smaller, more reliable and able to run many processes at one time. “Many will consider true freedom of speech to be enshrined in law, but is that really true? Do not these democracies that we live within not all have increasingly more and more laws to gag, or to influence, the press; and in fact do not the owners really control the contents? No to me the computer has become the truest tool to be employed in the pursuit of the freedom of speech. Though it the Internet has evolved into a communication medium that has proved to be ungovernable, to be resistant to all forms of censorship, communication that all of us now have access to.” Interview with Brent Meheux–Graphic Designer / Educator",
+    "image": ""
+  }, "world_wide_web": {
+    "title": "Internet",
+    "year": "1989",
+    "category": "invention",
+    "content": "Tim Berners-Lee invented the World Wide Web in 1989. He first described the concept of a global system which was based on the theory of ‘hypertext’ many years earlier. He later published a paper, which combined hypertext with the internet, which would create a system to share and distribute information on a global scale; this would be named the World Wide Web. Berners-Lee later developed the first web browser and editor. The first website was launched in 1991 and explained the concept of the World Wide Web and introduced people on how to start their own websites. “In the world when the information is multiplied and distributed so fast we cannot digest it properly, the web helps us to stand out and convince people to our ideas and opinions. Part of it, is the ability to visualise your thoughts in a more user friendly way (i.e. infographics).  The web helps us to feedback others. Social medias, forums and online surveys are quick and available to all, ways to see if your ideas would kick off and be a value to the communities.” Interview with Karol Strykowski–Web and UX Designer",
+    "image": ""
+  }, "fax_machine": {
+    "title": "Fax Machine",
+    "year": "1966",
+    "category": "invention",
+    "content": "The first fax machine was designed by Alexander Bain, a Scottish mechanic and inventor, who received a patent for his advancements in creating and regulating electric currents and improvements in timepieces, electrical printing and signal telegraphs—all these technologies combined to make a fax machine. A few years earlier the first telegraph was created by Samuel Morse and the fax machine relied heavily on the technological advancements used within its design. To fax is, by definition, a method which encodes data, then transmits it through a telephone line, the recipient receiving a hard copy. Bain’s fax machine scanned a flat metal surface using a stylus which was mounted on a pendulum, the stylus would then pick up images from the surface of the metal. As an amateur clock maker, Bain combined parts of clock mechanisms together with telegraph machines, to create his fax machine.",
+    "image": ""
+  }, "mobile_phone": {
+    "title": "Mobile Phone",
+    "year": "1973",
+    "category": "invention",
+    "content": "The first mobile phone was created in 1973 by Martin Cooper, who was a senior engineer at Motorola. The first mobile phone weighed over one kilogram, allowing for 30 minutes of call time from a ten hour charge. 1983 saw the release of the first commercial mobile phone which again was released by Motorola, this model allowed for 30 minutes of calling time with a six hour battery standby, it could store 30 phone numbers—it cost £2,639. The first mobile phones were not created with consumers in mind but from 1990-95 a leap of technological advancements were made allowing for design and portability. In 1997, Nokia released the 6110 model which featured 3 games, a calculator, clock and calendar, it worked as a pager, had profile settings and even had a display with 4 colours.",
+    "image": ""
+  }, "bell_centennial": {
+    "title": "Bell Centennial",
+    "year": "1976",
+    "category": "typography",
+    "content": "In 1976 Linotype commissioned Matthew Carter to update Bell Gothic for AT&T, which was a typeface designed by Chauncey H. Griffith and had been used in the phone books since 1937. The brief set was challenging, the font was required to be legible on the directories rough paper and at a size of six point. Carter designed the font in four weights which included; Address, Name & Number, Bold Listing and Sub Caption. He made the  font legible at small sizes by designing the type with ink traps, notches where strokes meet, so where the ink naturally runs does not obscure the character but completes it, this is only easily visible at large sizes. This sans serif is condensed, allowing more characters to be placed on a line which meant that the addresses could be displayed on a single lines, this design reduced the number of pages within the book and in turn saved the company millions of dollars. ",
+    "image": ""
+  }, "google": {
+    "title": "Google",
+    "year": "1996",
+    "category": "invention",
+    "content": "In 1996 Larry Page and Sergey Brin, who were both students at the time, started to collaborate on a search engine which was named BackRub. The search engine operated on Stanford servers for more than a year but eventually took up too much bandwidth so google.com became a registered domain in 1997. The name is a play on the word “googol” which is a mathematical term which represents the numeral 1 followed by one hundred zeros, this reflects the duos’ mission to organise an infinite amount of information. The playful google logo adaptions, known as doodles, started in 1998, when Page and Brin went to the Burning Man Festival, but before leaving they incorporated the synonymous Man into the logo so people would be informed on the whereabouts of the Google crew. In 1998 they employed their first employee, Google rapidly became known for its ability to search through the web to find relevant information and continued to grow in popularity. By 2004, they had moved into Googleplex with over 800 employees.",
+    "image": ""
+  }, "Printing": {
+    "title": "Youtube",
+    "year": "2005",
+    "category": "",
     "content": "",
     "image": ""
   }, "Printing": {
-    "title": "Printing",
+    "title": "Facebook",
+    "year": "2004",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Twitter",
+    "year": "2006",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Instagram",
     "year": "1440",
     "category": "",
     "content": "",
