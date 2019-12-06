@@ -163,6 +163,132 @@
     "category": "movement",
     "content": "The name Ionic appears to have derived from early Victorian founders and was used as another name for Egyptian type. A specimen created by Blake and Stephenson in 1813 is a modified form of the earliest examples of Egyptian type. Once this specimen is compared with those of Figgins and of Thorne, the differences included more bracketed and less slab like serifs, greater contrast in stroke weight and lighter, smoother cutting are evident, displaying the differences in these two type groups. The fonts within this group were originally display fonts but later were primarily used within newspapers, other uses include Bible printing, magazines and advertising. Present day versions have been adapted specifically for use within newspaper printing, composing of large x-heights with short ascenders and descenders, open counters and slightly bracketed serifs. ",
     "image": ""
+  }, "old_style": {
+    "title": "Old Style",
+    "year": "1820",
+    "category": "movement",
+    "content": "The year of 1820 was regarded ‘as a boundary line between the old and new style of punch-cutting’ by William Blades. At this time great changes were applied to faces of all kinds of type; the thick strokes were made thicker, the thin strokes were made even thinner and old ligatures were forgotten and unused. At this time printers were overloaded with decorative, and at the time illegible founts, up until 1844, which was the year in which the earliest Caslon types were revived after being used by the famous Chiswick Press, marking the beginning of the return of their favour. Since that day Caslon Old Face has not been forgotten but if anything has steadily gained in popularity.",
+    "image": ""
+  }, "clarendon": {
+    "title": "Clarendon",
+    "year": "1845",
+    "category": "typography",
+    "content": "The first Clarendon, which was a modified letter of Egyptian styling, was registered by W. Thorowgood and Co. in 1845, but as soon as the copyright period of three years had expired, the market was overwhelmed with poor piracies and imitations. The earliest Ionic faces were bold display types, but while they were later adapted for use in newspaper printing, Clarendon’s as a group have remained heavy typefaces which main use is to make a distinction between words in works of reference. This group gained such popularity it became a synonym for bold or heavy set types and became a generic name for bold compositon-sized faces by many old established printers. The type now mainly consists of condensed faces.",
+    "image": ""
+  }, "boolean_algebra": {
+    "title": "Boolean Algebra",
+    "year": "1847",
+    "category": "invention",
+    "content": "George Boole, an English mathematician, published works which founded symbolic logic in 1847. It was his combination of ideas derived from classical logic and algebra developed what is called Boolean algebra. This system uses symbols and variables which was developed for describing and manipulating logical statements which could be considered true or false. The system uses the symbols +, * and - to represent ‘and’, ‘or’ and ‘not’. They are also used within truth tables in logic, although the truth tables employ the use of T and F to indicate the state of the sentence whereas Boolean algebra uses a system of 1s and 0s to indicate ‘true’ or ‘false’. As Boolean Algebra, set algebra and binary arithmetic have a strong relationship, boolean algebra has a pivotal role in the development  of digital technology such as computers and the system also forms the foundation of information theory.",
+    "image": ""
+  }, "pony_express": {
+    "title": "Pony Express",
+    "year": "1860",
+    "category": "invention",
+    "content": "The Pony Express was founded in the 1860s by three men; William Russell, William Waddell and Alexander Majors. This development came about by the threat of civil war and the demand of the people of California to swiftly have news from the west of the country. The Pony Express was a giant system which worked by relays of men riding horses, which were carrying saddle bags of mail, to ride across the 2000 mile stretch. It was the fastest method of postage at the time, the first westbound trip was completed in 9 days and 23 hours with the eastbound journey taking 11 days and 12 hours, the horses and their riders covered up to 250 miles in a single day. Once established, the Pony Express consisted of 100 stations, 80 riders and around 500 horses and despite the route being very hazardous, only one mail delivery was ever lost. Unfortunately the service only lasted 19 months, as then the Pony Express was replaced by the completion of the Pacific Telegraph line.",
+    "image": ""
+  }, "telephone": {
+    "title": "Telephone",
+    "year": "1876",
+    "category": "invention",
+    "content": "In 1876 Alexander Graham Bell who was only 29 years old, received the patent for his invention—the telephone. Prior to this, he was working in London with his father, who had developed ‘Visible Speech’, which was a written system to teach the deaf to speak. In the 1970s the family moved to Boston which was where Bell because fascinated by the possibility of transmitting speech. The telegraph’s draw back was that the message still had to be hand delivered from the telegraph stations to the recipient, Bell wanted to create a device which would combine the aspects of the telegraph and the record player together, allowing individuals to speak to each other from over large distances. The Western Union Telegraph Company didn’t want to be completely abandoned from the advancements of the communications market and employed Elisha Gray and Thomas Edison to develop their own telephone technology but the case was taken to the U.S Supreme Court, which upheld the patent rights of Bell. The company withstood many other legal altercations and later developed into American Telephone and Telegraph; forming the foundations of the modern telecommunications industry. “It is often cited that the industrial revolution brought about the true mobility of the masses, if this is so then it must also be recognised that the mobile telephone has revolutionised communication between the masses. It has become universal in it’s acceptances, regardless of age, gender, class or even religion. A powerful idea, or message, may have been once been communicated to a small audience via the printed word, a book lost on a shelf, or a newspaper destined to become tomorrows litter, but no longer. Ideas are now instantly shared via mobile telephones, by spoken word, text and social media; ideas that have the reach few printed mediums have ever managed.” Interview with Brent Meheux–Graphic Designer / Educator",
+    "image": ""
+  }, "typewriter": {
+    "title": "Typewriter",
+    "year": "1808",
+    "category": "invention",
+    "content": "The typewriter has a rich history with many attempts made but the first patent, which was rather wordy and vague, was filed in 1714 by Henry Mill, an English engineer. Many prior attempts were made as a means for blind people to communicate through the median of writing. The first working typewriter was developed in 1808 by Pellegrino Turri, an Italian. The person attributed with the main creation of the typewriter is Christopher Sholes, an American newspaper journalist. Sholes designed and created a machine which was later produced as the Sholes & Glidden Typewriter  by the Remington factory, New York. Amongst Sholes’ accolades lies the QWERTY keyboard—this design was based on the rule that frequently used pairs of type-bars were separated so that they would not collide into each other at the point of printing.",
+    "image": ""
+  }, "akzidenz-grotesk": {
+    "title": "Akzidenz-Grotesk",
+    "year": "1896",
+    "category": "typography",
+    "content": "Akzidenz-Grotesk was first created during the years 1896-99 and is considered to be one of the most influential sans serif-typefaces, it is even claimed to be the ‘original’ sans serif: it was the inspiration for Helvetica and Futura, and also informed many other sans serif typefaces for more than 50 years after its creation. Its design was informed by Royal Grotesk from the 1880s. The characters are formed of strokes with subtle variation of width, making the font softer and have more character than its peers. The font was first a collection of different faces created by various designers from different foundries causing the different versions to vary in point size and more. It was later that Gunter Gerhard Lange, who was the art director of H. Berthold AG. type foundry, revised the typeface increasing its flexibility and consistency within its design, whilst maintaining the fundamental features displayed amongst the original nineteenth-century designs.",
+    "image": ""
+  }, "magnetic_recordings": {
+    "title": "Magnetic Recordings",
+    "year": "1900",
+    "category": "invention",
+    "content": "Magnetic recording, which is used within audio and video tapes, was a concept first introduced by Valdemar Poulsen, a Danish inventor, around 1900. Poulsen designed this invention with office dictation and telephone recording in mind, but despite this technology being manufactured in America and Europe, it never gained popularity, yet German and English inventors persisted. The first working model used a cylinder drum which the wire was wrapped around. The recording head tracked the wire along the cylinder, which it made the recording on. The development of electronic amplifiers and oxide-coated recording tapes replaced old technologies therefore the sound quality was improved. Although BBC, CBC and other broadcasting agencies were still using the earlier methods of magnetic recording in the 1930s, this process was replaced by tape recordings by radio, film and music studios and almost universally adopted by the 1950s.",
+    "image": ""
+  }, "radio": {
+    "title": "Radio",
+    "year": "1902",
+    "category": "invention",
+    "content": "Advancements within communication have surely changed our lives for the better, and some I cannot think of living without; the radio’s invention was heavily reliant on the development of both the telegraph and the telephone, and was a further advancement of such technology. An Italian inventor, Guglielmo Marconi, managed to send and receive his first radio signal in 1895, by 1899 he had successfully sent a radio signal across the English Channel. Two years later, in 1902, Marconi successfully sent a signal from England to Newfoundland, the first transatlantic radiotelegraph message. Nikola Tesla is accredited with being the first person to patent the radio technology, which was overturned because of the patent which Marconi possessed, in 1943. This technological advancement has since become a staple in the household, when it was released for public use it meant that people did not have to wait a whole day for the printed news making communication even faster. “The fundamental rule of radio is that it relies upon radiowaves to transmit signals through the air. These signals can only travel relatively short distances between radio masts when compared to modern means of broadcasting and data communication, but the speed at which information travels between a transmitter and receiver in an instance is how radio became such a powerful communicative  device. Take for example earlier forms of media such as News Papers and Posters, there’s always one thing in common, they are tangible forms of media. Being a non-tangible form of media Radio became destined for commercial success with a potentially infinite audience and the ability to reach places previously too rural for the local paperboy. Never before had the news been able to travel twenty miles across open countryside to a remote location without someone or something acting as the courier. So radio was not only faster, but also cheaper than print. Its success was so prominent that in 1923 the British Broadcasting Company was formed as a service to the people of Great Britain and it was soon considered a right to have access to radio. In 1927 the BBC was granted a Royal Charter upon becoming the British Broadcasting Corporation where it pledged to ‘inform, educate and entertain’.” Interview with Calfyn ap Bryn–Broadcast Producer",
+    "image": ""
+  }, "johnston_sans": {
+    "title": "Johnston Sans",
+    "year": "1918",
+    "category": "typography",
+    "content": "Edward Johnston, renowned as a master calligrapher, created this font in 1918, which he drew for the London Underground and which still continues to be one of most effective and widely loved typographic identities. The design should also in-part be attributed to Eric Gill, for he was Johnston’s student and contributed to drawing up the designs, although Eric Gill was heavily influenced by his teacher, Johnston, whose influence is evident in the design of Gill Sans. The font was modelled on an ancient Roman antecedent which are the letters around the base of Trajan’s Column, which employed classical Roman proportions. The font is still in use on the Underground today, although it has been revived with an extra weight (light) added.",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
+  }, "Printing": {
+    "title": "Printing",
+    "year": "1440",
+    "category": "",
+    "content": "",
+    "image": ""
   }, "Printing": {
     "title": "Printing",
     "year": "1440",
