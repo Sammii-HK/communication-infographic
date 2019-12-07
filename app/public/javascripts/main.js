@@ -70,7 +70,7 @@ function makeTimeline() {
       xAxis -= x
     }
     xAxisValues.push([ yAxis, xAxis ])
-    axisValues.push({ xAxis: xAxis, yAxis: yAxis })
+    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     // xValues.push(xAxis)
     // yValues.push(yAxis)
     console.log('*xAxis*', xAxis)
@@ -93,16 +93,22 @@ const overlayCheck = function() {
       // console.log('item', item.yAxis, item.xAxis)
       // console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
       if (item.xAxis <= (lastItem.xAxis - tenPerc)) {
-        console.log('item 1', item.xAxis)
-        console.log('xAxis 1', xAxis)
+        console.log('==========')
+        console.log('item', item)
+        console.log('lastItem', lastItem)
+        // console.log('item 1', item.xAxis)
+        // console.log('xAxis 1', xAxis)
         // ADD 10% TO BOTH ARRAY AND CURRENT XAXIS VAR VALUE
         item.xAxis += (tenPerc * posOrNeg)
         xAxis += tenPerc
-        console.log('item 2', item.xAxis)
-        console.log('xAxis 2', xAxis)
+        console.log('item', item)
+        console.log('lastItem', lastItem)
+        // console.log('item 2', item.xAxis)
+        // console.log('xAxis 2', xAxis)
       }
     }
-    console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
+    console.log('item 2', item)
+    // console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
   })
 }
 
