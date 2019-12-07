@@ -34,11 +34,18 @@ function loadData () {
 
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
-  console.log('content 🥝', content)
   // GET WIDTH OF TIMELINE
   width = timeline.offsetWidth
   tenPerc = (width / 100) * 10
   console.log('width', width)
+
+  // SORT CONTENT BY YEAR
+  content.sort(function(a, b) {
+    const aYear = parseInt(a.year)
+    const bYear = parseInt(b.year)
+    return aYear - bYear
+  })
+  console.log('content 🥝', content)
 
   content.map(item => {
     // SAVE CREATE DIV AS VAR
@@ -84,7 +91,7 @@ const lastValue = axisValues[axisValues.length-1]
 const overlayCheck = function() {
   axisValues.map((item, i) => {
     const lastItem = axisValues[ i - 1 ]
-    console.log('==========')
+    console.log('======================')
     console.log('item', item)
     if (i === 0) return
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
@@ -93,7 +100,7 @@ const overlayCheck = function() {
       // console.log('item', item.yAxis, item.xAxis)
       // console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
       if (item.xAxis <= (lastItem.xAxis - tenPerc)) {
-        console.log('==========')
+        console.log('***************************')
         console.log('item', item)
         console.log('lastItem', lastItem)
         // console.log('item 1', item.xAxis)
@@ -103,6 +110,7 @@ const overlayCheck = function() {
         xAxis += tenPerc
         console.log('item', item)
         console.log('lastItem', lastItem)
+        console.log('***************************')
         // console.log('item 2', item.xAxis)
         // console.log('xAxis 2', xAxis)
       }
