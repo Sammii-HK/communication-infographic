@@ -93,7 +93,7 @@ const overlayCheck = function() {
         console.log('item 1', item.xAxis)
         console.log('xAxis 1', xAxis)
         // ADD 10% TO BOTH ARRAY AND CURRENT XAXIS VAR VALUE
-        item.xAxis += tenPerc
+        item.xAxis += (tenPerc * posOrNeg)
         xAxis += tenPerc
         console.log('item 2', item.xAxis)
         console.log('xAxis 2', xAxis)
@@ -103,9 +103,10 @@ const overlayCheck = function() {
   })
 }
 
+// MAKE POSITIVE OR NEGATIVE NUMBER
+const posOrNeg = Math.random() < 0.5 ? -1 : 1
+
 const scatter = function() {
-  // MAKE POSITIVE OR NEGATIVE NUMBER
-  const posOrNeg = Math.random() < 0.5 ? -1 : 1
   // MAKE A RANDOM VALUE
   randomValue = Math.round(Math.random() * offset - 1)
   // RANDOMLY MAKE THE VALUE POSITIVE OR NEGATIVE
