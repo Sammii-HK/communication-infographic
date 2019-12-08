@@ -82,15 +82,12 @@ function makeTimeline() {
     }
     xAxisValues.push([ yAxis, xAxis ])
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
-    // xValues.push(xAxis)
-    // yValues.push(yAxis)
-    // console.log('*xAxis*', xAxis)
     overlayCheck()
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
 }
 
-const lastValue = axisValues[axisValues.length-1]
+// const lastValue = axisValues[axisValues.length-1]
 
 const overlayCheck = function() {
   axisValues.map((item, i) => {
