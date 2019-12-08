@@ -33,7 +33,6 @@ function loadData () {
       console.error(`${err}`)
     })
 }
-
 // CREATE ITEMS FROM JSON OBJECTS AND PUSH TO DOM
 function makeTimeline() {
   // GET WIDTH OF TIMELINE
@@ -63,47 +62,55 @@ function makeTimeline() {
     square.style.setProperty('--transform-y', `${yAxis}px`)
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
-    // GET POSITION OF ITEM ON THE X AXIS
-    x = window.scrollX + document.querySelector('.item').getBoundingClientRect().left
     // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
-    const randomValue = scatter()
-    // MAKE PERCENTAGE OF AXIS VALUE WITH RANDOMNUMBER FUNCTION
-    // const percentage = (x / randomValue)
-    // xAxis = x / percentage
-    const percentage = (width / randomValue)
-    xAxis = width / percentage
-    // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
-    if (xAxis <= 0) {
-      // MAKE NEW RANDOM NUMBER TO POSITIVE
-      xAxis = Math.abs(xAxis)
-    } else if (xAxis >= width) { // IF FINAL X AXIS VALUE IS MORE THAN THE BOUNDS OF THE TIMELINE
-      // MAKE NEW RANDOM NUMBER TO NEGATIVE
-      xAxis -= x
-    }
+    randomNumber()
+    // SCATTER ITEMS ON TIMELINE
+    scatter()
     xAxisValues.push([ yAxis, xAxis ])
-    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
-    overlayCheck()
+    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis, x: x })
+    // overlayCheck()
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
 }
 
 // const lastValue = axisValues[axisValues.length-1]
 
+const scatter = function() {
+  // MAKE PERCENTAGE OF AXIS VALUE WITH RANDOMNUMBER FUNCTION
+  // const percentage = (x / randomValue)
+  // xAxis = x / percentage
+  const percentage = (width / 100) * randomValue
+  // const percentage = (width / randomValue)
+  // const percentage = (width / randomValue) * 100
+  xAxis = width / percentage
+  // xAxis = width / percentage
+  // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
+  if (xAxis <= 0) {
+    // MAKE NEW RANDOM NUMBER TO POSITIVE
+    xAxis = Math.abs(xAxis)
+  } else if (xAxis >= width) { // IF FINAL X AXIS VALUE IS MORE THAN THE BOUNDS OF THE TIMELINE
+    // MAKE NEW RANDOM NUMBER TO NEGATIVE
+    xAxis = -Math.abs(xAxis)
+    // xAxis -= x
+  }
+}
+
 const overlayCheck = function() {
   axisValues.map((item, i) => {
     const lastItem = axisValues[ i - 1 ]
-    console.log('item', item)
+    // console.log('lastItem', lastItem)
     console.log('lastItem', lastItem)
+    // console.log('lastItem', lastItem.title)
     if (i === 0) return
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (item.yAxis <= (lastItem.yAxis - (year * 10))) {
       console.log('======================')
-      console.log('item', item)
       // IF CURRENT XAXIS IS WITHIN 10% (OF TIMELINE DIV WIDTH) OF LAST ITEM
       // console.log('item', item.yAxis, item.xAxis)
       // console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
       if (item.xAxis <= (lastItem.xAxis - tenPerc)) {
         console.log('***************************')
+        console.log('item', item)
         console.log('item', item)
         console.log('lastItem', lastItem)
         // console.log('item 1', item.xAxis)
@@ -124,9 +131,11 @@ const overlayCheck = function() {
 }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
-const posOrNeg = Math.random() < 0.5 ? -1 : 1
+const posOrNeg = function() {
+  return Math.random() < 0.5 ? -1 : 1
+}
 
-const scatter = function() {
+const randomNumber = function() {
   // MAKE A RANDOM VALUE
   randomValue = Math.round(Math.random() * (width / 2) - 1)
   // randomValue = Math.round(Math.random() * offset - 1)
