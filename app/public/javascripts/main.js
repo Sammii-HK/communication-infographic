@@ -84,8 +84,7 @@ const scatter = function() {
         item.xAxis = 0
         item.xAxis += newNumber
         axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
-        // console.log('2', axisDifference, item.xAxis)
-        console.log('diff 2:', axisDifference, item.title, item.xAxis)
+        console.log('diff 2:', axisDifference, item.xAxis)
         xAxis = item.xAxis
       }
     }
