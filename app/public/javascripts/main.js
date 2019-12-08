@@ -69,25 +69,22 @@ function makeTimeline() {
 const scatter = function() {
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
-
+  // CHECK FOR OVERLAPS
   axisValues.map((item, i) => {
     if (i === 0) return
+    // console.log('xAxis1', xAxis)
     const lastItem = axisValues[ i - 1 ]
     const currentYear = parseInt(item.year)
     const lastYear = parseInt(lastItem.year)
+    const axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (currentYear >= lastYear - 10) {
-      console.log('======================')
-      // console.log(item.title, currentYear, lastYear, lastYear - 10)
-      // console.log(lastItem.xAxis - item.xAxis)
-      const axisDifference = lastItem.xAxis - item.xAxis
-      console.log(item.title, lastItem.title, axisDifference)
-      if (axisDifference <= 100) {
+      if (axisDifference <= (width / 10)) {
+        console.log('============')
+        console.log(item.title, lastItem.title, axisDifference)
         xAxis = randomNumber()
+        console.log('xAxis2', xAxis)
       }
-      // if ((item.xAxis - 100) <= lastItem.xAxis || (item.xAxis + 100) >= lastItem.xAxis) {
-      //   xAxis = randomNumber()
-      // }
     }
   })
 }
