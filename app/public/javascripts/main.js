@@ -78,46 +78,19 @@ const scatter = function() {
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (currentYear >= lastYear - 10) {
       console.log('======================')
-      console.log(item.title, currentYear, lastYear, lastYear - 10)
-      console.log(item.xAxis, lastItem.xAxis)
+      // console.log(item.title, currentYear, lastYear, lastYear - 10)
+      // console.log(lastItem.xAxis - item.xAxis)
+      const axisDifference = lastItem.xAxis - item.xAxis
+      console.log(item.title, lastItem.title, axisDifference)
+      if (axisDifference <= 100) {
+        xAxis = randomNumber()
+      }
+      // if ((item.xAxis - 100) <= lastItem.xAxis || (item.xAxis + 100) >= lastItem.xAxis) {
+      //   xAxis = randomNumber()
+      // }
     }
   })
 }
-
-// const overlayCheck = function() {
-//   axisValues.map((item, i) => {
-//     const lastItem = axisValues[ i - 1 ]
-//     // console.log('lastItem', lastItem)
-//     console.log('lastItem', lastItem)
-//     // console.log('lastItem', lastItem.title)
-//     if (i === 0) return
-//     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-//     if (item.yAxis <= (lastItem.yAxis - (year * 10))) {
-//       console.log('======================')
-//       // IF CURRENT XAXIS IS WITHIN 10% (OF TIMELINE DIV WIDTH) OF LAST ITEM
-//       // console.log('item', item.yAxis, item.xAxis)
-//       // console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
-//       if (item.xAxis <= (lastItem.xAxis - tenPerc)) {
-//         console.log('***************************')
-//         console.log('item', item)
-//         console.log('item', item)
-//         console.log('lastItem', lastItem)
-//         // console.log('item 1', item.xAxis)
-//         // console.log('xAxis 1', xAxis)
-//         // ADD 10% TO BOTH ARRAY AND CURRENT XAXIS VAR VALUE
-//         item.xAxis += (tenPerc * posOrNeg)
-//         xAxis += tenPerc
-//         console.log('item', item)
-//         console.log('lastItem', lastItem)
-//         console.log('***************************')
-//         // console.log('item 2', item.xAxis)
-//         // console.log('xAxis 2', xAxis)
-//       }
-//     }
-//     // console.log('item 2', item)
-//     // console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
-//   })
-// }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
 const posOrNeg = function() {
