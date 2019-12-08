@@ -78,13 +78,6 @@ const scatter = function() {
     let axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (currentYear >= lastYear - 10) {
-      // if (axisDifference <= (width / 10)) {
-      //   console.log('============')
-      //   console.log(item.title, lastItem.title, axisDifference)
-      //   xAxis = randomNumber()
-      //   console.log('xAxis2', xAxis)
-      // }
-      // let newDifference = axisDifference
       while (axisDifference <= (width / 10)) {
         console.log('1', item.title, axisDifference, item.xAxis)
         const newNumber = randomNumber()
