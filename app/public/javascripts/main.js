@@ -3,15 +3,12 @@
 
 console.log('JS loaded 🍇')
 
-// const offset = 500
-// const offset = 50
 const y = 10
 const axisValues = []
 let year
 let xAxis = 0
 let x
 let width
-// let tenPerc
 let randomValue
 let content
 let timeline
@@ -37,7 +34,7 @@ function loadData () {
 function makeTimeline() {
   // GET WIDTH OF TIMELINE
   width = timeline.offsetWidth
-  tenPerc = (width / 100) * 10
+  // tenPerc = (width / 100) * 10
   console.log('width', width)
 
   // SORT CONTENT BY YEAR
@@ -64,14 +61,10 @@ function makeTimeline() {
     timeline.appendChild(square)
     // SCATTER ITEMS ON TIMELINE
     scatter()
-
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis, x: x })
-    // overlayCheck()
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
 }
-
-// const lastValue = axisValues[axisValues.length-1]
 
 const scatter = function() {
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
@@ -131,7 +124,7 @@ const posOrNeg = function() {
 }
 
 const randomNumber = function() {
-  // MAKE A RANDOM VALUE
+  // MAKE A RANDOM VALUE WHICH IS HALF OF TIMELINE WIDTH
   randomValue = Math.round(Math.random() * (width / 2) - 1)
   // RANDOMLY MAKE THE VALUE POSITIVE OR NEGATIVE
   randomValue = randomValue * posOrNeg()
@@ -141,6 +134,5 @@ const randomNumber = function() {
 // DOM CONTENT LOADED
 document.addEventListener('DOMContentLoaded', () => {
   timeline = document.getElementById('timeline')
-  // itemContainer = document.getElementById('item')
   loadData()
 })
