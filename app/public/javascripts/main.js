@@ -7,7 +7,6 @@ const y = 10
 const axisValues = []
 let year
 let xAxis = 0
-let x
 let width
 let randomValue
 let content
