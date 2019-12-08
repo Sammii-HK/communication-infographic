@@ -3,10 +3,12 @@
 
 console.log('JS loaded 🍇')
 
-const offset = 200
+const offset = 500
+// const offset = 50
 const y = 10
 const xAxisValues = []
 const axisValues = []
+let year
 let xAxis
 let x
 let width
@@ -54,7 +56,7 @@ function makeTimeline() {
     square.className = `item ${item.key} ${item.category}`
     square.innerHTML = `${item.title} <br> ${item.year}`
     // PUSH ALL ELEMENTS UP FOR AESTHETICS
-    const year = parseInt(item.year) - 1425
+    year = parseInt(item.year) - 1425
     // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
     const yAxis = parseInt(year * y)
     // SET TRANSFORM
@@ -66,8 +68,10 @@ function makeTimeline() {
     // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
     const randomValue = scatter()
     // MAKE PERCENTAGE OF AXIS VALUE WITH RANDOMNUMBER FUNCTION
-    const percentage = (x / randomValue)
-    xAxis = x / percentage
+    // const percentage = (x / randomValue)
+    // xAxis = x / percentage
+    const percentage = (width / randomValue)
+    xAxis = width / percentage
     // IF FINAL X AXIS VALUE IS LESS THAN THE BOUNDS OF THE TIMELINE
     if (xAxis <= 0) {
       // MAKE NEW RANDOM NUMBER TO POSITIVE
@@ -80,7 +84,7 @@ function makeTimeline() {
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     // xValues.push(xAxis)
     // yValues.push(yAxis)
-    console.log('*xAxis*', xAxis)
+    // console.log('*xAxis*', xAxis)
     overlayCheck()
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
@@ -91,11 +95,13 @@ const lastValue = axisValues[axisValues.length-1]
 const overlayCheck = function() {
   axisValues.map((item, i) => {
     const lastItem = axisValues[ i - 1 ]
-    console.log('======================')
     console.log('item', item)
+    console.log('lastItem', lastItem)
     if (i === 0) return
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-    if (item.yAxis <= (lastItem.yAxis - 10)) {
+    if (item.yAxis <= (lastItem.yAxis - (year * 10))) {
+      console.log('======================')
+      console.log('item', item)
       // IF CURRENT XAXIS IS WITHIN 10% (OF TIMELINE DIV WIDTH) OF LAST ITEM
       // console.log('item', item.yAxis, item.xAxis)
       // console.log('lastItem', lastItem.yAxis, lastItem.xAxis)
@@ -115,7 +121,7 @@ const overlayCheck = function() {
         // console.log('xAxis 2', xAxis)
       }
     }
-    console.log('item 2', item)
+    // console.log('item 2', item)
     // console.log('item.yAxis, item.xAxis', item.yAxis, item.xAxis)
   })
 }
@@ -125,7 +131,8 @@ const posOrNeg = Math.random() < 0.5 ? -1 : 1
 
 const scatter = function() {
   // MAKE A RANDOM VALUE
-  randomValue = Math.round(Math.random() * offset - 1)
+  randomValue = Math.round(Math.random() * (width / 2) - 1)
+  // randomValue = Math.round(Math.random() * offset - 1)
   // RANDOMLY MAKE THE VALUE POSITIVE OR NEGATIVE
   randomValue = randomValue * posOrNeg
   return randomValue
