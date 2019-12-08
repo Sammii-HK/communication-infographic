@@ -60,8 +60,8 @@ function makeTimeline() {
     timeline.appendChild(square)
     // SCATTER ITEMS ON TIMELINE
     scatter()
-    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     square.style.setProperty('--transform-x', `${xAxis}px`)
+    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
   })
 }
 
@@ -75,14 +75,24 @@ const scatter = function() {
     const lastItem = axisValues[ i - 1 ]
     const currentYear = parseInt(item.year)
     const lastYear = parseInt(lastItem.year)
-    const axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
+    let axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (currentYear >= lastYear - 10) {
-      if (axisDifference <= (width / 10)) {
-        console.log('============')
-        console.log(item.title, lastItem.title, axisDifference)
-        xAxis = randomNumber()
-        console.log('xAxis2', xAxis)
+      // if (axisDifference <= (width / 10)) {
+      //   console.log('============')
+      //   console.log(item.title, lastItem.title, axisDifference)
+      //   xAxis = randomNumber()
+      //   console.log('xAxis2', xAxis)
+      // }
+      // let newDifference = axisDifference
+      while (axisDifference <= (width / 10)) {
+        console.log('1', item.title, axisDifference, item.xAxis)
+        const newNumber = randomNumber()
+        item.xAxis = 0
+        item.xAxis += newNumber
+        axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
+        console.log('2', axisDifference, item.xAxis)
+        xAxis = item.xAxis
       }
     }
   })
