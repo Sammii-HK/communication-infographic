@@ -61,7 +61,7 @@ function makeTimeline() {
     timeline.appendChild(square)
     // SCATTER ITEMS ON TIMELINE
     scatter()
-    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis, x: x })
+    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     square.style.setProperty('--transform-x', `${xAxis}px`)
   })
 }
@@ -71,14 +71,15 @@ const scatter = function() {
   xAxis = randomNumber()
 
   axisValues.map((item, i) => {
-    const lastItem = axisValues[ i - 1 ]
-    // console.log('lastItem', lastItem)
-    console.log('lastItem', lastItem)
-    // console.log('lastItem', lastItem.title)
     if (i === 0) return
+    const lastItem = axisValues[ i - 1 ]
+    const currentYear = parseInt(item.year)
+    const lastYear = parseInt(lastItem.year)
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-    if (item.yAxis <= (lastItem.yAxis - (year * 10))) {
+    if (currentYear >= lastYear - 10) {
       console.log('======================')
+      console.log(item.title, currentYear, lastYear, lastYear - 10)
+      console.log(item.xAxis, lastItem.xAxis)
     }
   })
 }
