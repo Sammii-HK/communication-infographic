@@ -33,8 +33,8 @@ function loadData () {
 function makeTimeline() {
   // GET WIDTH OF TIMELINE
   width = timeline.offsetWidth
-  // tenPerc = (width / 100) * 10
-  console.log('width', width)
+  const tenPerc = (width / 10)
+  console.log('width', width, tenPerc)
 
   // SORT CONTENT BY YEAR
   content.sort(function(a, b) {
@@ -71,20 +71,21 @@ const scatter = function() {
   // CHECK FOR OVERLAPS
   axisValues.map((item, i) => {
     if (i === 0) return
-    // console.log('xAxis1', xAxis)
     const lastItem = axisValues[ i - 1 ]
     const currentYear = parseInt(item.year)
     const lastYear = parseInt(lastItem.year)
     let axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-    if (currentYear >= lastYear - 10) {
-      while (axisDifference <= (width / 10)) {
-        console.log('1', item.title, axisDifference, item.xAxis)
+    if (currentYear <= lastYear + 10) {
+    // if (currentYear <= lastYear + 10) {
+      while (axisDifference <= (width / 4)) {
+        console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
         const newNumber = randomNumber()
         item.xAxis = 0
         item.xAxis += newNumber
         axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
-        console.log('2', axisDifference, item.xAxis)
+        // console.log('2', axisDifference, item.xAxis)
+        console.log('diff 2:', axisDifference, item.title, item.xAxis)
         xAxis = item.xAxis
       }
     }
