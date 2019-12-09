@@ -102,11 +102,11 @@ const scatter = function() {
 
     const currentYear = parseInt(item.year)
     if ((currentYear + 10) >= comparisonYear) {
-      console.error(item.title, comparisonYear, currentYear) // ***
       withinTenYears.push(item)
     }
+    // console.error(item.title, comparisonYear, currentYear) // ***
   })
-  console.log('withinTenYears', withinTenYears)
+  console.log(comparisonItem.title, withinTenYears)
     // withinTenYears()
     // const lastItem = axisValues[ i - 1 ]
     // const lastYear = parseInt(lastItem.year)
