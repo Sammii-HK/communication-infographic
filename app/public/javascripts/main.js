@@ -59,13 +59,14 @@ function makeTimeline() {
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
     // SCATTER ITEMS ON TIMELINE
-    scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
+    scatter()
   })
 }
 
 const scatter = function() {
+  // xAxis = 0
   const withinTenYears = []
   if (axisValues.length === 0) return
   // GET LAST ITEM IN THE ARRAY FOR COMPARISON
@@ -73,6 +74,7 @@ const scatter = function() {
   const comparisonYear = parseInt(comparisonItem.year)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
+  comparisonItem.xAxis = xAxis
   // CHECK FOR OVERLAPS
   axisValues.map((item, i) => {
     if (i === 0) return
@@ -87,8 +89,8 @@ const scatter = function() {
   })
   // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
-  console.log(comparisonItem.title, withinTenYears)
-  const paddingValue = width / 5
+  console.log(comparisonItem.title, comparisonItem.xAxis, withinTenYears)
+  const paddingValue = width / 3
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
@@ -101,6 +103,7 @@ const scatter = function() {
       // SET XAXIS VALUE FOR USE LATER
       xAxis = comparisonItem.xAxis
     }
+    console.log(xAxis)
   })
 }
 
