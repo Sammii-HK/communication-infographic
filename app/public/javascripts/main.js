@@ -78,11 +78,23 @@ const scatter = function() {
 
     const currentYear = parseInt(item.year)
     if ((currentYear + 10) >= comparisonYear) {
-      withinTenYears.push(item)
+      withinTenYears.push(item.xAxis)
+      // withinTenYears.push(item)
     }
     // console.error(item.title, comparisonYear, currentYear) // ***
   })
+  withinTenYears.pop()
   console.log(comparisonItem.title, withinTenYears)
+  const paddingValue = width / 10
+
+  withinTenYears.map(value => {
+    while (comparisonItem.xAxis <= (value + paddingValue) && comparisonItem.xAxis >= (value - paddingValue)) {
+      const newNumber = randomNumber()
+      comparisonItem.xAxis = 0
+      comparisonItem.xAxis += newNumber
+      xAxis = comparisonItem.xAxis
+    }
+  })
 
   // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
   // if (currentYear <= lastYear + 10) {
