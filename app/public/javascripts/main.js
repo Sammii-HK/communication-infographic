@@ -4,7 +4,7 @@
 console.log('JS loaded 🍇')
 
 const y = 10
-let axisValues = []
+const axisValues = []
 let year
 let xAxis = 0
 let width
@@ -62,32 +62,8 @@ function makeTimeline() {
     scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
-    // console.log('withinTenYears', withinTenYears)
-    // console.log('axisValues', axisValues)
-    // // SORT CONTENT BY YEAR
-    // axisValues = axisValues.sort(function(a, b) {
-    //   const aYear = parseInt(a.year)
-    //   const bYear = parseInt(b.year)
-    //   return aYear - bYear
-    // })
   })
 }
-
-// const withinTenYears = function() {
-//   const withinTen = []
-//   // axisValues.map(item => {
-//   //   const currentYear = parseInt(item.year)
-//   //   if (currentYear)
-//   // })
-//   for (let i = 0; i <= axisValues.length - 1; i++ ) {
-//     const currentItem = axisValues[i]
-//     const currentYear = parseInt(currentItem.year)
-//     // console.log('currentYear', currentYear)
-//     // console.log('lastYear', lastYear)
-//     if (currentYear >= (lastYear - 10)) return withinTen.push(currentYear)
-//   }
-//   // console.log('withinTen', withinTen)
-// }
 
 const scatter = function() {
   const withinTenYears = []
@@ -107,42 +83,20 @@ const scatter = function() {
     // console.error(item.title, comparisonYear, currentYear) // ***
   })
   console.log(comparisonItem.title, withinTenYears)
-    // withinTenYears()
-    // const lastItem = axisValues[ i - 1 ]
-    // const lastYear = parseInt(lastItem.year)
-    // let axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
 
-
-    // for (i = 0; axisValues.length; i++) {
-    //   if (parseInt(axisValues[i].year) >= (currentYear - 10)) {
-    //     console.log(axisDifference)
-    //     // withinTenYears.push(axisValues[i])
-    //   }
-    // }
-
-    // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-    // if (currentYear <= lastYear + 10) {
-    // // if (currentYear <= lastYear + 10) {
-    //   while (axisDifference <= (width / 5)) {
-    //     console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
-    //     const newNumber = randomNumber()
-    //     item.xAxis = 0
-    //     item.xAxis += newNumber
-    //     axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
-    //
-    //     // if (i >= 1) return
-    //     // const secondLastItem = axisValues[ i - 2 ]
-    //     // let secondAxisDifference = Math.abs(secondLastItem.xAxis - item.xAxis)
-    //     // while (secondAxisDifference <= (width / 5)) {
-    //     //   const newNumber = randomNumber()
-    //     //   item.xAxis = 0
-    //     //   item.xAxis += newNumber
-    //     //   secondAxisDifference = Math.abs(secondLastItem.xAxis - item.xAxis)
-    //     // }
-    //     xAxis = item.xAxis
-    //     console.log('diff 2:', axisDifference, item.xAxis)
-    //   }
-    // }
+  // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
+  // if (currentYear <= lastYear + 10) {
+  // // if (currentYear <= lastYear + 10) {
+  //   while (axisDifference <= (width / 5)) {
+  //     console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
+  //     const newNumber = randomNumber()
+  //     item.xAxis = 0
+  //     item.xAxis += newNumber
+  //     axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
+  //     xAxis = item.xAxis
+  //     console.log('diff 2:', axisDifference, item.xAxis)
+  //   }
+  // }
 }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
