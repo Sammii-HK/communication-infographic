@@ -78,14 +78,24 @@ const scatter = function() {
     // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
     if (currentYear <= lastYear + 10) {
     // if (currentYear <= lastYear + 10) {
-      while (axisDifference <= (width / 4)) {
+      while (axisDifference <= (width / 5)) {
         console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
         const newNumber = randomNumber()
         item.xAxis = 0
         item.xAxis += newNumber
         axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
-        console.log('diff 2:', axisDifference, item.xAxis)
+
+        // if (i >= 1) return
+        // const secondLastItem = axisValues[ i - 2 ]
+        // let secondAxisDifference = Math.abs(secondLastItem.xAxis - item.xAxis)
+        // while (secondAxisDifference <= (width / 5)) {
+        //   const newNumber = randomNumber()
+        //   item.xAxis = 0
+        //   item.xAxis += newNumber
+        //   secondAxisDifference = Math.abs(secondLastItem.xAxis - item.xAxis)
+        // }
         xAxis = item.xAxis
+        console.log('diff 2:', axisDifference, item.xAxis)
       }
     }
   })

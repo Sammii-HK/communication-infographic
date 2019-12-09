@@ -54,7 +54,7 @@ a {
   /* transform: translateY(var(--transform-y)); */
   /* transform: translate(var(--transform-y), var(--transform-x)); */
   /* transform: translateX(var(--transform-x)); */
-  width: 150px;
+  width: 125px;
   text-align: center;
   justify-content: center;
   /* width: 75px;
