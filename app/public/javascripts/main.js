@@ -12,7 +12,7 @@ let randomValue
 let content
 let timeline
 
-function loadData () {
+function loadData() {
   fetch('./data.json')
     .then(response => {
       return response.json()
@@ -88,36 +88,21 @@ const scatter = function() {
   // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
   console.log(comparisonItem.title, withinTenYears)
-  const paddingValue = width / 10
+  const paddingValue = width / 5
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
-    while (comparisonItem.xAxis <= (value - paddingValue) && comparisonItem.xAxis >= (value + paddingValue)) {
+    while (comparisonItem.xAxis >= (value - paddingValue) && comparisonItem.xAxis <= (value + paddingValue)) {
       // MAKE A NEW NUMBER
       const newNumber = randomNumber()
       //  RESET AXIS VALUE
-      comparisonItem.xAxis = 0
-      // SET AXIS TO BE NEW NUMBER
-      comparisonItem.xAxis += newNumber
+      comparisonItem.xAxis = newNumber
+      console.log('newNumber', newNumber)
       // SET XAXIS VALUE FOR USE LATER
       xAxis = comparisonItem.xAxis
     }
   })
 }
-
-// IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-// if (currentYear <= lastYear + 10) {
-// // if (currentYear <= lastYear + 10) {
-//   while (axisDifference <= (width / 5)) {
-//     console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
-//     const newNumber = randomNumber()
-//     item.xAxis = 0
-//     item.xAxis += newNumber
-//     axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
-//     xAxis = item.xAxis
-//     console.log('diff 2:', axisDifference, item.xAxis)
-//   }
-// }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
 const posOrNeg = function() {
