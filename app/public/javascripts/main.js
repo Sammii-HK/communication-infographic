@@ -62,45 +62,50 @@ function makeTimeline() {
     scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
+
+    // SORT CONTENT BY YEAR
+    axisValues = axisValues.sort(function(a, b) {
+      const aYear = parseInt(a.year)
+      const bYear = parseInt(b.year)
+      return aYear - bYear
+    })
   })
 }
 
-// const axisValueSort = function() {
-//   axisValues.map(item => {
-//     axisValues = axisValues.sort(function(a, b) {
-//       const aYear = parseInt(a.year)
-//       const bYear = parseInt(b.year)
-//       return aYear - bYear
-//     })
-//   })
+// const withinTenYears = function() {
+//   const withinTen = []
+//   // axisValues.map(item => {
+//   //   const currentYear = parseInt(item.year)
+//   //   if (currentYear)
+//   // })
+//   for (let i = 0; i <= axisValues.length - 1; i++ ) {
+//     const currentItem = axisValues[i]
+//     const currentYear = parseInt(currentItem.year)
+//     // console.log('currentYear', currentYear)
+//     // console.log('lastYear', lastYear)
+//     if (currentYear >= (lastYear - 10)) return withinTen.push(currentYear)
+//   }
+//   // console.log('withinTen', withinTen)
 // }
 
-const withinTenYears = function() {
-  const withinTen = []
-  // axisValues.map(item => {
-  //   const currentYear = parseInt(item.year)
-  //   if (currentYear)
-  // })
-  for (let i = 0; i <= axisValues.length - 1; i++ ) {
-    const currentItem = axisValues[i]
-    const currentYear = parseInt(currentItem.year)
-    const lastItem = axisValues[axisValues.length - 1]
-    const lastYear = parseInt(lastItem.year)
-    // console.log('currentYear', currentYear)
-    // console.log('lastYear', lastYear)
-    if (currentYear >= (lastYear - 10)) return withinTen.push(currentYear)
-  }
-  console.log('withinTen', withinTen)
-}
-
 const scatter = function() {
-  // let withinTenYears = []
+  let withinTenYears = []
+  if (axisValues.length === 0) return
+  const comparisonItem = axisValues[axisValues.length - 1]
+  const comparisonYear = parseInt(comparisonItem.year)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
   // CHECK FOR OVERLAPS
   axisValues.map((item, i) => {
     if (i === 0) return
-    withinTenYears()
+
+    const currentYear = parseInt(item.year)
+    console.log(item.title, comparisonYear, currentYear)
+    if ((currentYear + 10) >= comparisonYear) {
+      withinTenYears.push(item)
+      console.log('withinTenYears', withinTenYears)
+    }
+    // withinTenYears()
     // const lastItem = axisValues[ i - 1 ]
     // const lastYear = parseInt(lastItem.year)
     // let axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
