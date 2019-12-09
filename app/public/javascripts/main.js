@@ -62,13 +62,14 @@ function makeTimeline() {
     scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
-
-    // SORT CONTENT BY YEAR
-    axisValues = axisValues.sort(function(a, b) {
-      const aYear = parseInt(a.year)
-      const bYear = parseInt(b.year)
-      return aYear - bYear
-    })
+    // console.log('withinTenYears', withinTenYears)
+    // console.log('axisValues', axisValues)
+    // // SORT CONTENT BY YEAR
+    // axisValues = axisValues.sort(function(a, b) {
+    //   const aYear = parseInt(a.year)
+    //   const bYear = parseInt(b.year)
+    //   return aYear - bYear
+    // })
   })
 }
 
@@ -89,7 +90,7 @@ function makeTimeline() {
 // }
 
 const scatter = function() {
-  let withinTenYears = []
+  const withinTenYears = []
   if (axisValues.length === 0) return
   const comparisonItem = axisValues[axisValues.length - 1]
   const comparisonYear = parseInt(comparisonItem.year)
@@ -100,11 +101,12 @@ const scatter = function() {
     if (i === 0) return
 
     const currentYear = parseInt(item.year)
-    console.log(item.title, comparisonYear, currentYear)
     if ((currentYear + 10) >= comparisonYear) {
+      console.error(item.title, comparisonYear, currentYear) // ***
       withinTenYears.push(item)
-      console.log('withinTenYears', withinTenYears)
     }
+  })
+  console.log('withinTenYears', withinTenYears)
     // withinTenYears()
     // const lastItem = axisValues[ i - 1 ]
     // const lastYear = parseInt(lastItem.year)
@@ -141,7 +143,6 @@ const scatter = function() {
     //     console.log('diff 2:', axisDifference, item.xAxis)
     //   }
     // }
-  })
 }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
