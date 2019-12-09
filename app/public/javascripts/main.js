@@ -68,6 +68,7 @@ function makeTimeline() {
 const scatter = function() {
   const withinTenYears = []
   if (axisValues.length === 0) return
+  // GET LAST ITEM IN THE ARRAY FOR COMPARISON
   const comparisonItem = axisValues[axisValues.length - 1]
   const comparisonYear = parseInt(comparisonItem.year)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
@@ -75,41 +76,48 @@ const scatter = function() {
   // CHECK FOR OVERLAPS
   axisValues.map((item, i) => {
     if (i === 0) return
-
+    // MAKE VALUE A NUMBER
     const currentYear = parseInt(item.year)
+    // IF CURRENT YEAR IS WITHIN TEN YEARS OF THE COMPARISON YEAR
     if ((currentYear + 10) >= comparisonYear) {
+      // PUSH XAXIS VALUE TO ARRAY
       withinTenYears.push(item.xAxis)
-      // withinTenYears.push(item)
     }
     // console.error(item.title, comparisonYear, currentYear) // ***
   })
+  // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
   console.log(comparisonItem.title, withinTenYears)
   const paddingValue = width / 10
-
+  // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
-    while (comparisonItem.xAxis <= (value + paddingValue) && comparisonItem.xAxis >= (value - paddingValue)) {
+    // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
+    while (comparisonItem.xAxis <= (value - paddingValue) && comparisonItem.xAxis >= (value + paddingValue)) {
+      // MAKE A NEW NUMBER
       const newNumber = randomNumber()
+      //  RESET AXIS VALUE
       comparisonItem.xAxis = 0
+      // SET AXIS TO BE NEW NUMBER
       comparisonItem.xAxis += newNumber
+      // SET XAXIS VALUE FOR USE LATER
       xAxis = comparisonItem.xAxis
     }
   })
-
-  // IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
-  // if (currentYear <= lastYear + 10) {
-  // // if (currentYear <= lastYear + 10) {
-  //   while (axisDifference <= (width / 5)) {
-  //     console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
-  //     const newNumber = randomNumber()
-  //     item.xAxis = 0
-  //     item.xAxis += newNumber
-  //     axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
-  //     xAxis = item.xAxis
-  //     console.log('diff 2:', axisDifference, item.xAxis)
-  //   }
-  // }
 }
+
+// IF CURRENT ITEM WITHIN 10 YEARS OF THE LAST
+// if (currentYear <= lastYear + 10) {
+// // if (currentYear <= lastYear + 10) {
+//   while (axisDifference <= (width / 5)) {
+//     console.log('diff 1:', axisDifference, item.title, item.xAxis, lastItem.title, lastItem.xAxis)
+//     const newNumber = randomNumber()
+//     item.xAxis = 0
+//     item.xAxis += newNumber
+//     axisDifference = Math.abs(lastItem.xAxis - item.xAxis)
+//     xAxis = item.xAxis
+//     console.log('diff 2:', axisDifference, item.xAxis)
+//   }
+// }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
 const posOrNeg = function() {
