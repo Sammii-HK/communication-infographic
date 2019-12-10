@@ -80,7 +80,7 @@ const scatter = function() {
   console.log('1 xAxis', xAxis)
   comparisonItem.xAxis = xAxis
   // CHECK FOR OVERLAPS
-  axisValues.map((item, i) => {
+  axisValues.map(item => {
     // if (i === 0) return
     // MAKE VALUE A NUMBER
     const currentYear = parseInt(item.year)
@@ -97,12 +97,12 @@ const scatter = function() {
   console.log('2', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
-    console.log('3 value', value)
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
     while (comparisonItem.xAxis >= (value - paddingValue) && comparisonItem.xAxis <= (value + paddingValue)) {
+      // console.log('3 value', value)
       // MAKE A NEW NUMBER
       const newNumber = randomNumber()
-      console.log('4 newNumber', newNumber)
+      console.log('3 newNumber', newNumber)
       //  RESET AXIS VALUE
       // console.log('5 comparisonItem.xAxis', comparisonItem.xAxis)
       // console.log('newNumber', newNumber)
@@ -111,7 +111,7 @@ const scatter = function() {
     }
     xAxis = comparisonItem.xAxis
     // console.log('xAxis', xAxis)
-    console.log('5', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
+    console.log('4', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
   })
 }
 
