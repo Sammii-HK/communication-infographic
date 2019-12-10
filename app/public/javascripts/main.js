@@ -72,9 +72,14 @@ const scatter = function() {
   // GET LAST ITEM IN THE ARRAY FOR COMPARISON
   const comparisonItem = axisValues[axisValues.length - 1]
   const comparisonYear = Math.abs(comparisonItem.year)
+<<<<<<< HEAD
   const paddingValue = width / 8
   console.log(paddingValue)
   // console.log('paddingValue', paddingValue)
+=======
+  const paddingValue = width / 10
+  console.log('paddingValue', paddingValue)
+>>>>>>> 4a119cecfb00d8328cf380412528a0fedee29972
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
   console.log('1 xAxis', xAxis)
@@ -98,6 +103,7 @@ const scatter = function() {
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
+    // ITS ONLY CHECKING THE VALUES ONE AT A TIME, SO IT WILL CHANGE THE VALUE UNTIL IT IS THE CORRECT NUMBER BUT THEN WHEN IT MOVES ONTO THE NEXT NUNMBER TO PASS THE CONDITION IT WILL THEN ONLY CHECK THAT CURRENT AXIS VALUE AND NOT EVERY VALUE IN THE ARRAY. I ALMOST NEED TO SWAP THE MAP AND THE WHILE LOOP AROUND, SO WHILE THE VALUE IS Z, IT MAPS THROUGH THE ARRAY....
     while (comparisonItem.xAxis >= (value - paddingValue) && comparisonItem.xAxis <= (value + paddingValue)) {
       // console.log('3 value', value)
       // MAKE A NEW NUMBER

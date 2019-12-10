@@ -20,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
+  background-color: darkSlateGray;
+  background-color: #232323;
 }
 
 body {
@@ -54,7 +56,7 @@ a {
   /* transform: translateY(var(--transform-y)); */
   /* transform: translate(var(--transform-y), var(--transform-x)); */
   /* transform: translateX(var(--transform-x)); */
-  width: 125px;
+  width: 100px;
   text-align: center;
   justify-content: center;
   /* width: 75px;
