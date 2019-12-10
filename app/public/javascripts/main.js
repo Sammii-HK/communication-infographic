@@ -72,7 +72,7 @@ const scatter = function() {
   // GET LAST ITEM IN THE ARRAY FOR COMPARISON
   const comparisonItem = axisValues[axisValues.length - 1]
   const comparisonYear = Math.abs(comparisonItem.year)
-  const paddingValue = width / 8
+  const paddingValue = width / 10
   console.log(paddingValue)
   // console.log('paddingValue', paddingValue)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
