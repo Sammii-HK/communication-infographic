@@ -67,7 +67,6 @@ function makeTimeline() {
 }
 
 const scatter = function() {
-  // xAxis = 0
   const withinTenYears = []
   if (axisValues.length === 0) return
   // GET LAST ITEM IN THE ARRAY FOR COMPARISON
