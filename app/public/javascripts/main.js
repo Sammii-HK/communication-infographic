@@ -57,9 +57,9 @@ function makeTimeline() {
     // SET TRANSFORM
     square.style.setProperty('--transform-y', `${yAxis}px`)
     // SCATTER ITEMS ON TIMELINE
+    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
-    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     // console.log('timeline xAxis', xAxis)
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
@@ -77,10 +77,11 @@ const scatter = function() {
   // console.log('paddingValue', paddingValue)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
+  console.log('1 xAxis', xAxis)
   comparisonItem.xAxis = xAxis
   // CHECK FOR OVERLAPS
   axisValues.map((item, i) => {
-    if (i === 0) return
+    // if (i === 0) return
     // MAKE VALUE A NUMBER
     const currentYear = parseInt(item.year)
     // IF CURRENT YEAR IS WITHIN TEN YEARS OF THE COMPARISON YEAR
@@ -93,20 +94,24 @@ const scatter = function() {
   })
   // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
-  console.log(comparisonItem.title, comparisonItem.xAxis, withinTenYears)
+  console.log('2', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
+    console.log('3 value', value)
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
     while (comparisonItem.xAxis >= (value - paddingValue) && comparisonItem.xAxis <= (value + paddingValue)) {
       // MAKE A NEW NUMBER
       const newNumber = randomNumber()
+      console.log('4 newNumber', newNumber)
       //  RESET AXIS VALUE
-      comparisonItem.xAxis = newNumber
+      // console.log('5 comparisonItem.xAxis', comparisonItem.xAxis)
       // console.log('newNumber', newNumber)
       // SET XAXIS VALUE FOR USE LATER
+      comparisonItem.xAxis = newNumber
     }
     xAxis = comparisonItem.xAxis
-    console.log('xAxis', xAxis)
+    // console.log('xAxis', xAxis)
+    console.log('5', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
   })
 }
 
