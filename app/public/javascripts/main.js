@@ -92,7 +92,7 @@ const scatter = function() {
   // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
   console.log(comparisonItem.title, comparisonItem.xAxis, withinTenYears)
-  const paddingValue = width / 5
+  const paddingValue = width / 10
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
