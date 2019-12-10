@@ -74,6 +74,10 @@ const scatter = function() {
   const comparisonYear = Math.abs(comparisonItem.year)
   const paddingValue = width / 8
   console.log(paddingValue)
+<<<<<<< HEAD
+=======
+  // console.log('paddingValue', paddingValue)
+>>>>>>> master
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
   console.log('1 xAxis', xAxis)
