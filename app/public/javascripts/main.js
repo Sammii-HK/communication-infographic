@@ -56,13 +56,13 @@ function makeTimeline() {
     const yAxis = parseInt(year * y)
     // SET TRANSFORM
     square.style.setProperty('--transform-y', `${yAxis}px`)
-    // PUSH ELEMENTS TO DOM TIMELINE
-    timeline.appendChild(square)
     // SCATTER ITEMS ON TIMELINE
-    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
-    console.log('timeline xAxis', xAxis)
+    axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
+    // console.log('timeline xAxis', xAxis)
+    // PUSH ELEMENTS TO DOM TIMELINE
+    timeline.appendChild(square)
   })
 }
 
@@ -73,6 +73,8 @@ const scatter = function() {
   // GET LAST ITEM IN THE ARRAY FOR COMPARISON
   const comparisonItem = axisValues[axisValues.length - 1]
   const comparisonYear = Math.abs(comparisonItem.year)
+  const paddingValue = width / 4
+  // console.log('paddingValue', paddingValue)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
   comparisonItem.xAxis = xAxis
@@ -92,7 +94,6 @@ const scatter = function() {
   // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
   console.log(comparisonItem.title, comparisonItem.xAxis, withinTenYears)
-  const paddingValue = width / 10
   // MAP WITHIN TEN YEARS ARRAY
   withinTenYears.map(value => {
     // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
@@ -103,9 +104,9 @@ const scatter = function() {
       comparisonItem.xAxis = newNumber
       // console.log('newNumber', newNumber)
       // SET XAXIS VALUE FOR USE LATER
-      xAxis = comparisonItem.xAxis
     }
-    console.log(xAxis)
+    xAxis = comparisonItem.xAxis
+    console.log('xAxis', xAxis)
   })
 }
 
