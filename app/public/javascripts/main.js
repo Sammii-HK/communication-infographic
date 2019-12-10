@@ -74,17 +74,13 @@ const scatter = function() {
   const comparisonYear = Math.abs(comparisonItem.year)
   const paddingValue = width / 8
   console.log(paddingValue)
-<<<<<<< HEAD
-=======
   // console.log('paddingValue', paddingValue)
->>>>>>> master
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
   console.log('1 xAxis', xAxis)
   comparisonItem.xAxis = xAxis
   // CHECK FOR OVERLAPS
   axisValues.map(item => {
-    // if (i === 0) return
     // MAKE VALUE A NUMBER
     const currentYear = parseInt(item.year)
     // IF CURRENT YEAR IS WITHIN TEN YEARS OF THE COMPARISON YEAR
@@ -93,30 +89,23 @@ const scatter = function() {
       // PUSH XAXIS VALUE TO ARRAY
       withinTenYears.push(item.xAxis)
     }
-    // console.error(item.title, comparisonYear, currentYear) // ***
   })
   // REMOVE LAST ITEM AS IT IS ITSELF
   withinTenYears.pop()
   console.log('2', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
   // MAP WITHIN TEN YEARS ARRAY
-  withinTenYears.map(value => {
-    // WHILE COMPARISON ITEM IS LESS OR MORE THAN VALUE
-    // ITS ONLY CHECKING THE VALUES ONE AT A TIME, SO IT WILL CHANGE THE VALUE UNTIL IT IS THE CORRECT NUMBER BUT THEN WHEN IT MOVES ONTO THE NEXT NUNMBER TO PASS THE CONDITION IT WILL THEN ONLY CHECK THAT CURRENT AXIS VALUE AND NOT EVERY VALUE IN THE ARRAY. I ALMOST NEED TO SWAP THE MAP AND THE WHILE LOOP AROUND, SO WHILE THE VALUE IS Z, IT MAPS THROUGH THE ARRAY....
-    while (comparisonItem.xAxis >= (value - paddingValue) && comparisonItem.xAxis <= (value + paddingValue)) {
-      // console.log('3 value', value)
-      // MAKE A NEW NUMBER
-      const newNumber = randomNumber()
-      console.log('3 newNumber', newNumber)
-      //  RESET AXIS VALUE
-      // console.log('5 comparisonItem.xAxis', comparisonItem.xAxis)
-      // console.log('newNumber', newNumber)
-      // SET XAXIS VALUE FOR USE LATER
-      comparisonItem.xAxis = newNumber
-    }
-    xAxis = comparisonItem.xAxis
-    // console.log('xAxis', xAxis)
-    console.log('4', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
+  while (withinTenYears.some(value => {
+    return comparisonItem.xAxis >= (value - paddingValue) && comparisonItem.xAxis <= (value + paddingValue)
   })
+  ) {
+    // MAKE A NEW NUMBER
+    const newNumber = randomNumber()
+    console.log('3 newNumber', newNumber)
+    // SET XAXIS VALUE FOR USE LATER
+    comparisonItem.xAxis = newNumber
+  }
+  xAxis = comparisonItem.xAxis
+  console.log('4', comparisonItem.title, comparisonItem.xAxis, withinTenYears)
 }
 
 // MAKE POSITIVE OR NEGATIVE NUMBER
