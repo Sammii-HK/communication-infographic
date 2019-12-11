@@ -26,6 +26,7 @@ class Home extends React.Component {
     return (
       <div className='container'>
         <h1 className='title'>Hello Universe!</h1>
+        <h2>sub heading</h2>
       </div>
     )
   }
