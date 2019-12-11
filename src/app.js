@@ -1,11 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import 'bulma'
+
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
+
+import Home from './components/Home'
+
 class App extends React.Component {
 
   render () {
-    return(
-      <h1>Hello World!</h1>
+    return (
+      <Router>
+        <main>
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        </main>
+      </Router>
     )
   }
 }
