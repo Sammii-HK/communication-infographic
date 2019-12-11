@@ -11,7 +11,7 @@ class Home extends React.Component {
   }
 
   getData() {
-    axios.get('/api/data.json')
+    axios.get('api/data')
       .then(res => this.setState({ data: res.data }))
       .catch(err => console.error(err))
   }
