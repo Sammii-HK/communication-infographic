@@ -2,23 +2,23 @@ import React from 'react'
 import axios from 'axios'
 
 class Home extends React.Component {
-
   constructor() {
     super()
 
     this.state = {
       data: null
     }
-    activeItem: null
   }
 
   getData() {
-    axios.get('./data.json')
+    axios.get('/api/data.json')
       .then(res => this.setState({ data: res.data }))
       .catch(err => console.error(err))
   }
+
   componentDidMount() {
     this.getData()
+    console.log('data', this.state.data)
   }
 
   render() {
