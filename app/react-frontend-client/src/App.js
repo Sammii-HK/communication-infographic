@@ -1,25 +1,33 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-class App extends Component {
-  state = {users: []}
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 
-  componentDidMount() {
-    fetch('/users')
-      .then(res => res.json())
-      .then(users => this.setState({ users }));
-  }
+import 'bulma'
 
-  render() {
-    return (
-      <div className="App">
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-      </div>
-    );
+import './style.scss'
+
+import Home from './components/Home'
+import ItemShow from './components/ItemShow'
+
+
+class App extends React.Component {
+  render(){
+    return(
+      <Router>
+        <Navbar />
+        <main>
+          <Switch>
+            <Route path="/item/:id" component={ItemShow} />
+            <Route path="/" component={Home} />
+          </Switch>
+        </main>
+      </Router>
+    )
   }
 }
 
-export default App;
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+)
