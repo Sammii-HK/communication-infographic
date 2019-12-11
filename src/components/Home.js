@@ -22,11 +22,11 @@ class Home extends React.Component {
   }
 
   render() {
+    console.log(this.state.data)
     if (!this.state.data) return <h1>Loading...</h1>
     return (
       <div className='container'>
         <h1 className='title'>Hello Universe!</h1>
-        <h2>sub heading</h2>
       </div>
     )
   }
