@@ -19,9 +19,4 @@ app.use('/api', routes)
 app.use(errorHandler)
 
 
-app.listen(port, () => console.log(`Listening on port ${port}`))
-
-// START SERVER
-app.listen(8000, () => {
-  console.log('App listening on port 8000! 🍌')
-})
+app.listen(port, () => console.log(`App listening on port ${port} 🍌`))
