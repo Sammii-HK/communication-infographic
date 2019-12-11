@@ -1,6 +1,3 @@
-/*eslint space-before-function-paren: ["error", "never"]*/
-/*eslint-env es6*/
-
 console.log('JS loaded 🍇')
 
 const y = 10
@@ -60,7 +57,6 @@ function makeTimeline() {
     axisValues.push({ title: item.title, year: item.year, yAxis: yAxis, xAxis: xAxis })
     scatter()
     square.style.setProperty('--transform-x', `${xAxis}px`)
-    // console.log('timeline xAxis', xAxis)
     // PUSH ELEMENTS TO DOM TIMELINE
     timeline.appendChild(square)
   })
@@ -74,17 +70,14 @@ const scatter = function() {
   const comparisonYear = Math.abs(comparisonItem.year)
   const paddingValue = width / 10
   console.log(paddingValue)
-  // console.log('paddingValue', paddingValue)
   // GET RANDOM VALUE TO OFFSET AXIS, WITH FUNCTION
   xAxis = randomNumber()
-  console.log('1 xAxis', xAxis)
   comparisonItem.xAxis = xAxis
   // CHECK FOR OVERLAPS
   axisValues.map(item => {
     // MAKE VALUE A NUMBER
     const currentYear = parseInt(item.year)
     // IF CURRENT YEAR IS WITHIN TEN YEARS OF THE COMPARISON YEAR
-    // if ((currentYear - comparisonYear) <= 10) {
     if ((currentYear + 10) >= comparisonYear) {
       // PUSH XAXIS VALUE TO ARRAY
       withinTenYears.push(item.xAxis)
@@ -100,7 +93,6 @@ const scatter = function() {
   ) {
     // MAKE A NEW NUMBER
     const newNumber = randomNumber()
-    console.log('3 newNumber', newNumber)
     // SET XAXIS VALUE FOR USE LATER
     comparisonItem.xAxis = newNumber
   }
