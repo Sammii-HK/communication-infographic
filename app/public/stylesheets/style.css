@@ -48,23 +48,14 @@ a {
 }
 
 .item {
+  transform: translate(var(--transform-x), var(--transform-y));
   display: inline-block;
   justify-content: center;
-  transform: translate(var(--transform-x), var(--transform-y));
-  /* top: var(--transform-y);
-  right: var(--transform-x); */
-  /* transform: translateY(var(--transform-y)); */
-  /* transform: translate(var(--transform-y), var(--transform-x)); */
-  /* transform: translateX(var(--transform-x)); */
   width: 100px;
   text-align: center;
-  justify-content: center;
-  /* width: 75px;
-  margin: 0 25px; */
   border: 0.8px solid gray;
   border-radius: 15px;
   position: absolute;
-  /* position: relative; */
 }
 
 .typography {
