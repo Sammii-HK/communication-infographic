@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const routes = require('./config/routes')
 const errorHandler = require('./lib/errorHandler')
-const port = require('./config/environment')
+const { port } = require('./config/environment')
 require('dotenv').config()
 
 
