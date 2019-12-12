@@ -19,7 +19,8 @@ class Home extends React.Component {
   }
 
   sortedData() {
-    return this.state.data.sort((a, b) => {
+    const data = this.state.data.data
+    return data.sort((a, b) => {
       if (a.year === b.year) return 0
       return a.year < b.year ? -1 : 1
     })
@@ -32,13 +33,14 @@ class Home extends React.Component {
 
   render() {
     console.log('state data', this.state.data)
+    // console.log('state data', this.state.data._id)
     if (!this.state.data) return <h1>Loading...</h1>
     return (
       <div className='container'>
         <h1 className='title'>Hello Universe!</h1>
         <div id='timeline'>
-          {this.sortedData().map(item =>
-            <div key={item._id} id={item._id} className={item._id}>
+          {this.sortedData().map((item, i) =>
+            <div key={i} className={item.category}>
               <h5>{item.title}</h5>
               <p>{item.year}</p>
             </div>
