@@ -6,20 +6,20 @@ class Home extends React.Component {
     super()
 
     this.state = {
-      data: null
+      timeline: null
     }
 
-    this.sortedData = this.sortedData.bind(this)
+    // this.sortedData = this.sortedData.bind(this)
   }
 
   getData() {
     axios.get('api/data')
-      .then(res => this.setState({ data: res.data }))
+      .then(res => this.setState({ timeline: res.data }))
       .catch(err => console.error(err))
   }
 
   sortedData() {
-    const data = this.state.data.data
+    const data = this.state.timeline.data
     return data.sort((a, b) => {
       if (a.year === b.year) return 0
       return a.year < b.year ? -1 : 1
@@ -27,16 +27,29 @@ class Home extends React.Component {
   }
 
   yAxis() {
-    const data = this.state.data.data
+    const data = this.state.timeline.data
+    if (!data) return
     const y = 10
-    // PUSH ALL ELEMENTS UP FOR AESTHETICS
-    const year = data.year
-    // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
-    return year * y
+    console.log('yAxis timeline.data', this.state.timeline)
+    // // PUSH ALL ELEMENTS UP FOR AESTHETICS
+    // // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
+    data.map(item => {
+      console.log('item', item.year)
+      // this.setState({ yAxis: (item.year * y) })
+    })
+    // return this.sortedData().map(item =>
+    //   // yAxis = item.year * y
+    //   console.log('item', item)
+    // )
   }
 
   componentDidMount() {
     this.getData()
+  }
+
+  componentDidUpdate() {
+    // console.log('timeline.data', this.state.timeline)
+    this.yAxis()
   }
 
   // MAKE POSITIVE OR NEGATIVE NUMBER
@@ -54,15 +67,15 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log('state data', this.state.data)
-    if (!this.state.data) return <h1>Loading...</h1>
+    if (!this.state.timeline) return <h1>Loading...</h1>
     return (
       <div className='container'>
         <h1 className='title'>Hello Universe!</h1>
         <div id='timeline'>
-          {this.sortedData().map((item, i) =>
-            <div key={i} className={item.category}
-              style={{ transform: `translate(${this.xAxis}px, ${this.yAxis()}px)` }}>
+          {this.state.timeline.data.map((item, i) =>
+            <div key={i}
+              className={item.category}
+              style={{ transform: `translate(50px, ${item.yAxis}px)` }}>
               <h5>{item.title}</h5>
             </div>
           )}
