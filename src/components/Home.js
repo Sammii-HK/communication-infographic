@@ -27,29 +27,25 @@ class Home extends React.Component {
   }
 
   yAxis() {
-    const data = this.state.timeline.data
+    const data = this.state.timeline
     if (!data) return
     const y = 10
     console.log('yAxis timeline.data', this.state.timeline)
-    // // PUSH ALL ELEMENTS UP FOR AESTHETICS
-    // // PLACE ITEMS ON ITEMLINE USING YEAR VALUE AND VALUE SET FOR 'Y'
-    data.map(item => {
-      console.log('item', item.year)
-      // this.setState({ yAxis: (item.year * y) })
+    const timeline = data.map(item => {
+      console.log('item', item)
+      const yAxis = item.year * y
+      return { ...item, yAxis }
     })
-    // return this.sortedData().map(item =>
-    //   // yAxis = item.year * y
-    //   console.log('item', item)
-    // )
+    this.setState({ timeline })
   }
 
   componentDidMount() {
     this.getData()
+    this.yAxis()
   }
 
   componentDidUpdate() {
-    // console.log('timeline.data', this.state.timeline)
-    this.yAxis()
+    console.log('timeline.data', this.state.timeline)
   }
 
   // MAKE POSITIVE OR NEGATIVE NUMBER
