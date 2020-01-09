@@ -96,6 +96,7 @@ class Home extends React.Component {
   }
 
   componentDidUpdate() {
+    console.log('update', this.state.selectedItem);
   }
 
   // MAKE POSITIVE OR NEGATIVE NUMBER
@@ -113,10 +114,12 @@ class Home extends React.Component {
   }
 
   handleSelect(i) {
-    console.log('selected item', i)
-    // console.log('selected item', this.state.timeline[i])
+    // console.log('selected item', i)
+    console.log('1', this.state.selectedItem)
+    console.log('selected item', this.state.timeline[i])
     this.setState({ selectedItem: this.state.timeline[i] })
     // this.setState({ selectedItem: i })
+    console.log('2', this.state.selectedItem)
   }
 
   handleClose() {
@@ -129,7 +132,8 @@ class Home extends React.Component {
     return (
       <div className='container'>
         <h1 className='title'>Hello Universe!</h1>
-        <div id='timeline'>
+        <div
+          id='timeline'>
           {this.state.timeline.map((item, i) =>
             <div key={i}
               className={ `item ${item.category}`}

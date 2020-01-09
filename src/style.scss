@@ -80,11 +80,22 @@ a {
       }
     }
 
-    div.modal {
-      // display: none;
-      width: 100vw;
-      height: 100vh;
+  }
+
+  div.modal {
+    // display: none;
+    // width: 100vw;
+    // height: 100vh;
+
+    div.modal-card {
+      section.modal-card-body {
+        p {
+          color: #232323;
+          font-size: 16px;
+        }
+      }
     }
+
   }
 
   .typography {
