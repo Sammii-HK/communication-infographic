@@ -11,15 +11,16 @@ class Home extends React.Component {
 
     // this.sortedData = this.sortedData.bind(this)
     this.yAxis = this.yAxis.bind(this)
+    this.xAxis = this.xAxis.bind(this)
     this.getData = this.getData.bind(this)
   }
 
   getData() {
     axios.get('api/data')
       .then(res => {
-        // this.setState({ timeline: res.data })
         this.yAxis(res.data)
       })
+      .then(() => console.log(this.state.timeline))
       .catch(err => console.error(err))
   }
 
@@ -31,15 +32,25 @@ class Home extends React.Component {
   }
 
   yAxis(data) {
-    // const data = this.state.timeline
+    // const data = this.state.timeline.data
     // if (!data.data) return
     const y = 10
     // console.log('yAxis timeline.data', this.state.timeline)
-    console.log(data)
     const timeline = data.data.map(item => {
       // console.log('item', item)
       const yAxis = (item.year - 1425) * y
       return { ...item, yAxis }
+    })
+    this.setState({ timeline })
+
+    this.xAxis()
+  }
+
+  xAxis(data) {
+    console.log('xAxis', this.randomNumber(), data)
+    const timeline = this.state.timeline.map(item => {
+      const xAxis = this.randomNumber()
+      return { ...item, xAxis }
     })
     this.setState({ timeline })
     setTimeout(() => console.log(this.state.timeline), 1000)
