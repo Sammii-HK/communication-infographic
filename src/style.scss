@@ -72,6 +72,8 @@ a {
 
     h5 {
       transition: all .2s ease-in-out;
+      cursor: pointer;
+
       &:hover {
         transform: scale(1.5);
       }
@@ -80,12 +82,14 @@ a {
   }
 
   div.modal {
-    color: #232323;
+    // color: #232323;
     div.modal-card {
       p {
         font-size: 16px;
       }
       header.modal-card-head, footer.modal-card-foot {
+        background-color: hsl(0, 0%, 21%);
+
         p {
           font-size: 18px;
           font-weight: 800;
@@ -94,6 +98,24 @@ a {
           align-items: center;
         }
       }
+
+      section.modal-card-body {
+        background-color: hsl(0, 0%, 21%);
+        color: white;
+        p {
+          line-height: 32px;
+          font-size: 18px;
+        }
+      }
+
+      header.modal-card-head {
+        color: white;
+        h3 {
+          color: white;
+        }
+      }
+      // footer.modal-card-foot {
+      // }
     }
   }
 
