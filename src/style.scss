@@ -64,7 +64,7 @@ a {
     border: 0.8px solid gray;
     border-radius: 15px;
     position: absolute;
-
+    z-index: 5;
     transition: all .2s ease-in-out;
 
     &:hover {
@@ -73,6 +73,7 @@ a {
     }
 
     h5 {
+      z-index: -2;
       transition: all .2s ease-in-out;
       &:hover {
         transform: scale(1.5);

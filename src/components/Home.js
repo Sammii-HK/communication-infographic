@@ -6,7 +6,8 @@ class Home extends React.Component {
     super()
 
     this.state = {
-      timeline: []
+      timeline: [],
+      selectedItem: null
     }
 
     this.yAxis = this.yAxis.bind(this)
@@ -112,6 +113,9 @@ class Home extends React.Component {
 
   handleSelect(e) {
     console.log(e.target);
+    const target = e.target
+    console.log(target.value);
+    // this.setState({ selectedItem: this.state.timeline[] })
   }
 
   render() {
@@ -127,7 +131,7 @@ class Home extends React.Component {
               style={{ transform: `translate(${item.xAxis}px, ${item.yAxis}px)` }}
               value={ `${i}` }
               onClick={this.handleSelect} >
-              {item.title}
+              <h5>{item.title}</h5>
               <div class="modal">
               <div class="modal-background"></div>
                 <div class="modal-card">
