@@ -58,28 +58,28 @@ class Home extends React.Component {
       let xAxis = currentItem.xAxis
       const withinTenYears = []
 
-      console.log('current:', currentItem.title, currentItem.year)
+      console.log('current:', currentItem.title, currentItem.year, currentItem.xAxis)
 
       for (let comparableIndex = 0; comparableIndex <= i; comparableIndex ++) {
 
         if ((this.state.timeline[comparableIndex].year + 10) >= currentItem.year) {
-          console.log(this.state.timeline[comparableIndex].year, this.state.timeline[comparableIndex].title)
           withinTenYears.push(this.state.timeline[comparableIndex].xAxis)
         }
       }
-
+      // REMOVE LAST ITEM AS IT IS ITSELF
+      withinTenYears.pop()
       console.log('withinTenYears', withinTenYears)
 
-      // MAP WITHIN TEN YEARS ARRAY
-      while (withinTenYears.some(value => {
-        return currentItem.xAxis >= (value - paddingValue) && currentItem.xAxis <= (value + paddingValue)
-      })
-      ) {
-        // MAKE A NEW NUMBER
-        const newNumber = this.randomNumber()
-        // SET XAXIS VALUE FOR USE LATER
-        xAxis = newNumber
-      }
+      // // MAP WITHIN TEN YEARS ARRAY
+      // while (withinTenYears.some(value => {
+      //   return currentItem.xAxis >= (value - paddingValue) && currentItem.xAxis <= (value + paddingValue)
+      // })
+      // ) {
+      //   // MAKE A NEW NUMBER
+      //   const newNumber = this.randomNumber()
+      //   // SET XAXIS VALUE FOR USE LATER
+      //   xAxis = newNumber
+      // }
 
       return { ...currentItem, xAxis }
     })
