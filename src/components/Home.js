@@ -13,6 +13,7 @@ class Home extends React.Component {
     this.xAxis = this.xAxis.bind(this)
     this.getData = this.getData.bind(this)
     this.overlapCheck = this.overlapCheck.bind(this)
+    this.handleSelect = this.handleSelect.bind(this)
   }
 
   getData() {
@@ -53,7 +54,8 @@ class Home extends React.Component {
   overlapCheck() {
     const timelineDOM = document.getElementById('timeline')
     const width = timelineDOM.offsetWidth
-    const paddingValue = width / 10
+    const paddingValue = 0
+    // const paddingValue = width / 12
     const timeline = this.state.timeline.map((currentItem, i) => {
       let xAxis = currentItem.xAxis
       const withinTenYears = []
@@ -70,15 +72,16 @@ class Home extends React.Component {
       withinTenYears.pop()
       console.log('withinTenYears', withinTenYears)
 
-      // // MAP WITHIN TEN YEARS ARRAY
+      // MAP WITHIN TEN YEARS ARRAY
       // while (withinTenYears.some(value => {
       //   return currentItem.xAxis >= (value - paddingValue) && currentItem.xAxis <= (value + paddingValue)
       // })
       // ) {
       //   // MAKE A NEW NUMBER
       //   const newNumber = this.randomNumber()
+      //   console.log(newNumber)
       //   // SET XAXIS VALUE FOR USE LATER
-      //   xAxis = newNumber
+      //   // xAxis = newNumber
       // }
 
       return { ...currentItem, xAxis }
@@ -107,6 +110,10 @@ class Home extends React.Component {
     return randomValue
   }
 
+  handleSelect(e) {
+    console.log(e.target);
+  }
+
   render() {
     if (this.state.timeline.length === 0) return <h1>Loading...</h1>
     //this.yAxis()
@@ -117,8 +124,24 @@ class Home extends React.Component {
           {this.state.timeline.map((item, i) =>
             <div key={i}
               className={ `item ${item.category}`}
-              style={{ transform: `translate(${item.xAxis}px, ${item.yAxis}px)` }}>
-              <h5>{item.title}</h5>
+              style={{ transform: `translate(${item.xAxis}px, ${item.yAxis}px)` }}
+              value={ `${i}` }
+              onClick={this.handleSelect} >
+              {item.title}
+              <div class="modal">
+              <div class="modal-background"></div>
+                <div class="modal-card">
+                  <header class="modal-card-head">
+                    <p class="modal-card-title">Modal title</p>
+                    <button class="delete" aria-label="close"></button>
+                  </header>
+                  <section class="modal-card-body">
+                    <p>${item.content}</p>
+                  </section>
+                  <footer class="modal-card-foot">
+                  </footer>
+                </div>
+              </div>
             </div>
           )}
         </div>

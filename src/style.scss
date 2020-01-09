@@ -54,22 +54,42 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
 
-  .item {
+  div.item {
     display: inline-block;
     justify-content: center;
+    align-items: center;
     width: 100px;
+    font-size: 20px;
     text-align: center;
     border: 0.8px solid gray;
     border-radius: 15px;
     position: absolute;
+
+    transition: all .2s ease-in-out;
+
+    &:hover {
+      transform: scale(1.5);
+      color: white;
+    }
+
+    h5 {
+      transition: all .2s ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
+
+    div.modal {
+      display: none;
+    }
   }
 
   .typography {
-    color: pink;
+    color: hotPink;
   }
 
   .invention {
-    color: blue;
+    color: turquoise;
   }
 
   .movement {
