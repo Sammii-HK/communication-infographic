@@ -51,6 +51,9 @@ class Home extends React.Component {
   }
 
   overlapCheck() {
+    const timelineDOM = document.getElementById('timeline')
+    const width = timelineDOM.offsetWidth
+    const paddingValue = width / 10
     const timeline = this.state.timeline.map((currentItem, i) => {
       const xAxis = currentItem.xAxis
       const withinTenYears = []
@@ -61,11 +64,22 @@ class Home extends React.Component {
 
         if ((this.state.timeline[comparableIndex].year + 10) >= currentItem.year) {
           console.log(this.state.timeline[comparableIndex].year, this.state.timeline[comparableIndex].title)
-          withinTenYears.push(this.state.timeline[comparableIndex])
+          withinTenYears.push(this.state.timeline[comparableIndex].xAxis)
         }
       }
 
       console.log('withinTenYears', withinTenYears)
+
+      // MAP WITHIN TEN YEARS ARRAY
+      while (withinTenYears.some(value => {
+        return currentItem.xAxis >= (value - paddingValue) && currentItem.xAxis <= (value + paddingValue)
+      })
+      ) {
+        // MAKE A NEW NUMBER
+        const newNumber = this.randomNumber()
+        // SET XAXIS VALUE FOR USE LATER
+        xAxis = newNumber
+      }
 
       return { ...currentItem, xAxis }
     })
