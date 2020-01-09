@@ -112,9 +112,9 @@ class Home extends React.Component {
   }
 
   handleSelect(i) {
+    console.log('selected item', i)
     // console.log('selected item', this.state.timeline[i])
     this.setState({ selectedItem: i })
-    console.log('selected item', this.state.selectedItem)
   }
 
   render() {
@@ -125,21 +125,20 @@ class Home extends React.Component {
         <h1 className='title'>Hello Universe!</h1>
         <div id='timeline'>
           {this.state.timeline.map((item, i) =>
-            <div
+            <div key={i}
               className={ `item ${item.category}`}
               style={{ transform: `translate(${item.xAxis}px, ${item.yAxis}px)` }}
               onClick={() => this.handleSelect(i)} >
               <h5>{item.title}</h5>
-
-              <div className={`modal ${ i !== this.state.selectedItem ? '' : 'is-active'}`}>
-              <div className='modal-background'></div>
+              <div className={`modal ${(i !== this.state.selectedItem) ? '' : 'is-active'}`}>
+                <div className='modal-background'></div>
                 <div className='modal-card'>
                   <header className='modal-card-head'>
-                    <p className='modal-card-title'>${item.title}</p>
+                    <p className='modal-card-title'>{item.title}</p>
                     <button className='delete' aria-label='close'></button>
                   </header>
                   <section className='modal-card-body'>
-                    <p>${item.content}</p>
+                    <p>{item.content}</p>
                   </section>
                   <footer className='modal-card-foot'>
                   </footer>
