@@ -9,7 +9,6 @@ class Home extends React.Component {
       timeline: []
     }
 
-    // this.sortedData = this.sortedData.bind(this)
     this.yAxis = this.yAxis.bind(this)
     this.xAxis = this.xAxis.bind(this)
     this.getData = this.getData.bind(this)
@@ -32,12 +31,8 @@ class Home extends React.Component {
   }
 
   yAxis(data) {
-    // const data = this.state.timeline.data
-    // if (!data.data) return
     const y = 10
-    // console.log('yAxis timeline.data', this.state.timeline)
     const timeline = data.data.map(item => {
-      // console.log('item', item)
       const yAxis = (item.year - 1425) * y
       return { ...item, yAxis }
     })
@@ -47,13 +42,16 @@ class Home extends React.Component {
   }
 
   xAxis(data) {
+    const withinTenYears = []
     console.log('xAxis', this.randomNumber(), data)
     const timeline = this.state.timeline.map(item => {
       const xAxis = this.randomNumber()
+
+      console.log(item.yAxis)
+
       return { ...item, xAxis }
     })
     this.setState({ timeline })
-    setTimeout(() => console.log(this.state.timeline), 1000)
   }
 
   componentDidMount() {
