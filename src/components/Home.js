@@ -128,10 +128,9 @@ class Home extends React.Component {
 
   render() {
     if (this.state.timeline.length === 0) return <h1>Loading...</h1>
-    //this.yAxis()
     return (
       <div className='container'>
-        <h1 className='title'>Hello Universe!</h1>
+        <h1 className='title'>Communication Infographic</h1>
         <div
           id='timeline'>
           {this.state.timeline.map((item, i) =>
@@ -149,7 +148,8 @@ class Home extends React.Component {
               <div className='modal-background'></div>
               <div className='modal-card'>
                 <header className='modal-card-head'>
-                  <p className='modal-card-title'>{this.state.selectedItem.title}</p>
+                  <h3 className='modal-card-title'>{this.state.selectedItem.title}</h3>
+                  <p className='column'>{this.state.selectedItem.year}</p>
                   <button
                     className='delete'
                     onClick={this.handleClose}
@@ -159,6 +159,7 @@ class Home extends React.Component {
                   <p>{this.state.selectedItem.content}</p>
                 </section>
                 <footer className='modal-card-foot'>
+                  <p className={`column ${this.state.selectedItem.category}`}>{this.state.selectedItem.category}</p>
                 </footer>
               </div>
             </div>
