@@ -55,21 +55,9 @@ class Home extends React.Component {
       const xAxis = currentItem.xAxis
       const withinTenYears = []
 
-      console.log('******1******', i, currentItem.year)
-
-      // const axisCheck = this.state.timeline.map((comparisonItem, comparisonIndex) => {
-      //   console.log('=== 2 ===', comparisonItem.title, comparisonItem.year);
-      //
-      //   if ((comparisonItem.year + 10) >= currentItem.year) {
-      //       // withinTenYears.push(comparisonItem)
-      //       console.log('pushed', comparisonItem);
-      //     }
-      // })
+      console.log('current:', currentItem.title, currentItem.year)
 
       for (let comparableIndex = 0; comparableIndex <= i; comparableIndex ++) {
-
-        // console.log('item.year', currentItem.year);
-        // console.log('this.state.timeline[comparableIndex].year', this.state.timeline[comparableIndex].year);
 
         if ((this.state.timeline[comparableIndex].year + 10) >= currentItem.year) {
           console.log(this.state.timeline[comparableIndex].year, this.state.timeline[comparableIndex].title)
