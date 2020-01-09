@@ -15,6 +15,7 @@ class Home extends React.Component {
     this.getData = this.getData.bind(this)
     this.overlapCheck = this.overlapCheck.bind(this)
     this.handleSelect = this.handleSelect.bind(this)
+    this.handleClose = this.handleClose.bind(this)
   }
 
   getData() {
@@ -118,6 +119,10 @@ class Home extends React.Component {
     // this.setState({ selectedItem: i })
   }
 
+  handleClose() {
+    this.setState({ selectedItem: null })
+  }
+
   render() {
     if (this.state.timeline.length === 0) return <h1>Loading...</h1>
     //this.yAxis()
@@ -141,7 +146,10 @@ class Home extends React.Component {
               <div className='modal-card'>
                 <header className='modal-card-head'>
                   <p className='modal-card-title'>{this.state.selectedItem.title}</p>
-                  <button className='delete' aria-label='close'></button>
+                  <button
+                    className='delete'
+                    onClick={this.handleClose}
+                    aria-label='close'></button>
                 </header>
                 <section className='modal-card-body'>
                   <p>{this.state.selectedItem.content}</p>
