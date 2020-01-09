@@ -37,17 +37,15 @@ class Home extends React.Component {
       return { ...item, yAxis }
     })
     this.setState({ timeline })
-
     this.xAxis()
   }
 
   xAxis(data) {
     const withinTenYears = []
-    console.log('xAxis', this.randomNumber(), data)
-    const timeline = this.state.timeline.map(item => {
+    const timeline = this.state.timeline.map((item, i) => {
       const xAxis = this.randomNumber()
 
-      console.log(item.yAxis)
+      console.log(i, item.yAxis)
 
       return { ...item, xAxis }
     })
@@ -59,7 +57,6 @@ class Home extends React.Component {
   }
 
   componentDidUpdate() {
-    //console.log('timeline.data', this.state.timeline)
   }
 
   // MAKE POSITIVE OR NEGATIVE NUMBER
