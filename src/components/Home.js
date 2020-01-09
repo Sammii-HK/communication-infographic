@@ -55,7 +55,7 @@ class Home extends React.Component {
     const width = timelineDOM.offsetWidth
     const paddingValue = width / 10
     const timeline = this.state.timeline.map((currentItem, i) => {
-      const xAxis = currentItem.xAxis
+      let xAxis = currentItem.xAxis
       const withinTenYears = []
 
       console.log('current:', currentItem.title, currentItem.year)
