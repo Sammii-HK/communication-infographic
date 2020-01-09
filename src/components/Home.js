@@ -114,12 +114,7 @@ class Home extends React.Component {
   }
 
   handleSelect(i) {
-    // console.log('selected item', i)
-    console.log('1', this.state.selectedItem)
-    console.log('selected item', this.state.timeline[i])
     this.setState({ selectedItem: this.state.timeline[i] })
-    // this.setState({ selectedItem: i })
-    console.log('2', this.state.selectedItem)
   }
 
   handleClose() {
