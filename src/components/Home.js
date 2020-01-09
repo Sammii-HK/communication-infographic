@@ -88,7 +88,7 @@ class Home extends React.Component {
           {this.state.timeline.map((item, i) =>
             <div key={i}
               className={item.category}
-              style={{ transform: `translate(50px, ${item.yAxis}px)` }}>
+              style={{ transform: `translate(0, ${item.yAxis}px)` }}>
               <h5>{item.title}</h5>
             </div>
           )}
