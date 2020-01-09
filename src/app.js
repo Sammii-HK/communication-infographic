@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import axios from 'axios'
 
 import 'bulma'
+import './style.scss'
 
 import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 

@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body, div#root {
+  background-color: darkSlateGray;
+  color: white;
+  height: 100%;
+}
