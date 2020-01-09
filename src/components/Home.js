@@ -12,6 +12,7 @@ class Home extends React.Component {
     this.yAxis = this.yAxis.bind(this)
     this.xAxis = this.xAxis.bind(this)
     this.getData = this.getData.bind(this)
+    this.overlapCheck = this.overlapCheck.bind(this)
   }
 
   getData() {
@@ -40,14 +41,45 @@ class Home extends React.Component {
     this.xAxis()
   }
 
-  xAxis(data) {
-    const withinTenYears = []
+  xAxis() {
     const timeline = this.state.timeline.map((item, i) => {
       const xAxis = this.randomNumber()
-
-      console.log(i, item.yAxis)
-
       return { ...item, xAxis }
+    })
+    this.setState({ timeline })
+    this.overlapCheck()
+  }
+
+  overlapCheck() {
+    const timeline = this.state.timeline.map((currentItem, i) => {
+      const xAxis = currentItem.xAxis
+      const withinTenYears = []
+
+      console.log('******1******', i, currentItem.year)
+
+      // const axisCheck = this.state.timeline.map((comparisonItem, comparisonIndex) => {
+      //   console.log('=== 2 ===', comparisonItem.title, comparisonItem.year);
+      //
+      //   if ((comparisonItem.year + 10) >= currentItem.year) {
+      //       // withinTenYears.push(comparisonItem)
+      //       console.log('pushed', comparisonItem);
+      //     }
+      // })
+
+      for (let comparableIndex = 0; comparableIndex <= i; comparableIndex ++) {
+
+        // console.log('item.year', currentItem.year);
+        // console.log('this.state.timeline[comparableIndex].year', this.state.timeline[comparableIndex].year);
+
+        if ((this.state.timeline[comparableIndex].year + 10) >= currentItem.year) {
+          console.log(this.state.timeline[comparableIndex].year, this.state.timeline[comparableIndex].title)
+          withinTenYears.push(this.state.timeline[comparableIndex])
+        }
+      }
+
+      console.log('withinTenYears', withinTenYears)
+
+      return { ...currentItem, xAxis }
     })
     this.setState({ timeline })
   }
