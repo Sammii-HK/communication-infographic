@@ -2,7 +2,7 @@
 
 ## A history of communication, after 1440
 
-[Live Site](http://onsetlondon.herokuapp.com/): [http://XX.herokuapp.com](http://onsetlondon.herokuapp.com/)
+[Live Site](https://communication-timeline.herokuapp.com/#/): [communication-timeline.herokuapp.com/#/](https://communication-timeline.herokuapp.com/#/)
 
 ## Timeframe
 
@@ -25,7 +25,7 @@
 
 The brief was to build a full-stack application with a React front-end which was running an Express server to load the data which was stored as JSON.
 
-The application is deployed via Git on Heroku and can be found here: [XX](http://xx.herokuapp.com/)
+The application is deployed via Git on Heroku and can be found here: [Communication Timeline Infographic](https://communication-timeline.herokuapp.com/#/)
 
 ### App overview
 
