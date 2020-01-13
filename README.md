@@ -2,7 +2,7 @@
 
 ## A history of communication, after 1440
 
-[Live Site](https://communication-timeline.herokuapp.com/#/): [communication-timeline.herokuapp.com/#/](https://communication-timeline.herokuapp.com/#/)
+[Live Site](https://communication-timeline.herokuapp.com/#/): [communication-timeline.herokuapp.com/](https://communication-timeline.herokuapp.com/)
 
 ## Timeframe
 
@@ -25,7 +25,7 @@
 
 The brief was to build a full-stack application with a React front-end which was running an Express server to load the data which was stored as JSON.
 
-The application is deployed via Git on Heroku and can be found here: [Communication Timeline Infographic](https://communication-timeline.herokuapp.com/#/)
+The application is deployed via Git on Heroku and can be found here: [Communication Timeline Infographic](https://communication-timeline.herokuapp.com/)
 
 ### App overview
 
@@ -33,7 +33,7 @@ My first task, I set about working the algorithms needed for my functions, to pl
 
 
 
-[![image](https://user-images.githubusercontent.com/40695746/57919387-a3c91980-7890-11e9-8ce1-8df3f62eeed0.png)](https://user-images.githubusercontent.com/40695746/57919387-a3c91980-7890-11e9-8ce1-8df3f62eeed0.png)
+![Screenshot 2020-01-13 at 19 01 45](https://user-images.githubusercontent.com/40900195/72283885-a6565b80-3637-11ea-80f1-78ed41f5db48.png)
 
 #### Development process
 
@@ -122,6 +122,23 @@ The logic behind placing items on the x-axis is that the items are centered with
 I then randomly make this number positive or negative to offset the items to the left or right of the centre.
 
 This randomly generated value is set to the xAxis variable and set to state.
+
+#### Functionality
+
+The site utalises interative features to engage the audience.
+
+A roll over affect allows the user to clearly point mark out an individual item using scale and colour to define it.
+
+![Screenshot 2020-01-13 at 19 01 53](https://user-images.githubusercontent.com/40900195/72283888-a6eef200-3637-11ea-8c5f-9cf39a1aa0df.png)
+
+Each item can be clicked on, which will open up a modal window. 
+The modal contains more information about each item, which is present in the JSON data and is being loaded.
+
+![Screenshot 2020-01-13 at 19 02 09](https://user-images.githubusercontent.com/40900195/72283887-a6eef200-3637-11ea-9987-5e96b0793aaf.png)
+
+The timeline starts at 1440, which was chosen as it was the year the printing press was invented, and spans across a few centuries, until it covers modern day communication techniques used today, to about 2010.
+
+![Screenshot 2020-01-13 at 19 02 49](https://user-images.githubusercontent.com/40900195/72283889-a6eef200-3637-11ea-9f54-0b00ad6d700f.png)
 
 ### Future enhancements
 
