@@ -21,9 +21,9 @@
 - GitHub
 - React Select
 
-## Project brief 
+## Project brief
 
-The brief was to build a full-stack application with a React front-end which was running an Express server to load the data which was stored as JSON. 
+The brief was to build a full-stack application with a React front-end which was running an Express server to load the data which was stored as JSON.
 
 The application is deployed via Git on Heroku and can be found here: [XX](http://xx.herokuapp.com/)
 
@@ -37,11 +37,30 @@ My first task, I set about working the algorithms needed for my functions, to pl
 
 #### Development process
 
-To get myself started with few distractions I worked on a JS, Pug & Express app at first, once the functionality was tested I then migrated my work and adapted my functions to a React app, allowing me greater scope to build onto the project in the future. 
+To get myself started with few distractions I worked on a JS, Pug & Express app at first, once the functionality was tested I then migrated my work and adapted my functions to a React app, allowing me greater scope to build onto the project in the future.
 
-#### Home.js component - the 'powerhouse parent'
+##### Project Origins
 
-The Home.js component is the parent of the other main components and sets the initial map coordinate state and passed this state and functions down to the children. In this manner we are able to minimise the number of api calls.
+This project was first created in 2016 as my BA(Hons) Graphic Design dissertation. It's an interactive Infographic which covers the History of Communication. I really wanted to push the boundaries of what was possible within designing my dissertation, not wanting to settle for an essay format.
+
+I relished this opportunity to push my design skills and moulded the constraints of the brief so that I was able to create my first website from the information of my dissertation in a creative and unusual way, which actually enhanced the experience of engaging with the essay.
+
+This project was created with Adobe Muse and was created to be viewed on large desktop screens, the live project can be viewed [here](https://sammiidesign.co.uk/communication_infographic_may16/).
+
+#### Server Side
+
+As the basis of the site was my dissertation I wanted a clean way to handle such a lage amount of data, so chose to convert the essay into JSON, which would be retrieved with Express, and loaded onto my React front end.
+
+```javascript
+getData() {
+    axios.get('api/data')
+      .then(res => {
+        this.yAxis(res.data)
+      })
+      .then(() => console.log(this.state.timeline))
+      .catch(err => console.error(err))
+  }
+```
 
 ##### Adding new locations
 
