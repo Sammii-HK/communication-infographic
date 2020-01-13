@@ -84,13 +84,51 @@ This function first sets a base value of 10, so 1 year is exquivalent of 10px.
 
 It then maps over the data to read the year value within each item object. It uses this value to subtract 1425, this is for visual purposes as the timeline starts at the year 1440, so removes the inital white space. It then takes the value and times it by the base value set for the pixels, so that value can be used to transform the object to 'z'px on the y-axis.
 
-#### Responsive design
+It then sets the data back to state, with a new key of yAxis and the value created.
 
-We decided that having a good mobile experience was particularly important for this app as it's use would be one the move, walking round London visiting the locations.
+#### X Axis
 
-Media queries are used to adjust the experience.
+The X-Axis function is a little more complex as it is not constant.
+
+##### Main Function
+
+```js
+xAxis() {
+    const timeline = this.state.timeline.map((item, i) => {
+      const xAxis = this.randomNumber()
+      return { ...item, xAxis }
+    })
+    this.setState({ timeline })
+    this.overlapCheck()
+  }
+```
+
+The main function maps over the data set to state, it then creates a random number and sets the data back to state with the new key and value for xAxis.
+
+##### Random Number
+
+```js
+randomNumber() {
+    const width = document.getElementById('timeline').offsetWidth
+    // MAKE A RANDOM VALUE WHICH IS HALF OF TIMELINE WIDTH
+    let randomValue = Math.round(Math.random() * (width / 2) - 1)
+    // RANDOMLY MAKE THE VALUE POSITIVE OR NEGATIVE
+    randomValue = randomValue * this.posOrNeg()
+    return randomValue
+  }
+```
+
+The logic behind placing items on the x-axis is that the items are centered within the viewport, so to scatter them I first find a random number which is half of the timeline container width.
+I then randomly make this number positive or negative to offset the items to the left or right of the centre.
+
+This randomly generated value is set to the xAxis variable and set to state.
 
 ### Future enhancements
 
-- Adding a lookup to the film database OMDB to populate new film images and film information.
-- Make scene note editing inline rather than via a separate page.
+- Working on the overlap check function
+- Adding more data to the timeline lines, such as: images, Wikipedialinks
+- Add to the functionality of the site
+  - Create a search feature
+  - Create a timeline navigation to 'jump' to a specific century
+  - Add more visual enhancements
+  - Make a database which can be added to, edited or deleted from.
