@@ -148,4 +148,5 @@ The timeline starts at 1440, which was chosen as it was the year the printing pr
   - Create a search feature
   - Create a timeline navigation to 'jump' to a specific century
   - Add more visual enhancements
-  - Make a database which can be added to, edited or deleted from.
+  - Make a database which can be added to, edited or deleted from
+  - Add a current year display, based on cursors position on the y-axis
