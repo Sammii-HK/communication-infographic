@@ -62,11 +62,27 @@ getData() {
   }
 ```
 
-##### Adding new locations
-
-#### Scrolling the Location Index and map focus
 
 
+#### Y Axis
+
+To place the items along the timeline on the y-axis I created a function.
+
+```js
+yAxis(data) {
+    const y = 10
+    const timeline = data.data.map(item => {
+      const yAxis = (item.year - 1425) * y
+      return { ...item, yAxis }
+    })
+    this.setState({ timeline })
+    this.xAxis()
+  }
+```
+
+This function first sets a base value of 10, so 1 year is exquivalent of 10px.
+
+It then maps over the data to read the year value within each item object. It uses this value to subtract 1425, this is for visual purposes as the timeline starts at the year 1440, so removes the inital white space. It then takes the value and times it by the base value set for the pixels, so that value can be used to transform the object to 'z'px on the y-axis.
 
 #### Responsive design
 
