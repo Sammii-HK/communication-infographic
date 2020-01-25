@@ -7,13 +7,14 @@ class Home extends React.Component {
 
     this.state = {
       timeline: [],
+      usedYearSlotColumns: {},
       selectedItem: null
     }
 
     this.yAxis = this.yAxis.bind(this)
     this.xAxis = this.xAxis.bind(this)
     this.getData = this.getData.bind(this)
-    this.overlapCheck = this.overlapCheck.bind(this)
+    // this.overlapCheck = this.overlapCheck.bind(this)
     this.handleSelect = this.handleSelect.bind(this)
     this.handleClose = this.handleClose.bind(this)
   }
@@ -46,50 +47,65 @@ class Home extends React.Component {
 
   xAxis() {
     const timeline = this.state.timeline.map((item, i) => {
-      const xAxis = this.randomNumber()
+      let xAxisColumn = this.random1to3()
+      let yearSlot = Math.floor(item.year/10)*10
+      if (!this.state.usedYearSlotColumns[yearSlot]) {
+        this.state.usedYearSlotColumns[yearSlot] = {}
+      }
+      while(this.state.usedYearSlotColumns[yearSlot][xAxisColumn]) {
+        xAxisColumn = this.random1to3()
+      }
+      this.state.usedYearSlotColumns[yearSlot][xAxisColumn] = true
+
+      const timelineDOM = document.getElementById('timeline')
+      const oneTwentiethPageWidth = timelineDOM.offsetWidth / 6
+
+      const xAxis = xAxisColumn * oneTwentiethPageWidth * this.posOrNeg()
       return { ...item, xAxis }
     })
     this.setState({ timeline })
-    this.overlapCheck()
+    // this.overlapCheck()
   }
 
-  overlapCheck() {
-    const timelineDOM = document.getElementById('timeline')
-    const width = timelineDOM.offsetWidth
-    const paddingValue = 0
-    // const paddingValue = width / 12
-    const timeline = this.state.timeline.map((currentItem, i) => {
-      let xAxis = currentItem.xAxis
-      const withinTenYears = []
-
-      console.log('current:', currentItem.title, currentItem.year, currentItem.xAxis)
-
-      for (let comparableIndex = 0; comparableIndex <= i; comparableIndex ++) {
-
-        if ((this.state.timeline[comparableIndex].year + 10) >= currentItem.year) {
-          withinTenYears.push(this.state.timeline[comparableIndex].xAxis)
-        }
-      }
-      // REMOVE LAST ITEM AS IT IS ITSELF
-      withinTenYears.pop()
-      console.log('withinTenYears', withinTenYears)
-
-      // MAP WITHIN TEN YEARS ARRAY
-      // while (withinTenYears.some(value => {
-      //   return currentItem.xAxis >= (value - paddingValue) && currentItem.xAxis <= (value + paddingValue)
-      // })
-      // ) {
-      //   // MAKE A NEW NUMBER
-      //   const newNumber = this.randomNumber()
-      //   console.log(newNumber)
-      //   // SET XAXIS VALUE FOR USE LATER
-      //   // xAxis = newNumber
-      // }
-
-      return { ...currentItem, xAxis }
-    })
-    this.setState({ timeline })
+  random1to3() {
+    return Math.round(Math.random() * 3)
   }
+  // overlapCheck() {
+  //   const timelineDOM = document.getElementById('timeline')
+  //   const width = timelineDOM.offsetWidth
+  //   // const paddingValue = 0
+  //   const paddingValue = width / 12
+  //   const timeline = this.state.timeline.map((currentItem, i) => {
+  //     // let xAxis = currentItem.xAxis
+  //     const withinTenYears = []
+  //
+  //     console.log('current:', currentItem.title, currentItem.year, currentItem.xAxis)
+  //
+  //     for (let comparableIndex = 0; comparableIndex <= i; comparableIndex ++) {
+  //
+  //       if ((this.state.timeline[comparableIndex].year + 10) >= currentItem.year) {
+  //         withinTenYears.push(this.state.timeline[comparableIndex].xAxis)
+  //       }
+  //     }
+  //     // REMOVE LAST ITEM AS IT IS ITSELF
+  //     withinTenYears.pop()
+  //     console.log('withinTenYears', withinTenYears)
+  //
+  //     // // MAP WITHIN TEN YEARS ARRAY
+  //     // while (withinTenYears.some(value => {
+  //     //   return currentItem.xAxis >= (value - paddingValue) && currentItem.xAxis <= (value + paddingValue)
+  //     // })
+  //     // ) {
+  //     //   // MAKE A NEW NUMBER
+  //     //   const newNumber = this.randomNumber()
+  //     //   console.log('new number', newNumber)
+  //     //   // SET XAXIS VALUE FOR USE LATER
+  //     //   currentItem.xAxis = newNumber
+  //     // }
+  //     return currentItem
+  //   })
+  //   this.setState({ timeline })
+  // }
 
   componentDidMount() {
     this.getData()
