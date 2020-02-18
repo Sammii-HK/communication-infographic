@@ -5,8 +5,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "client": "webpack-dev-server",
-    "server": "nodemon",
+    "run:client": "webpack-dev-server",
+    "run:server": "nodemon",
     "build": "webpack -p",
     "start": "node index"
   },
