@@ -42,7 +42,8 @@ class Home extends React.Component {
       return { ...item, yAxis }
     })
     this.setState({ timeline })
-    this.xAxis()
+    // this.xAxis()
+    console.log('this.state.timeline');
   }
 
   xAxis() {
@@ -60,8 +61,8 @@ class Home extends React.Component {
       const timelineDOM = document.getElementById('timeline')
       const oneTwentiethPageWidth = timelineDOM.offsetWidth / 6
 
-      const xAxis = xAxisColumn * oneTwentiethPageWidth * this.posOrNeg()
-      return { ...item, xAxis }
+      // const xAxis = xAxisColumn * oneTwentiethPageWidth * this.posOrNeg()
+      // return { ...item, xAxis }
     })
     this.setState({ timeline })
     // this.overlapCheck()
@@ -108,6 +109,7 @@ class Home extends React.Component {
   // }
 
   componentDidMount() {
+    console.log('mount', this.state.selectedItem);
     this.getData()
   }
 
