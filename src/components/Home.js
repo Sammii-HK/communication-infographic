@@ -42,31 +42,40 @@ class Home extends React.Component {
       return { ...item, yAxis }
     })
     this.setState({ timeline })
-    // this.xAxis()
+    this.xAxis()
     console.log('this.state.timeline');
   }
 
   xAxis() {
     const timeline = this.state.timeline.map((item, i) => {
-      let xAxisColumn = this.random1to3()
-      let yearSlot = Math.floor(item.year/10)*10
-      if (!this.state.usedYearSlotColumns[yearSlot]) {
-        this.state.usedYearSlotColumns[yearSlot] = {}
-      }
-      while(this.state.usedYearSlotColumns[yearSlot][xAxisColumn]) {
-        xAxisColumn = this.random1to3()
-      }
-      this.state.usedYearSlotColumns[yearSlot][xAxisColumn] = true
-
-      const timelineDOM = document.getElementById('timeline')
-      const oneTwentiethPageWidth = timelineDOM.offsetWidth / 6
-
-      // const xAxis = xAxisColumn * oneTwentiethPageWidth * this.posOrNeg()
-      // return { ...item, xAxis }
+      const xAxis = 50
+      console.log('*', item, i)
+      return { ...item, xAxis }
     })
     this.setState({ timeline })
-    // this.overlapCheck()
   }
+
+  // xAxis() {
+  //   const timeline = this.state.timeline.map((item, i) => {
+  //     let xAxisColumn = this.random1to3()
+  //     let yearSlot = Math.floor(item.year/10)*10
+  //     if (!this.state.usedYearSlotColumns[yearSlot]) {
+  //       this.state.usedYearSlotColumns[yearSlot] = {}
+  //     }
+  //     while(this.state.usedYearSlotColumns[yearSlot][xAxisColumn]) {
+  //       xAxisColumn = this.random1to3()
+  //     }
+  //     this.state.usedYearSlotColumns[yearSlot][xAxisColumn] = true
+  //
+  //     const timelineDOM = document.getElementById('timeline')
+  //     const oneTwentiethPageWidth = timelineDOM.offsetWidth / 6
+  //
+  //     // const xAxis = xAxisColumn * oneTwentiethPageWidth * this.posOrNeg()
+  //     // return { ...item, xAxis }
+  //   })
+  //   this.setState({ timeline })
+  //   // this.overlapCheck()
+  // }
 
   random1to3() {
     return Math.round(Math.random() * 3)
