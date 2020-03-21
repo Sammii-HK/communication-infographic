@@ -8,7 +8,8 @@ class Home extends React.Component {
     this.state = {
       timeline: [],
       usedYearSlotColumns: {},
-      selectedItem: null
+      selectedItem: null,
+      xAxisValues: [],
     }
 
     this.yAxis = this.yAxis.bind(this)
@@ -48,8 +49,24 @@ class Home extends React.Component {
 
   xAxis() {
     const timeline = this.state.timeline.map((item, i) => {
-      const xAxis = 50
-      console.log('*', item, i)
+      // const xAxis = 50
+      // console.log('*', item, i)
+
+      // const timelineDOM = document.getElementById('timeline')
+      //
+      // const oneTwentiethPageWidth = timelineDOM.offsetWidth / 6
+
+      let xAxis = this.randomNumber()
+
+      const lastxAxisValue = this.state.xAxisValues[this.state.xAxisValues.length - 1]
+      console.log('lastxAxisValue', lastxAxisValue);
+      while (lastxAxisValue > (xAxis + 200) || lastxAxisValue < (xAxis - 200)) {
+        xAxis = this.randomNumber()
+      }
+
+      this.state.xAxisValues.push(xAxis)
+
+
       return { ...item, xAxis }
     })
     this.setState({ timeline })
@@ -137,6 +154,7 @@ class Home extends React.Component {
     let randomValue = Math.round(Math.random() * (width / 2) - 1)
     // RANDOMLY MAKE THE VALUE POSITIVE OR NEGATIVE
     randomValue = randomValue * this.posOrNeg()
+    console.log('random', randomValue);
     return randomValue
   }
 
