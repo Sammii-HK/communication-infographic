@@ -1,53 +1,41 @@
 # Communication Infographic
 
-## A history of communication, after 1440
+A full-stack app, which is a rework of my Dissertation in the History of Communication. With a React front-end running an Express server loading data stored as JSON.
 
-[Live Site](https://communication-timeline.herokuapp.com/#/): [communication-timeline.herokuapp.com/](https://communication-timeline.herokuapp.com/)
+## Details
 
-## Timeframe
+### Timeframe
 
 14 days
 
-## Technologies
+### Technologies Used
 
-- React
-- Webpack
-- Express
-- Ajax
-- JavaScript (ES6)
-- HTML5
-- Bulma (CSS framework)
-- SCSS
-- GitHub
-- React Select
+* React
+* Webpack
+* Express
+* Ajax
+* JavaScript (ES6)
+* HTML5
+* Bulma (CSS framework)
+* SCSS
+* GitHub
+* React Select
 
-## Project brief
-
-The brief was to build a full-stack application with a React front-end which was running an Express server to load the data which was stored as JSON.
-
-The application is deployed via Git on Heroku and can be found here: [Communication Timeline Infographic](https://communication-timeline.herokuapp.com/)
-
-### App overview
-
-My first task, I set about working the algorithms needed for my functions, to place all items on the page. I chose to place the items with maths instead of hard coding the positions, as this added an extra layer of interactivity as every time the page is refreshed the x-axis changed.
-
-
-
-![Screenshot 2020-01-13 at 19 01 45](https://user-images.githubusercontent.com/40900195/72283885-a6565b80-3637-11ea-80f1-78ed41f5db48.png)
-
-#### Development process
-
-To get myself started with few distractions I worked on a JS, Pug & Express app at first, once the functionality was tested I then migrated my work and adapted my functions to a React app, allowing me greater scope to build onto the project in the future.
-
-##### Project Origins
+### App Overview
 
 This project was first created in 2016 as my BA(Hons) Graphic Design dissertation. It's an interactive Infographic which covers the History of Communication. I really wanted to push the boundaries of what was possible within designing my dissertation, not wanting to settle for an essay format.
 
 I relished this opportunity to push my design skills and moulded the constraints of the brief so that I was able to create my first website from the information of my dissertation in a creative and unusual way, which actually enhanced the experience of engaging with the essay.
 
-This project was created with Adobe Muse and was created to be viewed on large desktop screens, the live project can be viewed [here](https://sammiidesign.co.uk/communication_infographic_may16/).
+This project was created with Adobe Muse and was created to be viewed on large desktop screens, the live project can be viewed [here](https://sammiidesign.co.uk/communication_infographic_may16/)
 
-#### Server Side
+The application is deployed via Git on Heroku and can be found here: [Communication Timeline Infographic](https://communication-timeline.herokuapp.com/)
+
+#### Development Process
+
+To get myself started with few distractions I worked on a JS, Pug & Express app at first, once the functionality was tested I then migrated my work and adapted my functions to a React app, allowing me greater scope to build onto the project in the future.
+
+##### Server Side
 
 As the basis of the site was my dissertation I wanted a clean way to handle such a lage amount of data, so chose to convert the essay into JSON, which would be retrieved with Express, and loaded onto my React front end.
 
@@ -64,7 +52,7 @@ getData() {
 
 
 
-#### Y Axis
+##### Y Axis
 
 To place the items along the timeline on the y-axis I created a function.
 
@@ -86,7 +74,7 @@ It then maps over the data to read the year value within each item object. It us
 
 It then sets the data back to state, with a new key of yAxis and the value created.
 
-#### X Axis
+##### X Axis
 
 The X-Axis function is a little more complex as it is not constant.
 
@@ -140,13 +128,19 @@ The timeline starts at 1440, which was chosen as it was the year the printing pr
 
 ![Screenshot 2020-01-13 at 19 02 49](https://user-images.githubusercontent.com/40900195/72283889-a6eef200-3637-11ea-9f54-0b00ad6d700f.png)
 
-### Future enhancements
+### Challenges & Achievements
 
-- Working on the overlap check function
-- Adding more data to the timeline lines, such as: images, Wikipedialinks
-- Add to the functionality of the site
-  - Create a search feature
-  - Create a timeline navigation to 'jump' to a specific century
-  - Add more visual enhancements
-  - Make a database which can be added to, edited or deleted from
-  - Add a current year display, based on cursors position on the y-axis
+The no overlap functionn.
+
+The Y axis function.
+
+## Future enhancements
+
+* Working on the overlap check function
+* Adding more data to the timeline lines, such as: images, Wikipedialinks
+* Add to the functionality of the site
+  * Create a search feature
+  * Create a timeline navigation to 'jump' to a specific century
+  * Add more visual enhancements
+  * Make a database which can be added to, edited or deleted from
+  * Add a current year display, based on cursors position on the y-axis
