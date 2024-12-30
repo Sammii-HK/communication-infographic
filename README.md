@@ -4,7 +4,7 @@ A full-stack app, which is a rework of my Dissertation in the History of Communi
 
 ## Details
 
-### Timeframe
+### Time Frame
 
 14 days
 
@@ -37,7 +37,7 @@ To get myself started with few distractions I worked on a JS, Pug & Express app 
 
 ##### Server Side
 
-As the basis of the site was my dissertation I wanted a clean way to handle such a lage amount of data, so chose to convert the essay into JSON, which would be retrieved with Express, and loaded onto my React front end.
+As the basis of the site was my dissertation I wanted a clean way to handle such a large amount of data, so chose to convert the essay into JSON, which would be retrieved with Express, and loaded onto my React front end.
 
 ```javascript
 getData() {
@@ -130,7 +130,7 @@ The timeline starts at 1440, which was chosen as it was the year the printing pr
 
 ### Challenges & Achievements
 
-The no overlap functionn.
+The no overlap function.
 
 The Y axis function.
 
