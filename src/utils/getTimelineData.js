@@ -1,3 +1,5 @@
+import data from '../data.json';
+
   // overlapCheck() {
   //   const timelineDOM = document.getElementById('timeline')
   //   const width = timelineDOM.offsetWidth
@@ -34,3 +36,20 @@
   //   })
   //   this.setState({ timeline })
   // }
+
+const getTimelineData = (timelineRef) => {
+  const timelineWidth = timelineRef.current.offsetWidth;
+  const timelineData = data.data;
+
+  const timelineWithAxisPositions = timelineData.map((item, i) => {
+    const yAxis = (item.year - 1425) * 10
+
+    const xAxis = Math.round(Math.random() * (timelineWidth / 2) - 1) * (Math.random() < 0.5 ? -1 : 1)
+    return { ...item, yAxis, xAxis }
+  })
+
+  return timelineWithAxisPositions;
+  
+}
+
+export default getTimelineData;
