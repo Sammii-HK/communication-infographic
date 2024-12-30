@@ -3,7 +3,7 @@ import Timeline from './components/Timeline';
 
 function App() {
   return (
-    <div className="">
+    <div className="App">
       <Timeline />
     </div>
   );
