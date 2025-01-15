@@ -37,8 +37,7 @@ import data from '../data.json';
   //   this.setState({ timeline })
   // }
 
-const getTimelineData = (timelineRef) => {
-  const timelineWidth = timelineRef.current.offsetWidth;
+const getTimelineData = (timelineWidth) => {
   const timelineData = data.data;
 
   const timelineWithAxisPositions = timelineData.map((item, i) => {
