@@ -372,31 +372,87 @@
       "image": ""
     },
     {
-      "title": "Youtube",
-      "year": 2005,
-      "category": "invention",
-      "content": "",
-      "image": ""
-    },
-    {
       "title": "Facebook",
       "year": 2004,
       "category": "invention",
-      "content": "",
+      "content": "Facebook was launched in 2004 by Mark Zuckerberg and his Harvard roommates Eduardo Saverin, Andrew McCollum, Dustin Moskovitz and Chris Hughes. Originally confined to Harvard students, the platform quickly expanded to other universities before opening to the general public in 2006. Facebook fundamentally changed the way people communicate, introducing the concept of a digital social graph where relationships, conversations and life events are shared online. The News Feed, introduced in 2006, created a new paradigm for content consumption — an algorithmically curated stream of updates from friends and pages. By connecting over two billion users worldwide, Facebook transformed from a college directory into a global communication platform that reshaped politics, commerce, journalism and personal relationships. The company rebranded to Meta in 2021, signalling a shift toward building immersive virtual environments.",
+      "image": ""
+    },
+    {
+      "title": "YouTube",
+      "year": 2005,
+      "category": "invention",
+      "content": "YouTube was founded in 2005 by three former PayPal employees — Chad Hurley, Steve Chen and Jawed Karim — and was acquired by Google in 2006 for $1.65 billion. The platform democratised video publishing, allowing anyone with a camera and internet connection to broadcast to a global audience. Before YouTube, sharing video online was fragmented and technically challenging; the platform provided a simple, universal solution that transformed communication. YouTube gave rise to entirely new forms of media — vlogs, tutorials, citizen journalism and music videos that bypass traditional gatekeepers. It became the world's second-largest search engine and a primary source of education, entertainment and news for billions of people, fundamentally changing how information and culture are created and consumed.",
       "image": ""
     },
     {
       "title": "Twitter",
       "year": 2006,
       "category": "invention",
-      "content": "",
+      "content": "Twitter was created in 2006 by Jack Dorsey, Noah Glass, Biz Stone and Evan Williams. The platform introduced a radical constraint — messages limited to 140 characters (later expanded to 280) — that forced concise, rapid communication. This brevity made Twitter uniquely suited to real-time conversation, breaking news and public discourse. The platform became the de facto public square for politicians, journalists, celebrities and activists, enabling movements like the Arab Spring and Black Lives Matter to organise and spread globally. Twitter's hashtag system, invented by its users, became a universal tool for categorising conversations across all social media. Rebranded to X in 2023 under Elon Musk's ownership, the platform's influence on how public figures communicate directly with audiences permanently altered the media landscape.",
       "image": ""
     },
     {
       "title": "Instagram",
       "year": 2010,
       "category": "invention",
-      "content": "",
+      "content": "Instagram was launched in 2010 by Kevin Systrom and Mike Krieger, initially as an iOS-only photo-sharing application with built-in filters that made smartphone photography look professional. The app gained one million users within two months and was acquired by Facebook for $1 billion in 2012. Instagram shifted digital communication toward the visual, popularising the idea that images and short videos could replace text as the primary medium of personal expression. The introduction of Stories in 2016, borrowed from Snapchat, created ephemeral content that encouraged more casual, frequent sharing. Instagram became a powerful platform for visual storytelling, influencer culture, and brand communication, fundamentally changing how businesses market products and how individuals curate and present their identities online.",
+      "image": ""
+    },
+    {
+      "title": "Snapchat",
+      "year": 2011,
+      "category": "invention",
+      "content": "Snapchat was launched in 2011 by Evan Spiegel, Bobby Murphy and Reggie Brown while they were students at Stanford University. The app introduced a revolutionary concept to digital communication: ephemeral messaging, where photos and videos disappear after being viewed. This impermanence challenged the prevailing assumption that digital content should be permanent, encouraging more authentic and spontaneous sharing. Snapchat's Stories feature, which allowed users to compile content into a 24-hour narrative, was so influential that it was adopted by Instagram, Facebook, WhatsApp and YouTube. The platform also pioneered augmented reality lenses and filters that overlay digital effects onto real-world camera views, creating an entirely new visual language for communication among younger generations.",
+      "image": ""
+    },
+    {
+      "title": "Slack",
+      "year": 2013,
+      "category": "invention",
+      "content": "Slack was launched in 2013 by Stewart Butterfield and his team, born from the internal communication tool they built while developing a video game. The platform transformed workplace communication by organising conversations into searchable channels, replacing the chaos of overflowing email inboxes with structured, real-time messaging. Slack integrated with hundreds of other tools, becoming the central hub through which teams coordinate their work. Its casual tone — complete with emoji reactions, GIFs and custom status messages — brought informality to professional communication, blurring the line between workplace productivity and social interaction. Acquired by Salesforce in 2021 for $27.7 billion, Slack redefined expectations for how teams collaborate and demonstrated that workplace communication tools could be both powerful and enjoyable to use.",
+      "image": ""
+    },
+    {
+      "title": "WhatsApp",
+      "year": 2014,
+      "category": "invention",
+      "content": "WhatsApp was founded in 2009 by Jan Koum and Brian Acton, former Yahoo employees, and was acquired by Facebook in 2014 for $19 billion — the largest acquisition of a venture-backed company at the time. The app provided a simple, reliable alternative to SMS that worked across international borders without carrier fees, making it especially vital in developing nations. WhatsApp's implementation of end-to-end encryption in 2016 made it one of the most secure mainstream communication platforms, protecting messages from interception by anyone including the company itself. With over two billion users across 180 countries, WhatsApp became the primary means of daily communication for vast populations, handling not just personal messages but also business transactions, community organising and news distribution on a global scale.",
+      "image": ""
+    },
+    {
+      "title": "TikTok",
+      "year": 2016,
+      "category": "invention",
+      "content": "TikTok, developed by Chinese company ByteDance and launched internationally in 2016 as Musical.ly before being rebranded in 2018, revolutionised communication through short-form video content. Unlike previous social platforms that relied primarily on social graphs — showing content from people you follow — TikTok's algorithm-driven 'For You' page surfaces content based on interest, allowing unknown creators to reach millions overnight. This fundamentally democratised content distribution and created new forms of expression through trends, duets, stitches and sound-based memes. TikTok's influence extends far beyond entertainment; it has reshaped music discovery, political discourse, education and commerce. The platform demonstrated that communication in the digital age is increasingly visual, participatory and algorithmically mediated, influencing every competing platform to adopt short-form video.",
+      "image": ""
+    },
+    {
+      "title": "Zoom",
+      "year": 2020,
+      "category": "invention",
+      "content": "While Zoom was founded in 2011 by Eric Yuan, it became a defining communication tool in 2020 when the COVID-19 pandemic forced billions of people to work, learn and socialise remotely. Zoom's reliable, easy-to-use video conferencing transformed from a business tool into an essential utility for daily life — hosting everything from corporate meetings and university lectures to family gatherings and wedding ceremonies. At its peak, Zoom hosted 300 million daily meeting participants, becoming a verb synonymous with video calling. The platform's breakout rooms, virtual backgrounds and screen sharing became part of a new shared vocabulary. Zoom accelerated the normalisation of remote work and demonstrated that face-to-face communication could be effectively mediated through technology, permanently altering expectations about physical presence in professional and personal contexts.",
+      "image": ""
+    },
+    {
+      "title": "ChatGPT",
+      "year": 2022,
+      "category": "invention",
+      "content": "ChatGPT, developed by OpenAI and launched in November 2022, introduced the world to the power of large language models in an accessible conversational interface. The AI chatbot reached 100 million users within two months of launch, making it the fastest-growing consumer application in history. ChatGPT transformed how people access, process and communicate information — users could ask questions in natural language, draft emails, write code, summarise documents and brainstorm ideas through dialogue with an AI. This represented a fundamental shift from searching for information to conversing with it. The technology sparked a global race in AI development and raised profound questions about authorship, authenticity and the future of human communication. ChatGPT demonstrated that artificial intelligence could serve as both a communication partner and a tool that augments human expression.",
+      "image": ""
+    },
+    {
+      "title": "Threads",
+      "year": 2023,
+      "category": "invention",
+      "content": "Threads was launched by Meta in July 2023 as a text-based conversation platform directly linked to Instagram, positioning itself as an alternative to Twitter/X during a period of user dissatisfaction with that platform's changes under new ownership. Threads gained 100 million sign-ups within its first five days, leveraging Instagram's existing user base for rapid adoption. The platform focused on public, text-based conversations while aiming for a less confrontational tone than its competitors. Threads represented Meta's strategic move to capture the real-time public discourse market, integrating with the decentralised ActivityPub protocol to enable interoperability with platforms like Mastodon. Its launch highlighted the ongoing evolution of how people engage in public conversation online and the continued demand for open, text-centric social communication spaces.",
+      "image": ""
+    },
+    {
+      "title": "Apple Vision Pro",
+      "year": 2024,
+      "category": "invention",
+      "content": "Apple Vision Pro, released in February 2024, represents the first major consumer spatial computing device from a leading technology company. The headset merges digital content with the physical world, allowing users to interact with applications, media and other people through hand gestures, eye tracking and voice commands in three-dimensional space. For communication, Vision Pro introduced Spatial Personas — lifelike digital avatars that enable face-to-face conversations where participants appear to share the same physical space despite being miles apart. The device enables shared experiences like watching films together, collaborating on documents side by side, and presenting ideas in immersive environments. While still in its early adoption phase, Apple Vision Pro signals a future where communication transcends flat screens, pointing toward a world where digital and physical presence increasingly converge.",
       "image": ""
     }
   ]
