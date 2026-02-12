@@ -56,7 +56,7 @@ body {
   width: 90vw;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding: 90px 50px 50px;
   font: 12px 'Lato', Helvetica, Arial, sans-serif;
   height: auto;
 
@@ -64,7 +64,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    padding: 2rem 1rem;
+    padding: 90px 1rem 2rem;
     width: 80vw;
   }
 }
@@ -80,92 +80,341 @@ a {
   position: relative;
   flex-wrap: wrap;
   justify-content: space-around;
+}
 
-  .item {
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
+/* Vertical timeline axis */
+#timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.15) 5%,
+    rgba(255, 255, 255, 0.15) 95%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Timeline items */
+#timeline .item {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 15px;
+  position: absolute;
+  background: rgba(35, 35, 35, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 8px 6px;
+  z-index: 1;
+  cursor: pointer;
+  transform: translateX(-50%);
+  transition: transform 0.2s ease;
+}
+
+#timeline .item:hover {
+  transform: translateX(-50%) scale(1.3);
+}
+
+#timeline .item:focus-visible {
+  outline: 2px solid #00B7FF;
+  outline-offset: 3px;
+}
+
+#timeline .item h5 {
+  cursor: pointer;
+}
+
+#timeline .item .item-year {
+  display: block;
+  font-size: 11px;
+  opacity: 0.6;
+  margin-bottom: 2px;
+  font-weight: 400;
+}
+
+/* Category shape indicators */
+#timeline .item::before {
+  content: '';
+  display: block;
+  margin: 0 auto 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+#timeline .item.typography::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+  transform: rotate(45deg);
+}
+
+#timeline .item.movement::before {
+  width: 0;
+  height: 0;
+  border-radius: 0;
+  background: none;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 9px solid currentColor;
+}
+
+/* Hidden items for filtering */
+#timeline .item.item-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  #timeline .item {
+    font-size: 15px;
     width: 100px;
-    font-size: 20px;
-    text-align: center;
-    border-radius: 15px;
-    position: absolute;
-    transition: all .2s ease-in-out;
-
-    &:hover {
-      transform: scale(1.5);
-      color: white;
-    }
-
-    h5 {
-      transition: all .2s ease-in-out;
-      cursor: pointer;
-
-      &:hover {
-        transform: scale(1.5);
-      }
-    }
-
-  }
-
-  @media (max-width: 768px) {
-    .item {
-      font-size: 15px;
-    }
-  }
-
-  div.modal {
-    color: #232323;
-    z-index: 20;
-    min-width: 100vw;
-    min-height: 100vh;
-
-    .modal-card {
-      p {
-        font-size: 16px;
-      }
-      header.modal-card-head, footer.modal-card-foot {
-        background-color: hsl(0, 0%, 21%);
-
-        p {
-          font-size: 18px;
-          font-weight: 800;
-          display: flex;
-          justify-content: flex-end;
-          align-items: center;
-        }
-      }
-
-      section.modal-card-body {
-        background-color: hsl(0, 0%, 21%);
-        color: white;
-        p {
-          line-height: 32px;
-          font-size: 18px;
-        }
-      }
-
-      header.modal-card-head {
-        color: white;
-        h3 {
-          color: white;
-        }
-      }
-    }
-  }
-
-  .typography {
-    color: hotPink;
-  }
-
-  .invention {
-    color: turquoise;
-  }
-
-  .movement {
-    color: orange;
+    padding: 6px 4px;
   }
 }
 
+/* Modal */
+#timeline div.modal {
+  color: #232323;
+  z-index: 20;
+  min-width: 100vw;
+  min-height: 100vh;
+}
 
+#timeline div.modal .modal-card p {
+  font-size: 16px;
+}
 
+#timeline div.modal .modal-card header.modal-card-head,
+#timeline div.modal .modal-card footer.modal-card-foot {
+  background-color: hsl(0, 0%, 21%);
+}
+
+#timeline div.modal .modal-card header.modal-card-head p,
+#timeline div.modal .modal-card footer.modal-card-foot p {
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#timeline div.modal .modal-card section.modal-card-body {
+  background-color: hsl(0, 0%, 21%);
+  color: white;
+}
+
+#timeline div.modal .modal-card section.modal-card-body p {
+  line-height: 32px;
+  font-size: 18px;
+}
+
+#timeline div.modal .modal-card section.modal-card-body .modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+#timeline div.modal .modal-card header.modal-card-head {
+  color: white;
+}
+
+#timeline div.modal .modal-card header.modal-card-head h3 {
+  color: white;
+}
+
+/* Category colors */
+#timeline .typography {
+  color: hotPink;
+}
+
+#timeline .invention {
+  color: turquoise;
+}
+
+#timeline .movement {
+  color: orange;
+}
+
+/* Year Indicator */
+.year-indicator {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: rgba(35, 35, 35, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+}
+
+/* Filter Bar */
+.filter-bar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(35, 35, 35, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  z-index: 15;
+  backdrop-filter: blur(8px);
+  border-radius: 0 0 12px 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-bar .filter-btn {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.filter-bar .filter-btn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-bar .filter-btn[aria-pressed="true"] {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-bar .filter-btn.invention[aria-pressed="true"] {
+  border-color: turquoise;
+  color: turquoise;
+}
+
+.filter-bar .filter-btn.typography[aria-pressed="true"] {
+  border-color: hotPink;
+  color: hotPink;
+}
+
+.filter-bar .filter-btn.movement[aria-pressed="true"] {
+  border-color: orange;
+  color: orange;
+}
+
+.filter-bar .search-input {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  outline: none;
+  width: 160px;
+  transition: border-color 0.2s;
+}
+
+.filter-bar .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.filter-bar .search-input:focus {
+  border-color: #00B7FF;
+}
+
+/* Timeline Scrubber */
+.timeline-scrubber {
+  position: fixed;
+  right: 8px;
+  top: 80px;
+  bottom: 20px;
+  width: 40px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+.timeline-scrubber .scrubber-track {
+  position: relative;
+  width: 14px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 0 6px;
+}
+
+.timeline-scrubber .scrubber-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.timeline-scrubber .scrubber-dot:hover {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.timeline-scrubber .scrubber-position {
+  position: absolute;
+  width: 12px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  transition: top 0.1s;
+}
+
+.timeline-scrubber .scrubber-label {
+  position: absolute;
+  right: 20px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-50%);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .timeline-scrubber {
+    display: none;
+  }
+
+  .year-indicator {
+    top: auto;
+    bottom: 16px;
+    right: 16px;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
