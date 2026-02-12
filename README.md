@@ -10,9 +10,10 @@ A front-end app, which is a rework of my Dissertation in the History of Communic
 
 ### Technologies Used
 
-* React
+* React 19
 * JavaScript (ES6)
 * Bulma (CSS framework)
+* Framer Motion (animations)
 * CSS
 
 ### App Overview
@@ -70,7 +71,7 @@ The modal contains more information about each item, which is present in the JSO
 
 ![Screenshot 2020-01-13 at 19 02 09](https://user-images.githubusercontent.com/40900195/72283887-a6eef200-3637-11ea-9987-5e96b0793aaf.png)
 
-The timeline starts at 1440, which was chosen as it was the year the printing press was invented, and spans across a few centuries, until it covers modern day communication techniques used today, to about 2010.
+The timeline starts at 1440, which was chosen as it was the year the printing press was invented, and spans across centuries of communication history all the way to 2024, covering modern innovations like ChatGPT, Threads and Apple Vision Pro.
 
 ![Screenshot 2020-01-13 at 19 02 49](https://user-images.githubusercontent.com/40900195/72283889-a6eef200-3637-11ea-9f54-0b00ad6d700f.png)
 
@@ -78,10 +79,20 @@ The timeline starts at 1440, which was chosen as it was the year the printing pr
 
 The overlap check function was necessary due to the random nature of the data plotting.
 
+## Recent Features
+
+* **Extended timeline** — 8 new entries from 2011 to 2024 (Snapchat, Slack, WhatsApp, TikTok, Zoom, ChatGPT, Threads, Apple Vision Pro)
+* **Search** — filter timeline items by title in real time
+* **Category filters** — toggle invention, typography and movement categories on/off
+* **Year indicator** — fixed badge showing the current year as you scroll
+* **Timeline scrubber** — minimap on the right edge with click-and-drag navigation to jump to any century
+* **Scroll-triggered animations** — items fade and scale in as they enter the viewport (Framer Motion)
+* **Modal animations** — fade/slide entrance and exit transitions
+* **Accessibility** — full keyboard navigation (Tab, Enter/Space, Escape), ARIA roles, focus trapping in the modal, focus restoration on close
+* **Category shape indicators** — circle, diamond and triangle markers for colourblind-safe distinction
+* **Visual polish** — vertical timeline axis, item card backgrounds, focus-visible outlines
+
 ## Future enhancements
 
-* Adding more data to the timeline lines, such as: images &  Wikipedia links
-* Add to the functionality of the site
-  * Create a search feature
-  * Create a timeline navigation to 'jump' to a specific century
-  * Add a current year display, based on cursors position on the y-axis
+* Adding images & Wikipedia links to timeline entries
+* Touch/swipe support for the timeline scrubber on mobile
